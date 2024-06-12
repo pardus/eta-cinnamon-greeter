@@ -234,6 +234,7 @@ class MainWindow:
         self.non_tls_tried = False
 
         self.current_res = ""
+        self.current_scale = ""
         self.hidpi_found = False
         self.fullhd_found = False
         self.hidpi_res = None
@@ -311,6 +312,7 @@ class MainWindow:
                             if mode_properties.get("is-current", False):
                                 print("current: " + mode_id)
                                 self.current_res = mode_id
+                                self.current_scale = scale
 
 
         for res in availables:
@@ -323,7 +325,7 @@ class MainWindow:
                 self.fullhd_res = res
                 print("fullhd_found: {}".format(res))
 
-        self.lbl_current_res.set_text(self.current_res)
+        self.lbl_current_res.set_text("{} (%{})".format(self.current_res, int(self.current_scale * 100)))
 
     def set_pardussoftware_apps(self):
 
