@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=ETA Greeter
+Name[tr]=ETA Karşılayıcı
+GenericName=Greeter App
+GenericName[tr]=Karşılayıcı Uygulaması
+Comment=This tool helps you to get ETAP ready.
+Comment[tr]=Bu araç ETAP'ı hazırlamanıza yardımcı olacaktır.
+Exec=eta-cinnamon-greeter
+Icon=eta-cinnamon-greeter
+Terminal=false
+Type=Application
+Categories=System;X-Pardus-Apps;
+StartupNotify=true
+Keywords=welcome;greeter;setup;configuration;settings
+Keywords[tr]=hoşgeldin;karşılayıcı;kurulum;konfigürasyon;ayarlar

@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-12 17:32+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/MainWindow.glade:83
+msgid ""
+"Welcome.\n"
+"\n"
+"This application helps you to configure ETAP."
+msgstr ""
+
+#: ui/MainWindow.glade:141
+msgid "Current Resolution"
+msgstr ""
+
+#: ui/MainWindow.glade:200
+msgid "4K %200"
+msgstr ""
+
+#: ui/MainWindow.glade:215
+msgid "FullHD %100"
+msgstr ""
+
+#: ui/MainWindow.glade:320
+msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
+msgstr ""
+
+#: ui/MainWindow.glade:410
+msgid "For more application"
+msgstr ""
+
+#: ui/MainWindow.glade:426
+msgid "For more settings"
+msgstr ""
+
+#: ui/MainWindow.glade:479
+msgid "Pardus Software Center"
+msgstr ""
+
+#: ui/MainWindow.glade:524
+msgid "System Settings"
+msgstr ""
+
+#: ui/MainWindow.glade:582
+msgid "Shortcuts"
+msgstr ""
+
+#: ui/MainWindow.glade:617
+msgid ""
+"<b>Screenshot (Active Window):</b>\n"
+"Alt + Print Screen\n"
+"\n"
+"<b>Screenshot (Area):</b>\n"
+"Shift + Print Screen\n"
+"\n"
+"<b>Lock Screen:</b>\n"
+"Super + L | Ctrl + Alt + L\n"
+"\n"
+"<b>Applications:</b>\n"
+"Super\n"
+"\n"
+"<b>Show Desktop:</b>\n"
+"Ctrl + Alt + D\n"
+"\n"
+"<b>Terminal:</b>\n"
+"Ctrl + Alt + T"
+msgstr ""
+
+#: ui/MainWindow.glade:657
+msgid ""
+"<b>Change Workspace:</b>\n"
+"Ctrl + Alt + ←  → ↑ ↓\n"
+"\n"
+"<b>Add/Remove Workspace:</b>\n"
+"Alt + Insert/Delete\n"
+"\n"
+"<b>Go to Workspace:</b>\n"
+"Ctrl + F1...F12\n"
+"\n"
+"<b>Change Program:</b>\n"
+"Alt + Tab\n"
+"\n"
+"<b>Change Window:</b>\n"
+"Super + Tab\n"
+"\n"
+"<b>View Split:</b>\n"
+"Super + ←  →"
+msgstr ""
+
+#: ui/MainWindow.glade:696
+msgid ""
+"<b>Screenshot (Active Window):</b>\n"
+"Alt + Print Screen\n"
+"\n"
+"<b>Screenshot (Area):</b>\n"
+"Shift + Print Screen\n"
+"\n"
+"<b>Lock Screen:</b>\n"
+"Super + L\n"
+"\n"
+"<b>Applications:</b>\n"
+"Super"
+msgstr ""
+
+#: ui/MainWindow.glade:730
+msgid ""
+"<b>Change Workspace:</b>\n"
+"Ctrl + Alt + ↑ ↓\n"
+"\n"
+"<b>Change Program:</b>\n"
+"Alt + Tab\n"
+"\n"
+"<b>Change Window:</b>\n"
+"Super + Tab\n"
+"\n"
+"<b>View Split:</b>\n"
+"Super + ←  →"
+msgstr ""
+
+#: ui/MainWindow.glade:789
+msgid "<span size=\"large\">Links</span>"
+msgstr ""
+
+#: ui/MainWindow.glade:802
+msgid ""
+"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
+"tr\">Home Page</a>"
+msgstr ""
+
+#: ui/MainWindow.glade:815
+msgid ""
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
+"tr\">Documentations</a>"
+msgstr ""
+
+#: ui/MainWindow.glade:828
+msgid ""
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
+"tr\">Community</a>"
+msgstr ""
+
+#: ui/MainWindow.glade:841
+msgid ""
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
+"tr\">Forum</a>"
+msgstr ""
+
+#: ui/MainWindow.glade:877 ui/MainWindow.glade:905
+msgid "<small></small>"
+msgstr ""
+
+#: ui/MainWindow.glade:892
+msgid "<small>+90</small>"
+msgstr ""
+
+#: ui/MainWindow.glade:933
+msgid "<span size=\"large\">Support</span>"
+msgstr ""
+
+#: ui/MainWindow.glade:946
+msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
+msgstr ""
+
+#: ui/MainWindow.glade:1066
+msgid "Show at next startup."
+msgstr ""
+
+#: ui/MainWindow.glade:1108
+msgid "Previous"
+msgstr ""
+
+#: ui/MainWindow.glade:1126
+msgid "Next"
+msgstr ""
+
+#: ui/MainWindow.glade:1134
+msgid "page0"
+msgstr ""
+
+#: ui/MainWindow.glade:1139
+msgid "Close"
+msgstr ""
+
+#: ui/MainWindow.glade:1151
+msgid "page1"
+msgstr ""
+
+#: ui/MainWindow.glade:1190 src/MainWindow.py:175
+msgid "ETA Greeter"
+msgstr ""
+
+#: ui/MainWindow.glade:1236
+msgid "Tool that helps you to get ETAP ready."
+msgstr ""
+
+#. Name Surname <example@examplemail.com>
+#: ui/MainWindow.glade:1239
+msgid "translator-credits"
+msgstr ""
+
+#: src/MainWindow.py:179
+msgid "About ETA Greeter"
+msgstr ""
+
+#: src/MainWindow.py:207
+msgid "Welcome"
+msgstr ""
+
+#: src/MainWindow.py:208
+msgid "Select Wallpaper"
+msgstr ""
+
+#: src/MainWindow.py:209
+msgid "Display Settings"
+msgstr ""
+
+#: src/MainWindow.py:210
+msgid "Applications"
+msgstr ""
+
+#: src/MainWindow.py:211
+msgid "Support & Community"
+msgstr ""
+
+#: src/MainWindow.py:457 src/MainWindow.py:463 src/MainWindow.py:469
+#: src/MainWindow.py:475 src/MainWindow.py:481
+msgid "Error"
+msgstr ""
