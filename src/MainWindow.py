@@ -292,8 +292,9 @@ class MainWindow:
         self.bus = dbus.SessionBus()
         self.display_config_name = "org.cinnamon.Muffin.DisplayConfig"
         self.display_config_path = "/org/cinnamon/Muffin/DisplayConfig"
-        self.display_config_name = "org.gnome.Mutter.DisplayConfig"
-        self.display_config_path = "/org/gnome/Mutter/DisplayConfig"
+        if "gnome" in get_current_desktop():
+            self.display_config_name = "org.gnome.Mutter.DisplayConfig"
+            self.display_config_path = "/org/gnome/Mutter/DisplayConfig"
 
         display_config_proxy = self.bus.get_object(self.display_config_name, self.display_config_path)
         display_config_interface = dbus.Interface(display_config_proxy, dbus_interface=self.display_config_name)
@@ -470,13 +471,13 @@ class MainWindow:
 
     def on_btn_4k_clicked(self, button):
         try:
-            subprocess.call(["eta-resolution", "-s", "0"])
+            subprocess.Popen(["eta-resolution", "-s", "0"])
         except Exception as e:
             ErrorDialog(_("Error"), "{}".format(e))
 
     def on_btn_fullhd_clicked(self, button):
         try:
-            subprocess.call(["eta-resolution", "-s", "1"])
+            subprocess.Popen(["eta-resolution", "-s", "1"])
         except Exception as e:
             ErrorDialog(_("Error"), "{}".format(e))
 
