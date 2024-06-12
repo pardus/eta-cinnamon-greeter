@@ -76,7 +76,7 @@ class MainWindow:
         self.window.set_application(application)
         self.window.connect('destroy', self.onDestroy)
 
-        self.control_display()
+        # self.control_display()
 
         self.user_locale = self.get_user_locale()
 
