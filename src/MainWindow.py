@@ -214,6 +214,9 @@ class MainWindow:
         self.flow_wallpapers = get_ui("flow_wallpapers")
         self.lbl_current_res = get_ui("lbl_current_res")
 
+        self.btn_4k = get_ui("btn_4k")
+        self.btn_fullhd = get_ui("btn_fullhd")
+
         self.chkbtn_autostart = get_ui("chkbtn_autostart")
 
 
@@ -244,6 +247,8 @@ class MainWindow:
     def hide_widgets(self):
 
         self.btn_prev.set_sensitive(self.currentpage != 0)
+        self.btn_fullhd.set_sensitive(self.fullhd_found)
+        self.btn_4k.set_sensitive(self.hidpi_found)
 
     def get_locale(self):
         try:
@@ -476,12 +481,16 @@ class MainWindow:
             subprocess.Popen(["eta-resolution", "-s", "0"])
         except Exception as e:
             ErrorDialog(_("Error"), "{}".format(e))
+            return
+        self.lbl_current_res.set_text("{}".format(self.hidpi_res))
 
     def on_btn_fullhd_clicked(self, button):
         try:
             subprocess.Popen(["eta-resolution", "-s", "1"])
         except Exception as e:
             ErrorDialog(_("Error"), "{}".format(e))
+            return
+        self.lbl_current_res.set_text("{}".format(self.fullhd_res))
 
     def on_chkbtn_autostart_toggled(self, button):
         state = button.get_active()
