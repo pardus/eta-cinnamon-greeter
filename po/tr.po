@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-13 16:50+0300\n"
-"PO-Revision-Date: 2024-06-13 16:53+0300\n"
+"PO-Revision-Date: 2024-06-13 17:26+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
@@ -247,7 +247,7 @@ msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
 #: ui/MainWindow.glade:1066
 msgid "Show at next startup."
-msgstr "Bir sonraki açılışta göster."
+msgstr "Sonraki açılışta göster."
 
 #: ui/MainWindow.glade:1108
 msgid "Previous"
