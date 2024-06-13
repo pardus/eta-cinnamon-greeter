@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-12 17:32+0300\n"
+"POT-Creation-Date: 2024-06-13 16:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Support & Community"
 msgstr ""
 
-#: src/MainWindow.py:457 src/MainWindow.py:463 src/MainWindow.py:469
-#: src/MainWindow.py:475 src/MainWindow.py:481
+#: src/MainWindow.py:465 src/MainWindow.py:471 src/MainWindow.py:477
+#: src/MainWindow.py:483 src/MainWindow.py:491
 msgid "Error"
 msgstr ""
