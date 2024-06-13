@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-12 17:32+0300\n"
-"PO-Revision-Date: 2024-03-19 11:06+0300\n"
+"POT-Creation-Date: 2024-06-13 16:50+0300\n"
+"PO-Revision-Date: 2024-06-13 16:53+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Generator: Gtranslator 42.0\n"
 
 #: ui/MainWindow.glade:83
-#, fuzzy
 msgid ""
 "Welcome.\n"
 "\n"
@@ -28,19 +27,19 @@ msgid ""
 msgstr ""
 "Hoş Geldiniz.\n"
 "\n"
-"Bu uygulama Pardus'u hazırlamanız için size yardımcı olacaktır."
+"Bu uygulama ETAP'ı hazırlamanız için size yardımcı olacaktır."
 
 #: ui/MainWindow.glade:141
 msgid "Current Resolution"
-msgstr ""
+msgstr "Mevcut Çözünürlük"
 
 #: ui/MainWindow.glade:200
 msgid "4K %200"
-msgstr ""
+msgstr "4K %200"
 
 #: ui/MainWindow.glade:215
 msgid "FullHD %100"
-msgstr ""
+msgstr "FullHD %100"
 
 #: ui/MainWindow.glade:320
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
@@ -59,9 +58,8 @@ msgid "Pardus Software Center"
 msgstr "Pardus Yazılım Merkezi"
 
 #: ui/MainWindow.glade:524
-#, fuzzy
 msgid "System Settings"
-msgstr "Tema Ayarları"
+msgstr "Sistem Ayarları"
 
 #: ui/MainWindow.glade:582
 msgid "Shortcuts"
@@ -249,7 +247,7 @@ msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
 #: ui/MainWindow.glade:1066
 msgid "Show at next startup."
-msgstr ""
+msgstr "Bir sonraki açılışta göster."
 
 #: ui/MainWindow.glade:1108
 msgid "Previous"
@@ -272,14 +270,12 @@ msgid "page1"
 msgstr "page1"
 
 #: ui/MainWindow.glade:1190 src/MainWindow.py:175
-#, fuzzy
 msgid "ETA Greeter"
-msgstr "Pardus Karşılayıcı"
+msgstr "ETA Karşılayıcı"
 
 #: ui/MainWindow.glade:1236
-#, fuzzy
 msgid "Tool that helps you to get ETAP ready."
-msgstr "Bu araç Pardus'u hazırlamanıza yardımcı olacaktır."
+msgstr "Bu araç ETAP'ı hazırlamanıza yardımcı olacaktır."
 
 #. Name Surname <example@examplemail.com>
 #: ui/MainWindow.glade:1239
@@ -287,9 +283,8 @@ msgid "translator-credits"
 msgstr "Fatih Altun <fatih.altun@pardus.org.tr>"
 
 #: src/MainWindow.py:179
-#, fuzzy
 msgid "About ETA Greeter"
-msgstr "Pardus Karşılayıcı Hakkında"
+msgstr "ETA Karşılayıcı Hakkında"
 
 #: src/MainWindow.py:207
 msgid "Welcome"
@@ -311,8 +306,8 @@ msgstr "Uygulamalar"
 msgid "Support & Community"
 msgstr "Destek ve Topluluk"
 
-#: src/MainWindow.py:457 src/MainWindow.py:463 src/MainWindow.py:469
-#: src/MainWindow.py:475 src/MainWindow.py:481
+#: src/MainWindow.py:465 src/MainWindow.py:471 src/MainWindow.py:477
+#: src/MainWindow.py:483 src/MainWindow.py:491
 msgid "Error"
 msgstr "Hata"
 
