@@ -10,7 +10,8 @@ import utils
 from utils import ErrorDialog
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GdkPixbuf, GLib, Gdk
+gi.require_version('Gst', '1.0')
+from gi.repository import Gtk, GdkPixbuf, GLib, Gdk, Gst
 import locale
 from locale import gettext as _
 from pathlib import Path
@@ -86,6 +87,7 @@ class MainWindow:
         self.define_variables()
 
         self.get_monitor_resolution()
+        self.add_sound_devices()
 
         self.user_settings()
         self.UserSettings.set_autostart(self.UserSettings.config_autostart)
@@ -200,6 +202,7 @@ class MainWindow:
         self.page_welcome = get_ui("page_welcome")
         self.page_wallpaper = get_ui("page_wallpaper")
         self.page_display = get_ui("page_display")
+        self.page_sound = get_ui("page_sound")
         self.page_applications = get_ui("page_applications")
         self.page_support = get_ui("page_support")
 
@@ -207,6 +210,7 @@ class MainWindow:
         self.page_welcome.name = _("Welcome")
         self.page_wallpaper.name = _("Select Wallpaper")
         self.page_display.name = _("Display Settings")
+        self.page_sound.name = _("Sound Settings")
         self.page_applications.name = _("Applications")
         self.page_support.name = _("Support & Community")
 
@@ -226,6 +230,8 @@ class MainWindow:
         self.ui_apps_flowbox = get_ui("ui_apps_flowbox")
         self.ui_apps_error_label = get_ui("ui_apps_error_label")
         self.ui_apps_stack = get_ui("ui_apps_stack")
+
+        self.sound_listbox = get_ui("sound_listbox")
 
     def define_variables(self):
         self.currentpage = 0
@@ -400,6 +406,38 @@ class MainWindow:
                 self.ui_apps_stack.set_visible_child_name("error")
                 self.ui_apps_error_label.set_text(error_message)
 
+    def get_sound_devices(self):
+        result = subprocess.run(['pactl', 'list', 'sinks'], stdout=subprocess.PIPE)
+        output = result.stdout.decode('utf-8').splitlines()
+
+        devices = []
+        current_device = {}
+
+        for line in output:
+            line = line.strip()
+            if line.startswith("Sink #"):
+                if current_device:
+                    devices.append(current_device)
+                current_device = {'index': line.split()[1]}
+            elif line.startswith("Name:"):
+                current_device['name'] = line.split(":", 1)[1].strip()
+            elif line.startswith("Description:"):
+                current_device['pretty_name'] = line.split(":", 1)[1].strip()
+
+        if current_device:
+            devices.append(current_device)
+
+        return devices
+
+    def add_sound_devices(self):
+        self.devices = self.get_sound_devices()
+        for device in self.devices:
+            row = Gtk.ListBoxRow()
+            label = Gtk.Label(label=device['pretty_name'])
+            row.add(label)
+            self.sound_listbox.add(row)
+            print(device)
+
     # - stack prev and next page controls
     def get_next_page(self, page):
         increase = 0
@@ -500,3 +538,15 @@ class MainWindow:
         if state != user_autostart:
             self.UserSettings.writeConfig(state)
             self.user_settings()
+
+    def on_sound_listbox_row_activated(self, listbox, row):
+        selected_device = self.devices[row.get_index()]
+        subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
+        subprocess.run(['pactl', 'set-sink-volume', selected_device['name'], '100%'])
+        print("Selected Device: {} {}".format(selected_device['pretty_name'], selected_device['name']))
+
+    def on_play_button_clicked(self, button):
+        Gst.init(None)
+        self.player = Gst.ElementFactory.make('playbin', 'player')
+        self.player.set_property('uri', 'file://' + (os.path.dirname(os.path.abspath(__file__)) + "/../data/sample.m4a"))
+        self.player.set_state(Gst.State.PLAYING)
