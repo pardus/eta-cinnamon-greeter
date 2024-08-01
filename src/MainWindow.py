@@ -542,6 +542,7 @@ class MainWindow:
     def on_sound_listbox_row_activated(self, listbox, row):
         selected_device = self.devices[row.get_index()]
         subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
+        subprocess.run(['pactl', 'set-sink-mute', selected_device['name'], '0'])
         subprocess.run(['pactl', 'set-sink-volume', selected_device['name'], '100%'])
         print("Selected Device: {} {}".format(selected_device['pretty_name'], selected_device['name']))
 
