@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-13 16:50+0300\n"
-"PO-Revision-Date: 2024-06-13 17:26+0300\n"
+"POT-Creation-Date: 2024-08-07 15:12+0300\n"
+"PO-Revision-Date: 2024-08-07 15:13+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
@@ -29,175 +29,63 @@ msgstr ""
 "\n"
 "Bu uygulama ETAP'ı hazırlamanız için size yardımcı olacaktır."
 
-#: ui/MainWindow.glade:141
+#: ui/MainWindow.glade:145
 msgid "Current Resolution"
 msgstr "Mevcut Çözünürlük"
 
-#: ui/MainWindow.glade:200
+#: ui/MainWindow.glade:204
 msgid "4K %200"
 msgstr "4K %200"
 
-#: ui/MainWindow.glade:215
+#: ui/MainWindow.glade:219
 msgid "FullHD %100"
 msgstr "FullHD %100"
 
-#: ui/MainWindow.glade:320
+#: ui/MainWindow.glade:253
+msgid ""
+"4K resolution provides a clearer view, but some applications may not support "
+"4K resolution and may be difficult to use. In this case, you can choose Full "
+"HD resolution."
+msgstr ""
+"4K çözünürlük daha net bir görünüm sağlar; ancak bazı uygulamalar 4K "
+"çözünürlüğü desteklemeyebilir ve kullanımı zor olabilir. Bu durumda Full HD "
+"çözünürlüğü tercih edebilirsiniz."
+
+#: ui/MainWindow.glade:272
+msgid ""
+"You can change the resolution setting later bottom right corner of your "
+"desktop"
+msgstr "Çözünürlük ayarını daha sonra masaüstünüzün sağ alt köşesindeki"
+
+#: ui/MainWindow.glade:297
+msgid "change it with the icon."
+msgstr "simgesiyle değiştirebilirsiniz."
+
+#: ui/MainWindow.glade:508
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr "<span size='x-large'><b>Pardus Yazılım Merkezi</b></span>"
 
-#: ui/MainWindow.glade:410
+#: ui/MainWindow.glade:598
 msgid "For more application"
 msgstr "Daha fazla uygulama için"
 
-#: ui/MainWindow.glade:426
+#: ui/MainWindow.glade:614
 msgid "For more settings"
 msgstr "Daha fazla ayar için"
 
-#: ui/MainWindow.glade:479
+#: ui/MainWindow.glade:667
 msgid "Pardus Software Center"
 msgstr "Pardus Yazılım Merkezi"
 
-#: ui/MainWindow.glade:524
+#: ui/MainWindow.glade:712
 msgid "System Settings"
 msgstr "Sistem Ayarları"
 
-#: ui/MainWindow.glade:582
-msgid "Shortcuts"
-msgstr "Kısayollar"
-
-#: ui/MainWindow.glade:617
-msgid ""
-"<b>Screenshot (Active Window):</b>\n"
-"Alt + Print Screen\n"
-"\n"
-"<b>Screenshot (Area):</b>\n"
-"Shift + Print Screen\n"
-"\n"
-"<b>Lock Screen:</b>\n"
-"Super + L | Ctrl + Alt + L\n"
-"\n"
-"<b>Applications:</b>\n"
-"Super\n"
-"\n"
-"<b>Show Desktop:</b>\n"
-"Ctrl + Alt + D\n"
-"\n"
-"<b>Terminal:</b>\n"
-"Ctrl + Alt + T"
-msgstr ""
-"<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
-"Alt + Print Screen\n"
-"\n"
-"<b>Ekran Görüntüsü (Seçim):</b>\n"
-"Shift + Print Screen\n"
-"\n"
-"<b>Ekranı Kilitle:</b>\n"
-"Super + L | Ctrl + Alt + L\n"
-"\n"
-"<b>Uygulamalar:</b>\n"
-"Super\n"
-"\n"
-"<b>Masaüstünü Göster:</b>\n"
-"Ctrl + Alt + D\n"
-"\n"
-"<b>Uçbirim:</b>\n"
-"Ctrl + Alt + T"
-
-#: ui/MainWindow.glade:657
-msgid ""
-"<b>Change Workspace:</b>\n"
-"Ctrl + Alt + ←  → ↑ ↓\n"
-"\n"
-"<b>Add/Remove Workspace:</b>\n"
-"Alt + Insert/Delete\n"
-"\n"
-"<b>Go to Workspace:</b>\n"
-"Ctrl + F1...F12\n"
-"\n"
-"<b>Change Program:</b>\n"
-"Alt + Tab\n"
-"\n"
-"<b>Change Window:</b>\n"
-"Super + Tab\n"
-"\n"
-"<b>View Split:</b>\n"
-"Super + ←  →"
-msgstr ""
-"<b>Çalışma Alanı Değiştir:</b>\n"
-"Ctrl + Alt + ←  → ↑ ↓\n"
-"\n"
-"<b>Çalışma Alanı Ekle/Kaldır:</b>\n"
-"Alt + Insert/Delete\n"
-"\n"
-"<b>Çalışma Alanına Git:</b>\n"
-"Ctrl + F1...F12\n"
-"\n"
-"<b>Programlar Arası Geçiş:</b>\n"
-"Alt + Tab\n"
-"\n"
-"<b>Pencereler Arası Geçiş:</b>\n"
-"Super + Tab\n"
-"\n"
-"<b>Ekranı Böl:</b>\n"
-"Super + ←  →"
-
-#: ui/MainWindow.glade:696
-msgid ""
-"<b>Screenshot (Active Window):</b>\n"
-"Alt + Print Screen\n"
-"\n"
-"<b>Screenshot (Area):</b>\n"
-"Shift + Print Screen\n"
-"\n"
-"<b>Lock Screen:</b>\n"
-"Super + L\n"
-"\n"
-"<b>Applications:</b>\n"
-"Super"
-msgstr ""
-"<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
-"Alt + Print Screen\n"
-"\n"
-"<b>Ekran Görüntüsü (Seçim):</b>\n"
-"Shift + Print Screen\n"
-"\n"
-"<b>Ekranı Kilitle:</b>\n"
-"Super + L\n"
-"\n"
-"<b>Uygulamalar:</b>\n"
-"Super"
-
-#: ui/MainWindow.glade:730
-msgid ""
-"<b>Change Workspace:</b>\n"
-"Ctrl + Alt + ↑ ↓\n"
-"\n"
-"<b>Change Program:</b>\n"
-"Alt + Tab\n"
-"\n"
-"<b>Change Window:</b>\n"
-"Super + Tab\n"
-"\n"
-"<b>View Split:</b>\n"
-"Super + ←  →"
-msgstr ""
-"<b>Çalışma Alanı Değiştir:</b>\n"
-"Ctrl + Alt + ↑ ↓\n"
-"\n"
-"<b>Programlar Arası Geçiş:</b>\n"
-"Alt + Tab\n"
-"\n"
-"<b>Pencereler Arası Geçiş:</b>\n"
-"Super + Tab\n"
-"\n"
-"<b>Ekranı Böl:</b>\n"
-"Super + ←  →"
-
-#: ui/MainWindow.glade:789
+#: ui/MainWindow.glade:778
 msgid "<span size=\"large\">Links</span>"
 msgstr "<span size=\"large\">Bağlantılar</span>"
 
-#: ui/MainWindow.glade:802
+#: ui/MainWindow.glade:791
 msgid ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Home Page</a>"
@@ -205,7 +93,7 @@ msgstr ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Ana Sayfa</a>"
 
-#: ui/MainWindow.glade:815
+#: ui/MainWindow.glade:804
 msgid ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Documentations</a>"
@@ -213,7 +101,7 @@ msgstr ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Belgeler</a>"
 
-#: ui/MainWindow.glade:828
+#: ui/MainWindow.glade:817
 msgid ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Community</a>"
@@ -221,7 +109,7 @@ msgstr ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Topluluk</a>"
 
-#: ui/MainWindow.glade:841
+#: ui/MainWindow.glade:830
 msgid ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
@@ -229,87 +117,218 @@ msgstr ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
 
-#: ui/MainWindow.glade:877 ui/MainWindow.glade:905
+#: ui/MainWindow.glade:866 ui/MainWindow.glade:894
 msgid "<small></small>"
 msgstr "<small></small>"
 
-#: ui/MainWindow.glade:892
+#: ui/MainWindow.glade:881
 msgid "<small>+90</small>"
 msgstr "<small>+90</small>"
 
-#: ui/MainWindow.glade:933
+#: ui/MainWindow.glade:922
 msgid "<span size=\"large\">Support</span>"
 msgstr "<span size=\"large\">Destek</span>"
 
-#: ui/MainWindow.glade:946
+#: ui/MainWindow.glade:935
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
-#: ui/MainWindow.glade:1066
+#: ui/MainWindow.glade:1043
 msgid "Show at next startup."
 msgstr "Sonraki açılışta göster."
 
-#: ui/MainWindow.glade:1108
+#: ui/MainWindow.glade:1085
 msgid "Previous"
 msgstr "Önceki"
 
-#: ui/MainWindow.glade:1126
+#: ui/MainWindow.glade:1103
 msgid "Next"
 msgstr "Sonraki"
 
-#: ui/MainWindow.glade:1134
+#: ui/MainWindow.glade:1111
 msgid "page0"
 msgstr "page0"
 
-#: ui/MainWindow.glade:1139
+#: ui/MainWindow.glade:1116
 msgid "Close"
 msgstr "Kapat"
 
-#: ui/MainWindow.glade:1151
+#: ui/MainWindow.glade:1128
 msgid "page1"
 msgstr "page1"
 
-#: ui/MainWindow.glade:1190 src/MainWindow.py:175
+#: ui/MainWindow.glade:1181 src/MainWindow.py:177
 msgid "ETA Greeter"
 msgstr "ETA Karşılayıcı"
 
-#: ui/MainWindow.glade:1236
+#: ui/MainWindow.glade:1227
 msgid "Tool that helps you to get ETAP ready."
 msgstr "Bu araç ETAP'ı hazırlamanıza yardımcı olacaktır."
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:1239
+#: ui/MainWindow.glade:1230
 msgid "translator-credits"
 msgstr "Fatih Altun <fatih.altun@pardus.org.tr>"
 
-#: src/MainWindow.py:179
+#: src/MainWindow.py:181
 msgid "About ETA Greeter"
 msgstr "ETA Karşılayıcı Hakkında"
 
-#: src/MainWindow.py:207
+#: src/MainWindow.py:210
 msgid "Welcome"
 msgstr "Hoş Geldiniz"
 
-#: src/MainWindow.py:208
+#: src/MainWindow.py:211
 msgid "Select Wallpaper"
 msgstr "Duvar Kağıdı Seçin"
 
-#: src/MainWindow.py:209
+#: src/MainWindow.py:212
 msgid "Display Settings"
 msgstr "Görünüm Ayarları"
 
-#: src/MainWindow.py:210
+#: src/MainWindow.py:213
+msgid "Sound Settings"
+msgstr "Ses Ayarları"
+
+#: src/MainWindow.py:214
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: src/MainWindow.py:211
+#: src/MainWindow.py:215
 msgid "Support & Community"
 msgstr "Destek ve Topluluk"
 
-#: src/MainWindow.py:465 src/MainWindow.py:471 src/MainWindow.py:477
-#: src/MainWindow.py:483 src/MainWindow.py:491
+#: src/MainWindow.py:503 src/MainWindow.py:509 src/MainWindow.py:515
+#: src/MainWindow.py:521 src/MainWindow.py:529
 msgid "Error"
 msgstr "Hata"
+
+#~ msgid "Shortcuts"
+#~ msgstr "Kısayollar"
+
+#~ msgid ""
+#~ "<b>Screenshot (Active Window):</b>\n"
+#~ "Alt + Print Screen\n"
+#~ "\n"
+#~ "<b>Screenshot (Area):</b>\n"
+#~ "Shift + Print Screen\n"
+#~ "\n"
+#~ "<b>Lock Screen:</b>\n"
+#~ "Super + L | Ctrl + Alt + L\n"
+#~ "\n"
+#~ "<b>Applications:</b>\n"
+#~ "Super\n"
+#~ "\n"
+#~ "<b>Show Desktop:</b>\n"
+#~ "Ctrl + Alt + D\n"
+#~ "\n"
+#~ "<b>Terminal:</b>\n"
+#~ "Ctrl + Alt + T"
+#~ msgstr ""
+#~ "<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
+#~ "Alt + Print Screen\n"
+#~ "\n"
+#~ "<b>Ekran Görüntüsü (Seçim):</b>\n"
+#~ "Shift + Print Screen\n"
+#~ "\n"
+#~ "<b>Ekranı Kilitle:</b>\n"
+#~ "Super + L | Ctrl + Alt + L\n"
+#~ "\n"
+#~ "<b>Uygulamalar:</b>\n"
+#~ "Super\n"
+#~ "\n"
+#~ "<b>Masaüstünü Göster:</b>\n"
+#~ "Ctrl + Alt + D\n"
+#~ "\n"
+#~ "<b>Uçbirim:</b>\n"
+#~ "Ctrl + Alt + T"
+
+#~ msgid ""
+#~ "<b>Change Workspace:</b>\n"
+#~ "Ctrl + Alt + ←  → ↑ ↓\n"
+#~ "\n"
+#~ "<b>Add/Remove Workspace:</b>\n"
+#~ "Alt + Insert/Delete\n"
+#~ "\n"
+#~ "<b>Go to Workspace:</b>\n"
+#~ "Ctrl + F1...F12\n"
+#~ "\n"
+#~ "<b>Change Program:</b>\n"
+#~ "Alt + Tab\n"
+#~ "\n"
+#~ "<b>Change Window:</b>\n"
+#~ "Super + Tab\n"
+#~ "\n"
+#~ "<b>View Split:</b>\n"
+#~ "Super + ←  →"
+#~ msgstr ""
+#~ "<b>Çalışma Alanı Değiştir:</b>\n"
+#~ "Ctrl + Alt + ←  → ↑ ↓\n"
+#~ "\n"
+#~ "<b>Çalışma Alanı Ekle/Kaldır:</b>\n"
+#~ "Alt + Insert/Delete\n"
+#~ "\n"
+#~ "<b>Çalışma Alanına Git:</b>\n"
+#~ "Ctrl + F1...F12\n"
+#~ "\n"
+#~ "<b>Programlar Arası Geçiş:</b>\n"
+#~ "Alt + Tab\n"
+#~ "\n"
+#~ "<b>Pencereler Arası Geçiş:</b>\n"
+#~ "Super + Tab\n"
+#~ "\n"
+#~ "<b>Ekranı Böl:</b>\n"
+#~ "Super + ←  →"
+
+#~ msgid ""
+#~ "<b>Screenshot (Active Window):</b>\n"
+#~ "Alt + Print Screen\n"
+#~ "\n"
+#~ "<b>Screenshot (Area):</b>\n"
+#~ "Shift + Print Screen\n"
+#~ "\n"
+#~ "<b>Lock Screen:</b>\n"
+#~ "Super + L\n"
+#~ "\n"
+#~ "<b>Applications:</b>\n"
+#~ "Super"
+#~ msgstr ""
+#~ "<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
+#~ "Alt + Print Screen\n"
+#~ "\n"
+#~ "<b>Ekran Görüntüsü (Seçim):</b>\n"
+#~ "Shift + Print Screen\n"
+#~ "\n"
+#~ "<b>Ekranı Kilitle:</b>\n"
+#~ "Super + L\n"
+#~ "\n"
+#~ "<b>Uygulamalar:</b>\n"
+#~ "Super"
+
+#~ msgid ""
+#~ "<b>Change Workspace:</b>\n"
+#~ "Ctrl + Alt + ↑ ↓\n"
+#~ "\n"
+#~ "<b>Change Program:</b>\n"
+#~ "Alt + Tab\n"
+#~ "\n"
+#~ "<b>Change Window:</b>\n"
+#~ "Super + Tab\n"
+#~ "\n"
+#~ "<b>View Split:</b>\n"
+#~ "Super + ←  →"
+#~ msgstr ""
+#~ "<b>Çalışma Alanı Değiştir:</b>\n"
+#~ "Ctrl + Alt + ↑ ↓\n"
+#~ "\n"
+#~ "<b>Programlar Arası Geçiş:</b>\n"
+#~ "Alt + Tab\n"
+#~ "\n"
+#~ "<b>Pencereler Arası Geçiş:</b>\n"
+#~ "Super + Tab\n"
+#~ "\n"
+#~ "<b>Ekranı Böl:</b>\n"
+#~ "Super + ←  →"
 
 #~ msgid "Light"
 #~ msgstr "Açık"
@@ -362,6 +381,3 @@ msgstr "Hata"
 
 #~ msgid "Your desktop environment is not supported."
 #~ msgstr "Masaüstü ortamınız desteklenmiyor."
-
-#~ msgid "Keyboard Settings"
-#~ msgstr "Klavye Ayarları"
