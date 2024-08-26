@@ -433,10 +433,37 @@ class MainWindow:
         self.devices = self.get_sound_devices()
         for device in self.devices:
             row = Gtk.ListBoxRow()
+            row.set_margin_top(3)
+            row.set_margin_bottom(3)
+            row.set_margin_start(3)
+            row.set_margin_end(3)
+
             label = Gtk.Label(label=device['pretty_name'])
-            row.add(label)
+
+            image = Gtk.Image.new_from_icon_name("audio-speakers-symbolic", Gtk.IconSize.BUTTON)
+
+            box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 8)
+            box.set_margin_top(13)
+            box.set_margin_bottom(13)
+            box.set_margin_start(5)
+            box.set_margin_end(5)
+
+            box.pack_start(image, False, True, 0)
+            box.pack_start(label, False, True, 0)
+
+            row.add(box)
+            row.name = device
             self.sound_listbox.add(row)
             print(device)
+
+        # All volume outputs to max and adjust the balance
+        for row in self.sound_listbox:
+            self.sound_listbox.select_row(row)
+
+        # If hdmi in list then make it default
+        for row in self.sound_listbox:
+            if "hdmi" in row.name["pretty_name"].lower():
+                self.sound_listbox.select_row(row)
 
     # - stack prev and next page controls
     def get_next_page(self, page):
@@ -539,7 +566,14 @@ class MainWindow:
             self.UserSettings.writeConfig(state)
             self.user_settings()
 
-    def on_sound_listbox_row_activated(self, listbox, row):
+    # def on_sound_listbox_row_activated(self, listbox, row):
+    #     selected_device = self.devices[row.get_index()]
+    #     subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
+    #     subprocess.run(['pactl', 'set-sink-mute', selected_device['name'], '0'])
+    #     subprocess.run(['pactl', 'set-sink-volume', selected_device['name'], '100%'])
+    #     print("Selected Device: {} {}".format(selected_device['pretty_name'], selected_device['name']))
+
+    def on_sound_listbox_row_selected(self, listbox, row):
         selected_device = self.devices[row.get_index()]
         subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
         subprocess.run(['pactl', 'set-sink-mute', selected_device['name'], '0'])
