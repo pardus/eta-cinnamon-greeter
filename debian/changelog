@@ -1,5 +1,24 @@
 eta-cinnamon-greeter (1.0.0) unstable; urgency=medium
 
+  [ Fatih Altun ]
   * Initial commit
+  * Fix typo
+  * Disable control_display
+  * Add current scale to display page
+  * Update current resolution controls
+  * Update pot file
+  * Update Turkish translations
+  * Fix typo
+  * Add sound device chooser
+  * Add unmute for selected sound device
+  * Add info text to display page
+  * Update pot file
+  * Update Turkish translations
+  * Disable valign center of display page
+  * Update sample audio
+  * Update sound device row
 
- -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 12 Jun 2024 17:37:17 +0300
+  [ Emel Öztürk ]
+  * Del shortcuts
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Mon, 26 Aug 2024 19:41:05 +0300
