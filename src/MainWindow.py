@@ -3,6 +3,8 @@
 import os
 import subprocess
 import threading
+import time
+
 import dbus
 import gi
 
@@ -11,7 +13,8 @@ from utils import ErrorDialog
 
 gi.require_version('Gtk', '3.0')
 gi.require_version('Gst', '1.0')
-from gi.repository import Gtk, GdkPixbuf, GLib, Gdk, Gst
+gi.require_version('Cvc', '1.0')
+from gi.repository import Gtk, GdkPixbuf, GLib, Gdk, Gst, Cvc
 import locale
 from locale import gettext as _
 from pathlib import Path
@@ -106,6 +109,10 @@ class MainWindow:
 
         # Hide widgets:
         self.hide_widgets()
+
+        thread_sound = threading.Thread(target=self.select_sound_device)
+        thread_sound.daemon = True
+        thread_sound.start()
 
     def get_user_locale(self):
         try:
@@ -406,64 +413,61 @@ class MainWindow:
                 self.ui_apps_stack.set_visible_child_name("error")
                 self.ui_apps_error_label.set_text(error_message)
 
-    def get_sound_devices(self):
-        result = subprocess.run(['pactl', 'list', 'sinks'], stdout=subprocess.PIPE)
-        output = result.stdout.decode('utf-8').splitlines()
+    def on_sound_device_added(self, c, deviceId, direction):
+        device = getattr(self.controller, "lookup_" + direction + "_id")(deviceId)
+        print("Sound Device: {}".format(device.get_description()))
+        self.add_sound_device_to_ui(device)
 
-        devices = []
-        current_device = {}
-
-        for line in output:
-            line = line.strip()
-            if line.startswith("Sink #"):
-                if current_device:
-                    devices.append(current_device)
-                current_device = {'index': line.split()[1]}
-            elif line.startswith("Name:"):
-                current_device['name'] = line.split(":", 1)[1].strip()
-            elif line.startswith("Description:"):
-                current_device['pretty_name'] = line.split(":", 1)[1].strip()
-
-        if current_device:
-            devices.append(current_device)
-
-        return devices
+    def on_sound_default_sink_changed(self, c, deviceId):
+        default_sink = self.controller.get_default_sink()
+        if default_sink is None:
+            return
+        print(f"default sink_changed to: {c.get_default_sink().get_description()}")
+        max_norm = self.controller.get_vol_max_norm()
+        stream = self.controller.lookup_stream_id(deviceId)
+        denormalized_volume = max_norm
+        stream.change_is_muted(False)
+        stream.set_volume(denormalized_volume)
+        stream.push_volume()
 
     def add_sound_devices(self):
-        self.devices = self.get_sound_devices()
-        for device in self.devices:
-            row = Gtk.ListBoxRow()
-            row.set_margin_top(3)
-            row.set_margin_bottom(3)
-            row.set_margin_start(3)
-            row.set_margin_end(3)
+        self.controller = Cvc.MixerControl.new("mixer-control")
+        self.controller.open()
 
-            label = Gtk.Label(label=device['pretty_name'])
+        self.controller.connect("output-added", self.on_sound_device_added, "output")
+        self.controller.connect("default_sink_changed", self.on_sound_default_sink_changed)
 
-            image = Gtk.Image.new_from_icon_name("audio-speakers-symbolic", Gtk.IconSize.BUTTON)
-
-            box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 8)
-            box.set_margin_top(13)
-            box.set_margin_bottom(13)
-            box.set_margin_start(5)
-            box.set_margin_end(5)
-
-            box.pack_start(image, False, True, 0)
-            box.pack_start(label, False, True, 0)
-
-            row.add(box)
-            row.name = device
-            self.sound_listbox.add(row)
-            print(device)
-
-        # All volume outputs to max and adjust the balance
-        for row in self.sound_listbox:
-            self.sound_listbox.select_row(row)
-
+    def select_sound_device(self):
+        time.sleep(3)
         # If hdmi in list then make it default
         for row in self.sound_listbox:
-            if "hdmi" in row.name["pretty_name"].lower():
-                self.sound_listbox.select_row(row)
+            if "hdmi" in row.name.get_description().lower():
+                GLib.idle_add(self.sound_listbox.select_row, row)
+
+    def add_sound_device_to_ui(self, device):
+        row = Gtk.ListBoxRow()
+        row.set_margin_top(3)
+        row.set_margin_bottom(3)
+        row.set_margin_start(3)
+        row.set_margin_end(3)
+
+        label = Gtk.Label(label="{}".format(device.get_description()))
+
+        image = Gtk.Image.new_from_icon_name("audio-speakers-symbolic", Gtk.IconSize.BUTTON)
+
+        box = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, 8)
+        box.set_margin_top(13)
+        box.set_margin_bottom(13)
+        box.set_margin_start(5)
+        box.set_margin_end(5)
+
+        box.pack_start(image, False, True, 0)
+        box.pack_start(label, False, True, 0)
+
+        row.add(box)
+        row.name = device
+        self.sound_listbox.add(row)
+        GLib.idle_add(self.sound_listbox.show_all)
 
     # - stack prev and next page controls
     def get_next_page(self, page):
@@ -566,19 +570,10 @@ class MainWindow:
             self.UserSettings.writeConfig(state)
             self.user_settings()
 
-    # def on_sound_listbox_row_activated(self, listbox, row):
-    #     selected_device = self.devices[row.get_index()]
-    #     subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
-    #     subprocess.run(['pactl', 'set-sink-mute', selected_device['name'], '0'])
-    #     subprocess.run(['pactl', 'set-sink-volume', selected_device['name'], '100%'])
-    #     print("Selected Device: {} {}".format(selected_device['pretty_name'], selected_device['name']))
-
     def on_sound_listbox_row_selected(self, listbox, row):
-        selected_device = self.devices[row.get_index()]
-        subprocess.run(['pactl', 'set-default-sink', selected_device['name']])
-        subprocess.run(['pactl', 'set-sink-mute', selected_device['name'], '0'])
-        subprocess.run(['pactl', 'set-sink-volume', selected_device['name'], '100%'])
-        print("Selected Device: {} {}".format(selected_device['pretty_name'], selected_device['name']))
+        device = row.name
+        print(f"Selected Device: {device.get_description()}")
+        GLib.idle_add(self.controller.change_output, device)
 
     def on_play_button_clicked(self, button):
         Gst.init(None)
