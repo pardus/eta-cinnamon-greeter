@@ -15,6 +15,6 @@ Depends: ${misc:Depends},
          gir1.2-gtk-3.0,
          gir1.2-gstreamer-1.0,
          gstreamer1.0-gtk3,
-         pulseaudio-utils
+         gir1.2-cvc-1.0
 Description: ETAP Cinnamon Greeter
  Simple Gtk+ and Python based greeter application after login.
