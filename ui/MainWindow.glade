@@ -120,7 +120,7 @@ This application helps you to configure ETAP.</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="valign">start</property>
-                            <property name="margin-top">34</property>
+                            <property name="margin-top">21</property>
                             <property name="pixel-size">150</property>
                             <property name="icon-name">computer-symbolic</property>
                           </object>
@@ -325,15 +325,17 @@ This application helps you to configure ETAP.</property>
                   <object class="GtkBox" id="page_sound">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
+                    <property name="margin-start">13</property>
+                    <property name="margin-end">13</property>
+                    <property name="margin-top">13</property>
+                    <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">13</property>
-                    <property name="homogeneous">True</property>
+                    <property name="spacing">55</property>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">center</property>
-                        <property name="margin-top">13</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">13</property>
                         <child>
@@ -341,7 +343,7 @@ This application helps you to configure ETAP.</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="valign">start</property>
-                            <property name="margin-top">34</property>
+                            <property name="margin-top">21</property>
                             <property name="pixel-size">150</property>
                             <property name="icon-name">audio-speakers-symbolic</property>
                           </object>
@@ -365,7 +367,7 @@ This application helps you to configure ETAP.</property>
                         <property name="halign">center</property>
                         <property name="valign">start</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">13</property>
+                        <property name="spacing">21</property>
                         <child>
                           <object class="GtkListBox" id="sound_listbox">
                             <property name="visible">True</property>
