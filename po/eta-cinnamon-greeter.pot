@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-07 15:12+0300\n"
+"POT-Creation-Date: 2024-09-12 13:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,165 +24,177 @@ msgid ""
 "This application helps you to configure ETAP."
 msgstr ""
 
-#: ui/MainWindow.glade:145
+#: ui/MainWindow.glade:144
 msgid "Current Resolution"
 msgstr ""
 
-#: ui/MainWindow.glade:204
+#: ui/MainWindow.glade:203
 msgid "4K %200"
 msgstr ""
 
-#: ui/MainWindow.glade:219
+#: ui/MainWindow.glade:218
 msgid "FullHD %100"
 msgstr ""
 
-#: ui/MainWindow.glade:253
+#: ui/MainWindow.glade:252
 msgid ""
 "4K resolution provides a clearer view, but some applications may not support "
 "4K resolution and may be difficult to use. In this case, you can choose Full "
 "HD resolution."
 msgstr ""
 
-#: ui/MainWindow.glade:272
+#: ui/MainWindow.glade:271
 msgid ""
 "You can change the resolution setting later bottom right corner of your "
 "desktop"
 msgstr ""
 
-#: ui/MainWindow.glade:297
+#: ui/MainWindow.glade:296
 msgid "change it with the icon."
 msgstr ""
 
-#: ui/MainWindow.glade:508
+#: ui/MainWindow.glade:476
+msgid "Light"
+msgstr ""
+
+#: ui/MainWindow.glade:527
+msgid "Dark"
+msgstr ""
+
+#: ui/MainWindow.glade:637
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr ""
 
-#: ui/MainWindow.glade:598
+#: ui/MainWindow.glade:727
 msgid "For more application"
 msgstr ""
 
-#: ui/MainWindow.glade:614
+#: ui/MainWindow.glade:743
 msgid "For more settings"
 msgstr ""
 
-#: ui/MainWindow.glade:667
+#: ui/MainWindow.glade:796
 msgid "Pardus Software Center"
 msgstr ""
 
-#: ui/MainWindow.glade:712
+#: ui/MainWindow.glade:841
 msgid "System Settings"
 msgstr ""
 
-#: ui/MainWindow.glade:778
+#: ui/MainWindow.glade:907
 msgid "<span size=\"large\">Links</span>"
 msgstr ""
 
-#: ui/MainWindow.glade:791
+#: ui/MainWindow.glade:920
 msgid ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Home Page</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:804
+#: ui/MainWindow.glade:933
 msgid ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Documentations</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:817
+#: ui/MainWindow.glade:946
 msgid ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Community</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:830
+#: ui/MainWindow.glade:959
 msgid ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:866 ui/MainWindow.glade:894
+#: ui/MainWindow.glade:995 ui/MainWindow.glade:1023
 msgid "<small></small>"
 msgstr ""
 
-#: ui/MainWindow.glade:881
+#: ui/MainWindow.glade:1010
 msgid "<small>+90</small>"
 msgstr ""
 
-#: ui/MainWindow.glade:922
+#: ui/MainWindow.glade:1051
 msgid "<span size=\"large\">Support</span>"
 msgstr ""
 
-#: ui/MainWindow.glade:935
+#: ui/MainWindow.glade:1064
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr ""
 
-#: ui/MainWindow.glade:1043
+#: ui/MainWindow.glade:1175
 msgid "Show at next startup."
 msgstr ""
 
-#: ui/MainWindow.glade:1085
+#: ui/MainWindow.glade:1217
 msgid "Previous"
 msgstr ""
 
-#: ui/MainWindow.glade:1103
+#: ui/MainWindow.glade:1235
 msgid "Next"
 msgstr ""
 
-#: ui/MainWindow.glade:1111
+#: ui/MainWindow.glade:1243
 msgid "page0"
 msgstr ""
 
-#: ui/MainWindow.glade:1116
+#: ui/MainWindow.glade:1248
 msgid "Close"
 msgstr ""
 
-#: ui/MainWindow.glade:1128
+#: ui/MainWindow.glade:1260
 msgid "page1"
 msgstr ""
 
-#: ui/MainWindow.glade:1181 src/MainWindow.py:177
+#: ui/MainWindow.glade:1313 src/MainWindow.py:189
 msgid "ETA Greeter"
 msgstr ""
 
-#: ui/MainWindow.glade:1227
+#: ui/MainWindow.glade:1359
 msgid "Tool that helps you to get ETAP ready."
 msgstr ""
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:1230
+#: ui/MainWindow.glade:1362
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.py:181
+#: src/MainWindow.py:193
 msgid "About ETA Greeter"
 msgstr ""
 
-#: src/MainWindow.py:210
+#: src/MainWindow.py:223
 msgid "Welcome"
 msgstr ""
 
-#: src/MainWindow.py:211
+#: src/MainWindow.py:224
 msgid "Select Wallpaper"
 msgstr ""
 
-#: src/MainWindow.py:212
+#: src/MainWindow.py:225
+msgid "Select Theme"
+msgstr ""
+
+#: src/MainWindow.py:226
 msgid "Display Settings"
 msgstr ""
 
-#: src/MainWindow.py:213
+#: src/MainWindow.py:227
 msgid "Sound Settings"
 msgstr ""
 
-#: src/MainWindow.py:214
+#: src/MainWindow.py:228
 msgid "Applications"
 msgstr ""
 
-#: src/MainWindow.py:215
+#: src/MainWindow.py:229
 msgid "Support & Community"
 msgstr ""
 
-#: src/MainWindow.py:503 src/MainWindow.py:509 src/MainWindow.py:515
-#: src/MainWindow.py:521 src/MainWindow.py:529
+#: src/MainWindow.py:569 src/MainWindow.py:575 src/MainWindow.py:581
+#: src/MainWindow.py:587 src/MainWindow.py:595
 msgid "Error"
 msgstr ""
