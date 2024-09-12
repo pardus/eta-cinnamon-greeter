@@ -428,6 +428,134 @@ This application helps you to configure ETAP.</property>
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkBox" id="page_theme">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="margin-bottom">21</property>
+                        <property name="spacing">13</property>
+                        <property name="homogeneous">True</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">13</property>
+                            <child>
+                              <object class="GtkRadioButton" id="rb_lightTheme">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">False</property>
+                                <property name="halign">center</property>
+                                <property name="margin-top">13</property>
+                                <property name="draw-indicator">False</property>
+                                <child>
+                                  <object class="GtkImage" id="img_lightTheme">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="icon-name">image-missing</property>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Light</property>
+                                <attributes>
+                                  <attribute name="size" value="21000"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">13</property>
+                            <child>
+                              <object class="GtkRadioButton" id="rb_darkTheme">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">False</property>
+                                <property name="halign">center</property>
+                                <property name="margin-top">13</property>
+                                <property name="draw-indicator">False</property>
+                                <property name="group">rb_lightTheme</property>
+                                <child>
+                                  <object class="GtkImage" id="img_darkTheme">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="icon-name">image-missing</property>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Dark</property>
+                                <attributes>
+                                  <attribute name="size" value="21000"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="name">3</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkBox" id="page_wallpaper">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
@@ -470,8 +598,8 @@ This application helps you to configure ETAP.</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="name">3</property>
-                    <property name="position">3</property>
+                    <property name="name">4</property>
+                    <property name="position">4</property>
                   </packing>
                 </child>
                 <child>
@@ -743,8 +871,8 @@ This application helps you to configure ETAP.</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="name">4</property>
-                    <property name="position">4</property>
+                    <property name="name">5</property>
+                    <property name="position">5</property>
                   </packing>
                 </child>
                 <child>
@@ -1020,9 +1148,12 @@ This application helps you to configure ETAP.</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="name">5</property>
-                    <property name="position">5</property>
+                    <property name="name">6</property>
+                    <property name="position">6</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
               </object>
               <packing>

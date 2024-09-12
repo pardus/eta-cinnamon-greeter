@@ -45,6 +45,7 @@ def get_current_desktop():
 #     exit(0)
 
 import WallpaperManager as WallpaperManager
+import ThemeManager as ThemeManager
 
 from Server import Server
 from Stream import Stream
@@ -104,11 +105,15 @@ class MainWindow:
         # set pardus-software apps
         self.set_pardussoftware_apps()
 
+        self.set_active_theme()
+
         # Show Screen:
         self.window.show_all()
 
         # Hide widgets:
         self.hide_widgets()
+
+        self.set_signals()
 
         thread_sound = threading.Thread(target=self.select_sound_device)
         thread_sound.daemon = True
@@ -207,6 +212,7 @@ class MainWindow:
 
         # - Stack Pages:
         self.page_welcome = get_ui("page_welcome")
+        self.page_theme = get_ui("page_theme")
         self.page_wallpaper = get_ui("page_wallpaper")
         self.page_display = get_ui("page_display")
         self.page_sound = get_ui("page_sound")
@@ -216,6 +222,7 @@ class MainWindow:
         # FIX this solution later. Because we are not getting stack title in this gtk version.
         self.page_welcome.name = _("Welcome")
         self.page_wallpaper.name = _("Select Wallpaper")
+        self.page_theme.name = _("Select Theme")
         self.page_display.name = _("Display Settings")
         self.page_sound.name = _("Sound Settings")
         self.page_applications.name = _("Applications")
@@ -240,6 +247,17 @@ class MainWindow:
 
         self.sound_listbox = get_ui("sound_listbox")
 
+        self.img_lightTheme = get_ui("img_lightTheme")
+        self.img_darkTheme = get_ui("img_darkTheme")
+
+        self.rb_darkTheme = get_ui("rb_darkTheme")
+        self.rb_lightTheme = get_ui("rb_lightTheme")
+
+        self.img_lightTheme.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
+            os.path.dirname(os.path.abspath(__file__)) + "/../data/theme-light.png", 350, 276, False))
+        self.img_darkTheme.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
+            os.path.dirname(os.path.abspath(__file__)) + "/../data/theme-dark.png", 350, 276, False))
+
     def define_variables(self):
         self.currentpage = 0
         self.stk_len = 0
@@ -262,6 +280,23 @@ class MainWindow:
         self.btn_prev.set_sensitive(self.currentpage != 0)
         self.btn_fullhd.set_sensitive(self.fullhd_found)
         self.btn_4k.set_sensitive(self.hidpi_found)
+
+    def set_signals(self):
+        self.rb_lightTheme.connect("clicked", self.on_rb_lightTheme_clicked)
+        self.rb_darkTheme.connect("clicked", self.on_rb_darkTheme_clicked)
+
+    def set_active_theme(self):
+        try:
+            theme = ThemeManager.get_gtk_theme()
+            if theme == "eta":
+                self.rb_lightTheme.set_active(True)
+            elif theme == "eta-dark":
+                self.rb_darkTheme.set_active(True)
+            else:
+                self.rb_lightTheme.set_active(False)
+                self.rb_darkTheme.set_active(False)
+        except Exception as e:
+            print("{}".format(e))
 
     def get_locale(self):
         try:
@@ -580,3 +615,16 @@ class MainWindow:
         self.player = Gst.ElementFactory.make('playbin', 'player')
         self.player.set_property('uri', 'file://' + (os.path.dirname(os.path.abspath(__file__)) + "/../data/sample.m4a"))
         self.player.set_state(Gst.State.PLAYING)
+
+    def on_rb_lightTheme_clicked(self, rb):
+        if rb.get_active():
+
+            GLib.idle_add(ThemeManager.set_gtk_theme, "eta")
+            GLib.idle_add(ThemeManager.set_icon_theme, "eta")
+            GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta")
+
+    def on_rb_darkTheme_clicked(self, rb):
+        if rb.get_active():
+            GLib.idle_add(ThemeManager.set_gtk_theme, "eta-dark")
+            GLib.idle_add(ThemeManager.set_icon_theme, "eta-dark")
+            GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta-dark")
