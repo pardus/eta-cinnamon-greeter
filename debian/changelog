@@ -1,3 +1,13 @@
+eta-cinnamon-greeter (1.0.2) unstable; urgency=medium
+
+  * Add theme manager
+  * Update pot file
+  * Update Turkish translations
+  * Add ThemeManager to setup.py
+  * Add theme png files to setup.py
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 12 Sep 2024 17:05:17 +0300
+
 eta-cinnamon-greeter (1.0.1) unstable; urgency=medium
 
   * Update some spaces
