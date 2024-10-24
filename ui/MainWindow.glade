@@ -5,8 +5,8 @@
   <object class="GtkApplicationWindow" id="window">
     <property name="can-focus">False</property>
     <property name="window-position">center</property>
-    <property name="default-width">815</property>
-    <property name="default-height">650</property>
+    <property name="default-width">1</property>
+    <property name="default-height">1</property>
     <property name="icon-name">pardus-xfce-greeter</property>
     <property name="show-menubar">False</property>
     <child>
@@ -29,17 +29,74 @@
                   <object class="GtkBox" id="page_welcome">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="halign">center</property>
-                    <property name="valign">center</property>
-                    <property name="margin-bottom">89</property>
                     <property name="orientation">vertical</property>
                     <property name="spacing">8</property>
                     <child>
-                      <object class="GtkImage">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="pixel-size">160</property>
-                        <property name="icon-name">emblem-pardus-symbolic</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="vexpand">True</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">34</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">8</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">160</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                                <attributes>
+                                  <attribute name="weight" value="bold"/>
+                                  <attribute name="size" value="21000"/>
+                                </attributes>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">&lt;span size ='x-large'&gt;&lt;b&gt;Expand Your Boundaries! Pardus is Everywhere&lt;/b&gt;&lt;/span&gt;</property>
+                            <property name="use-markup">True</property>
+                            <property name="justify">center</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -48,48 +105,50 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="label">ETAP 23</property>
-                        <attributes>
-                          <attribute name="weight" value="bold"/>
-                          <attribute name="size" value="21000"/>
-                        </attributes>
+                        <property name="halign">end</property>
+                        <property name="valign">end</property>
+                        <property name="margin-end">21</property>
+                        <property name="margin-bottom">8</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="label" translatable="yes">Let's Start</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-start">21</property>
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
                       </object>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
                         <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkSeparator">
-                        <property name="width-request">300</property>
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="label" translatable="yes">Welcome.
-
-This application helps you to configure ETAP.</property>
-                        <property name="use-markup">True</property>
-                        <property name="justify">center</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">3</property>
                       </packing>
                     </child>
                   </object>
@@ -107,44 +166,24 @@ This application helps you to configure ETAP.</property>
                     <property name="margin-top">13</property>
                     <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">34</property>
+                    <property name="spacing">21</property>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="halign">center</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">13</property>
-                        <child>
-                          <object class="GtkImage">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="valign">start</property>
-                            <property name="margin-top">21</property>
-                            <property name="pixel-size">150</property>
-                            <property name="icon-name">computer-symbolic</property>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
+                        <property name="spacing">5</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="orientation">vertical</property>
-                            <property name="spacing">8</property>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="margin-top">13</property>
-                                <property name="label" translatable="yes">Current Resolution</property>
-                                <attributes>
-                                  <attribute name="weight" value="bold"/>
-                                </attributes>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -153,10 +192,10 @@ This application helps you to configure ETAP.</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="lbl_current_res">
+                              <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label">3840x2160@60</property>
+                                <property name="label">ETAP 23</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -168,6 +207,23 @@ This application helps you to configure ETAP.</property>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">Always the Same Speed, Uninterrupted Performance! Don't Waste Time in Education with Pardus</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
                             <property name="position">1</property>
                           </packing>
                         </child>
@@ -175,6 +231,7 @@ This application helps you to configure ETAP.</property>
                           <object class="GtkSeparator">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -193,64 +250,82 @@ This application helps you to configure ETAP.</property>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="halign">center</property>
-                        <property name="valign">start</property>
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">13</property>
-                        <property name="homogeneous">True</property>
-                        <child>
-                          <object class="GtkButton" id="btn_4k">
-                            <property name="label" translatable="yes">4K %200</property>
-                            <property name="visible">True</property>
-                            <property name="can-focus">True</property>
-                            <property name="receives-default">True</property>
-                            <property name="valign">center</property>
-                            <signal name="clicked" handler="on_btn_4k_clicked" swapped="no"/>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="btn_fullhd">
-                            <property name="label" translatable="yes">FullHD %100</property>
-                            <property name="visible">True</property>
-                            <property name="can-focus">True</property>
-                            <property name="receives-default">True</property>
-                            <property name="valign">center</property>
-                            <signal name="clicked" handler="on_btn_fullhd_clicked" swapped="no"/>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkBox">
-                        <property name="visible">True</property>
-                        <property name="can-focus">False</property>
-                        <property name="halign">center</property>
                         <property name="valign">center</property>
-                        <property name="margin-start">8</property>
-                        <property name="margin-end">8</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">13</property>
+                        <property name="spacing">21</property>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">4K resolution provides a clearer view, but some applications may not support 4K resolution and may be difficult to use. In this case, you can choose Full HD resolution.</property>
-                            <property name="wrap">True</property>
+                            <property name="halign">center</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">13</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="valign">start</property>
+                                <property name="pixel-size">150</property>
+                                <property name="icon-name">computer-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">8</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="margin-top">13</property>
+                                    <property name="label" translatable="yes">Current Resolution</property>
+                                    <attributes>
+                                      <attribute name="weight" value="bold"/>
+                                    </attributes>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="lbl_current_res">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="label">3840x2160@60</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -263,12 +338,18 @@ This application helps you to configure ETAP.</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">center</property>
-                            <property name="spacing">5</property>
+                            <property name="valign">start</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">13</property>
+                            <property name="homogeneous">True</property>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkButton" id="btn_4k">
+                                <property name="label" translatable="yes">4K %200</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">You can change the resolution setting later bottom right corner of your desktop</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <signal name="clicked" handler="on_btn_4k_clicked" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -277,11 +358,13 @@ This application helps you to configure ETAP.</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage">
+                              <object class="GtkButton" id="btn_fullhd">
+                                <property name="label" translatable="yes">FullHD %100</property>
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="icon-name">preferences-desktop-display-symbolic</property>
-                                <property name="icon_size">3</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="valign">center</property>
+                                <signal name="clicked" handler="on_btn_fullhd_clicked" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -289,23 +372,91 @@ This application helps you to configure ETAP.</property>
                                 <property name="position">1</property>
                               </packing>
                             </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">13</property>
                             <child>
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">change it with the icon.</property>
+                                <property name="label" translatable="yes">4K resolution provides a clearer view, but some applications may not support 4K resolution and may be difficult to use. In this case, you can choose Full HD resolution.</property>
+                                <property name="wrap">True</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">2</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="spacing">5</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="label" translatable="yes">You can change the resolution setting later bottom right corner of your desktop</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="icon-name">preferences-desktop-display-symbolic</property>
+                                    <property name="icon_size">3</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="label" translatable="yes">change it with the icon.</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
                               </packing>
                             </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">1</property>
+                            <property name="position">2</property>
                           </packing>
                         </child>
                       </object>
@@ -330,20 +481,97 @@ This application helps you to configure ETAP.</property>
                     <property name="margin-top">13</property>
                     <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">55</property>
+                    <property name="spacing">21</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">Secure Education, Seamless Technology! No Place for Viruses with Pardus</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">center</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">13</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="valign">start</property>
-                            <property name="margin-top">21</property>
                             <property name="pixel-size">150</property>
                             <property name="icon-name">audio-speakers-symbolic</property>
                           </object>
@@ -357,7 +585,7 @@ This application helps you to configure ETAP.</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                     <child>
@@ -418,7 +646,7 @@ This application helps you to configure ETAP.</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
@@ -431,15 +659,101 @@ This application helps you to configure ETAP.</property>
                   <object class="GtkBox" id="page_theme">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
+                    <property name="margin-start">13</property>
+                    <property name="margin-end">13</property>
+                    <property name="margin-top">13</property>
+                    <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
+                    <property name="spacing">21</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">Tailored to Your Needs, Made for You! Pardus Was Created for You</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
                         <property name="halign">center</property>
-                        <property name="valign">center</property>
-                        <property name="margin-bottom">21</property>
-                        <property name="spacing">13</property>
+                        <property name="margin-start">13</property>
+                        <property name="margin-end">13</property>
+                        <property name="margin-top">13</property>
+                        <property name="margin-bottom">13</property>
+                        <property name="spacing">21</property>
                         <property name="homogeneous">True</property>
                         <child>
                           <object class="GtkBox">
@@ -453,7 +767,6 @@ This application helps you to configure ETAP.</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
                                 <property name="halign">center</property>
-                                <property name="margin-top">13</property>
                                 <property name="draw-indicator">False</property>
                                 <child>
                                   <object class="GtkImage" id="img_lightTheme">
@@ -503,7 +816,6 @@ This application helps you to configure ETAP.</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
                                 <property name="halign">center</property>
-                                <property name="margin-top">13</property>
                                 <property name="draw-indicator">False</property>
                                 <property name="group">rb_lightTheme</property>
                                 <child>
@@ -563,7 +875,86 @@ This application helps you to configure ETAP.</property>
                     <property name="margin-end">13</property>
                     <property name="margin-top">13</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">8</property>
+                    <property name="spacing">21</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">Make Your Choices! Pardus Offers Options Tailored to You</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkScrolledWindow">
                         <property name="visible">True</property>
@@ -608,13 +999,93 @@ This application helps you to configure ETAP.</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
                     <property name="margin-end">13</property>
+                    <property name="margin-top">13</property>
+                    <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">8</property>
+                    <property name="spacing">21</property>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="margin-top">34</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">No Licensing Issues with Pardus! Discover the Power of Free Software</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
                         <property name="orientation">vertical</property>
                         <property name="spacing">8</property>
                         <child>
@@ -647,14 +1118,13 @@ This application helps you to configure ETAP.</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="valign">center</property>
                         <property name="orientation">vertical</property>
                         <child>
                           <object class="GtkStack" id="ui_apps_stack">
@@ -699,9 +1169,9 @@ This application helps you to configure ETAP.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="expand">True</property>
+                        <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                     <child>
@@ -710,7 +1180,6 @@ This application helps you to configure ETAP.</property>
                         <property name="can-focus">False</property>
                         <property name="halign">center</property>
                         <property name="valign">center</property>
-                        <property name="margin-bottom">34</property>
                         <property name="spacing">13</property>
                         <child>
                           <object class="GtkBox">
@@ -864,9 +1333,9 @@ This application helps you to configure ETAP.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="expand">True</property>
+                        <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">2</property>
+                        <property name="position">3</property>
                       </packing>
                     </child>
                   </object>
@@ -879,9 +1348,91 @@ This application helps you to configure ETAP.</property>
                   <object class="GtkBox" id="page_support">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="margin-bottom">8</property>
+                    <property name="margin-start">13</property>
+                    <property name="margin-end">13</property>
+                    <property name="margin-top">13</property>
+                    <property name="margin-bottom">13</property>
                     <property name="orientation">vertical</property>
                     <property name="spacing">8</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="pixel-size">38</property>
+                                <property name="icon-name">emblem-pardus-symbolic</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label">ETAP 23</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="label" translatable="yes">We Are Always with You! Support is at Your Fingertips with the Pardus Community</property>
+                            <property name="justify">center</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-top">13</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
                     <child>
                       <object class="GtkBox">
                         <property name="visible">True</property>
@@ -1151,9 +1702,6 @@ This application helps you to configure ETAP.</property>
                     <property name="name">6</property>
                     <property name="position">6</property>
                   </packing>
-                </child>
-                <child>
-                  <placeholder/>
                 </child>
               </object>
               <packing>
