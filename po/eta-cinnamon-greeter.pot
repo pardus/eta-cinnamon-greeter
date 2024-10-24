@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-12 13:01+0300\n"
+"POT-Creation-Date: 2024-10-24 20:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,148 +17,179 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ui/MainWindow.glade:83
+#: ui/MainWindow.glade:90
 msgid ""
-"Welcome.\n"
-"\n"
-"This application helps you to configure ETAP."
+"<span size ='x-large'><b>Expand Your Boundaries! Pardus is Everywhere</b></"
+"span>"
 msgstr ""
 
-#: ui/MainWindow.glade:144
-msgid "Current Resolution"
-msgstr ""
-
-#: ui/MainWindow.glade:203
-msgid "4K %200"
+#: ui/MainWindow.glade:123
+msgid "Let's Start"
 msgstr ""
 
 #: ui/MainWindow.glade:218
+msgid ""
+"Always the Same Speed, Uninterrupted Performance! Don't Waste Time in "
+"Education with Pardus"
+msgstr ""
+
+#: ui/MainWindow.glade:288
+msgid "Current Resolution"
+msgstr ""
+
+#: ui/MainWindow.glade:347
+msgid "4K %200"
+msgstr ""
+
+#: ui/MainWindow.glade:362
 msgid "FullHD %100"
 msgstr ""
 
-#: ui/MainWindow.glade:252
+#: ui/MainWindow.glade:396
 msgid ""
 "4K resolution provides a clearer view, but some applications may not support "
 "4K resolution and may be difficult to use. In this case, you can choose Full "
 "HD resolution."
 msgstr ""
 
-#: ui/MainWindow.glade:271
+#: ui/MainWindow.glade:415
 msgid ""
 "You can change the resolution setting later bottom right corner of your "
 "desktop"
 msgstr ""
 
-#: ui/MainWindow.glade:296
+#: ui/MainWindow.glade:440
 msgid "change it with the icon."
 msgstr ""
 
-#: ui/MainWindow.glade:476
+#: ui/MainWindow.glade:533
+msgid "Secure Education, Seamless Technology! No Place for Viruses with Pardus"
+msgstr ""
+
+#: ui/MainWindow.glade:716
+msgid "Tailored to Your Needs, Made for You! Pardus Was Created for You"
+msgstr ""
+
+#: ui/MainWindow.glade:789
 msgid "Light"
 msgstr ""
 
-#: ui/MainWindow.glade:527
+#: ui/MainWindow.glade:839
 msgid "Dark"
 msgstr ""
 
-#: ui/MainWindow.glade:637
+#: ui/MainWindow.glade:927
+msgid "Make Your Choices! Pardus Offers Options Tailored to You"
+msgstr ""
+
+#: ui/MainWindow.glade:1054
+msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
+msgstr ""
+
+#: ui/MainWindow.glade:1108
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr ""
 
-#: ui/MainWindow.glade:727
+#: ui/MainWindow.glade:1196
 msgid "For more application"
 msgstr ""
 
-#: ui/MainWindow.glade:743
+#: ui/MainWindow.glade:1212
 msgid "For more settings"
 msgstr ""
 
-#: ui/MainWindow.glade:796
+#: ui/MainWindow.glade:1265
 msgid "Pardus Software Center"
 msgstr ""
 
-#: ui/MainWindow.glade:841
+#: ui/MainWindow.glade:1310
 msgid "System Settings"
 msgstr ""
 
-#: ui/MainWindow.glade:907
+#: ui/MainWindow.glade:1405
+msgid ""
+"We Are Always with You! Support is at Your Fingertips with the Pardus "
+"Community"
+msgstr ""
+
+#: ui/MainWindow.glade:1458
 msgid "<span size=\"large\">Links</span>"
 msgstr ""
 
-#: ui/MainWindow.glade:920
+#: ui/MainWindow.glade:1471
 msgid ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Home Page</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:933
+#: ui/MainWindow.glade:1484
 msgid ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Documentations</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:946
+#: ui/MainWindow.glade:1497
 msgid ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Community</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:959
+#: ui/MainWindow.glade:1510
 msgid ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
 msgstr ""
 
-#: ui/MainWindow.glade:995 ui/MainWindow.glade:1023
+#: ui/MainWindow.glade:1546 ui/MainWindow.glade:1574
 msgid "<small></small>"
 msgstr ""
 
-#: ui/MainWindow.glade:1010
+#: ui/MainWindow.glade:1561
 msgid "<small>+90</small>"
 msgstr ""
 
-#: ui/MainWindow.glade:1051
+#: ui/MainWindow.glade:1602
 msgid "<span size=\"large\">Support</span>"
 msgstr ""
 
-#: ui/MainWindow.glade:1064
+#: ui/MainWindow.glade:1615
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr ""
 
-#: ui/MainWindow.glade:1175
+#: ui/MainWindow.glade:1723
 msgid "Show at next startup."
 msgstr ""
 
-#: ui/MainWindow.glade:1217
+#: ui/MainWindow.glade:1765
 msgid "Previous"
 msgstr ""
 
-#: ui/MainWindow.glade:1235
+#: ui/MainWindow.glade:1783
 msgid "Next"
 msgstr ""
 
-#: ui/MainWindow.glade:1243
+#: ui/MainWindow.glade:1791
 msgid "page0"
 msgstr ""
 
-#: ui/MainWindow.glade:1248
+#: ui/MainWindow.glade:1796
 msgid "Close"
 msgstr ""
 
-#: ui/MainWindow.glade:1260
+#: ui/MainWindow.glade:1808
 msgid "page1"
 msgstr ""
 
-#: ui/MainWindow.glade:1313 src/MainWindow.py:189
+#: ui/MainWindow.glade:1861 src/MainWindow.py:189
 msgid "ETA Greeter"
 msgstr ""
 
-#: ui/MainWindow.glade:1359
+#: ui/MainWindow.glade:1907
 msgid "Tool that helps you to get ETAP ready."
 msgstr ""
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:1362
+#: ui/MainWindow.glade:1910
 msgid "translator-credits"
 msgstr ""
 
