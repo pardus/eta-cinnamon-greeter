@@ -1,6 +1,6 @@
 # ETA Cinnamon Greeter
 
-ETA Cinnamon Greeter is a menu application.
+ETA Cinnamon Greeter is a greeter application that welcomes the user after login.
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/eta-cinnamon-greeter.svg)](https://repology.org/project/eta-cinnamon-greeter/versions)
 
