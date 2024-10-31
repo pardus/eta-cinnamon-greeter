@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-24 20:34+0300\n"
+"PO-Revision-Date: 2024-10-31 19:51+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: ui/MainWindow.glade:90
+msgid ""
+"<span size ='x-large'><b>Expand Your Boundaries! Pardus is Everywhere</b></"
+"span>"
+msgstr ""
+"<span size ='x-large'><b>Expanda os seus limites! O Pardus está em todo o "
+"lado</b></span>"
+
+#: ui/MainWindow.glade:123
+msgid "Let's Start"
+msgstr "Vamos começar"
+
+#: ui/MainWindow.glade:218
+msgid ""
+"Always the Same Speed, Uninterrupted Performance! Don't Waste Time in "
+"Education with Pardus"
+msgstr ""
+"Sempre a mesma velocidade, desempenho ininterrupto! Não perca tempo na "
+"educação com o Pardus"
+
+#: ui/MainWindow.glade:288
+msgid "Current Resolution"
+msgstr "Resolução atual"
+
+#: ui/MainWindow.glade:347
+msgid "4K %200"
+msgstr "4K %200"
+
+#: ui/MainWindow.glade:362
+msgid "FullHD %100"
+msgstr "FullHD %100"
+
+#: ui/MainWindow.glade:396
+msgid ""
+"4K resolution provides a clearer view, but some applications may not support "
+"4K resolution and may be difficult to use. In this case, you can choose Full "
+"HD resolution."
+msgstr ""
+"A resolução 4K proporciona uma visualização mais nítida, mas algumas "
+"aplicações podem não suportar a resolução 4K e podem ser difíceis de "
+"utilizar. Neste caso, pode escolher a resolução Full HD."
+
+#: ui/MainWindow.glade:415
+msgid ""
+"You can change the resolution setting later bottom right corner of your "
+"desktop"
+msgstr ""
+"Pode alterar a definição de resolução no canto inferior direito da sua área "
+"de trabalho"
+
+#: ui/MainWindow.glade:440
+msgid "change it with the icon."
+msgstr "altere-o com o ícone."
+
+#: ui/MainWindow.glade:533
+msgid "Secure Education, Seamless Technology! No Place for Viruses with Pardus"
+msgstr ""
+"Educação segura, tecnologia sem falhas! Não há lugar para vírus com o Pardus"
+
+#: ui/MainWindow.glade:716
+msgid "Tailored to Your Needs, Made for You! Pardus Was Created for You"
+msgstr ""
+"Feito à medida das suas necessidades, feito para si! O Pardus foi criado "
+"para si"
+
+#: ui/MainWindow.glade:789
+msgid "Light"
+msgstr "Claro"
+
+#: ui/MainWindow.glade:839
+msgid "Dark"
+msgstr "Escuro"
+
+#: ui/MainWindow.glade:927
+msgid "Make Your Choices! Pardus Offers Options Tailored to You"
+msgstr "Faça as suas escolhas! O Pardus oferece opções adaptadas a si"
+
+#: ui/MainWindow.glade:1054
+msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
+msgstr ""
+"Sem problemas de licenciamento com o Pardus! Descubra o poder do software "
+"livre"
+
+#: ui/MainWindow.glade:1108
+msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
+msgstr "<span size='x-large'><b>Centro de Software Pardus</b></span>"
+
+#: ui/MainWindow.glade:1196
+msgid "For more application"
+msgstr "Para mais aplicações"
+
+#: ui/MainWindow.glade:1212
+msgid "For more settings"
+msgstr "Para mais definições"
+
+#: ui/MainWindow.glade:1265
+msgid "Pardus Software Center"
+msgstr "Centro de Software Pardus"
+
+#: ui/MainWindow.glade:1310
+msgid "System Settings"
+msgstr "Definições do sistema"
+
+#: ui/MainWindow.glade:1405
+msgid ""
+"We Are Always with You! Support is at Your Fingertips with the Pardus "
+"Community"
+msgstr ""
+"Estamos sempre consigo! O suporte está ao seu alcance com a Comunidade Pardus"
+
+#: ui/MainWindow.glade:1458
+msgid "<span size=\"large\">Links</span>"
+msgstr "<span size=\"large\">Ligações</span>"
+
+#: ui/MainWindow.glade:1471
+msgid ""
+"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
+"tr\">Home Page</a>"
+msgstr ""
+"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
+"tr\">Página inicial</a>"
+
+#: ui/MainWindow.glade:1484
+msgid ""
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
+"tr\">Documentations</a>"
+msgstr ""
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
+"tr\">Documentação</a>"
+
+#: ui/MainWindow.glade:1497
+msgid ""
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
+"tr\">Community</a>"
+msgstr ""
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
+"tr\">Comunidade</a>"
+
+#: ui/MainWindow.glade:1510
+msgid ""
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
+"tr\">Forum</a>"
+msgstr ""
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
+"tr\">Fórum</a>"
+
+#: ui/MainWindow.glade:1546 ui/MainWindow.glade:1574
+msgid "<small></small>"
+msgstr "<small></small>"
+
+#: ui/MainWindow.glade:1561
+msgid "<small>+90</small>"
+msgstr "<small>+90</small>"
+
+#: ui/MainWindow.glade:1602
+msgid "<span size=\"large\">Support</span>"
+msgstr "<span size=\"large\">Suporte</span>"
+
+#: ui/MainWindow.glade:1615
+msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
+msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
+
+#: ui/MainWindow.glade:1723
+msgid "Show at next startup."
+msgstr "Mostrar no próximo arranque."
+
+#: ui/MainWindow.glade:1765
+msgid "Previous"
+msgstr "Anterior"
+
+#: ui/MainWindow.glade:1783
+msgid "Next"
+msgstr "Seguinte"
+
+#: ui/MainWindow.glade:1791
+msgid "page0"
+msgstr "page0"
+
+#: ui/MainWindow.glade:1796
+msgid "Close"
+msgstr "Fechar"
+
+#: ui/MainWindow.glade:1808
+msgid "page1"
+msgstr "page1"
+
+#: ui/MainWindow.glade:1861 src/MainWindow.py:189
+msgid "ETA Greeter"
+msgstr "Saudador ETA"
+
+#: ui/MainWindow.glade:1907
+msgid "Tool that helps you to get ETAP ready."
+msgstr "Ferramenta que o ajuda a preparar o ETAP."
+
+#. Name Surname <example@examplemail.com>
+#: ui/MainWindow.glade:1910
+msgid "translator-credits"
+msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
+
+#: src/MainWindow.py:193
+msgid "About ETA Greeter"
+msgstr "Acerca do Saudador ETA"
+
+#: src/MainWindow.py:223
+msgid "Welcome"
+msgstr "Bem-vindo(a)"
+
+#: src/MainWindow.py:224
+msgid "Select Wallpaper"
+msgstr "Selecionar papel de parede"
+
+#: src/MainWindow.py:225
+msgid "Select Theme"
+msgstr "Selecionar tema"
+
+#: src/MainWindow.py:226
+msgid "Display Settings"
+msgstr "Definições de ecrã"
+
+#: src/MainWindow.py:227
+msgid "Sound Settings"
+msgstr "Definições de som"
+
+#: src/MainWindow.py:228
+msgid "Applications"
+msgstr "Aplicações"
+
+#: src/MainWindow.py:229
+msgid "Support & Community"
+msgstr "Suporte e comunidade"
+
+#: src/MainWindow.py:569 src/MainWindow.py:575 src/MainWindow.py:581
+#: src/MainWindow.py:587 src/MainWindow.py:595
+msgid "Error"
+msgstr "Erro"
