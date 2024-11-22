@@ -4,8 +4,8 @@
    data-name="Capa 1"
    viewBox="0 0 64 64"
    version="1.1"
-   sodipodi:docname="pardus-xfce-greeter.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="eta-cinnamon-greeter.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -19,15 +19,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="5.1099514"
-     inkscape:cx="13.307367"
-     inkscape:cy="49.021993"
+     inkscape:zoom="3.6132813"
+     inkscape:cx="-0.41513513"
+     inkscape:cy="53.967567"
      inkscape:window-width="1920"
-     inkscape:window-height="1127"
+     inkscape:window-height="1005"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Capa_1" />
+     inkscape:current-layer="Capa_1"
+     showgrid="false" />
   <defs
      id="defs1">
     <style
@@ -35,7 +36,7 @@
   </defs>
   <g
      id="g1"
-     transform="matrix(1.3381366,0,0,1.3381366,-10.820372,-10.820372)">
+     transform="matrix(1.3381366,0,0,1.3381366,-10.820371,-10.820371)">
     <g
        id="g299"
        transform="translate(75.47297,265.8927)">
@@ -75,12 +76,12 @@
        style="fill:#33b5d9;fill-opacity:1">
       <polygon
          class="cls-2"
-         points="38.3,40.9 38.3,37.4 32,35.2 25.7,37.4 25.7,40.9 32,44.7 "
+         points="25.7,40.9 32,44.7 38.3,40.9 38.3,37.4 32,35.2 25.7,37.4 "
          id="polygon1"
          style="fill:#33b5d9;fill-opacity:1" />
       <polygon
          class="cls-2"
-         points="26.3,28.5 19.6,33.8 22.5,36.6 30.6,33.4 30.8,29.8 26.7,25.5 37.3,25.5 33.2,29.8 33.4,33.4 41.5,36.6 44.4,33.8 37.7,28.5 45.5,32.8 46.3,32 41.8,22.8 32,19.3 22.2,22.8 17.7,32 18.5,32.8 "
+         points="30.8,29.8 26.7,25.5 37.3,25.5 33.2,29.8 33.4,33.4 41.5,36.6 44.4,33.8 37.7,28.5 45.5,32.8 46.3,32 41.8,22.8 32,19.3 22.2,22.8 17.7,32 18.5,32.8 26.3,28.5 19.6,33.8 22.5,36.6 30.6,33.4 "
          id="polygon2"
          style="fill:#33b5d9;fill-opacity:1" />
       <polygon
@@ -90,7 +91,7 @@
          style="fill:#33b5d9;fill-opacity:1" />
       <polygon
          class="cls-3"
-         points="22.5,36.6 30.6,33.4 30.8,29.8 26.7,25.5 32,25.5 32,19.3 22.2,22.8 17.7,32 18.5,32.8 26.3,28.5 19.6,33.8 "
+         points="32,25.5 32,19.3 22.2,22.8 17.7,32 18.5,32.8 26.3,28.5 19.6,33.8 22.5,36.6 30.6,33.4 30.8,29.8 26.7,25.5 "
          id="polygon4"
          style="fill:#33b5d9;fill-opacity:1" />
     </g>
