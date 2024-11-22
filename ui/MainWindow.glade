@@ -1743,7 +1743,7 @@
                     <property name="can-focus">False</property>
                     <property name="halign">center</property>
                     <property name="hexpand">False</property>
-                    <property name="label">TÜBİTAK ULAKBİM | 2024</property>
+                    <property name="label">© TÜBİTAK BİLGEM</property>
                     <attributes>
                       <attribute name="weight" value="light"/>
                     </attributes>
@@ -1904,7 +1904,7 @@
     <property name="transient-for">window</property>
     <property name="program-name">ETA Greeter</property>
     <property name="version">0.1.0</property>
-    <property name="copyright">© 2024 Pardus</property>
+    <property name="copyright">© TÜBİTAK BİLGEM</property>
     <property name="comments" translatable="yes">Tool that helps you to get ETAP ready.</property>
     <property name="website">https://github.com/pardus/etap-cinnamon-greeter</property>
     <property name="authors">Fatih Altun &lt;fatih.altun@pardus.org.tr&gt;</property>
