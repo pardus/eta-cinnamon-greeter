@@ -1,3 +1,14 @@
+eta-cinnamon-greeter (1.2.0) unstable; urgency=medium
+
+  * Add night light page
+  * Update pot file
+  * Update Turkish translations
+  * Fix typo
+  * Fix typo on Turkish translation
+  * Add missing version file to setup.py
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Sun, 13 Apr 2025 15:51:20 +0300
+
 eta-cinnamon-greeter (1.1.0) unstable; urgency=medium
 
   [ Fatih Altun ]
