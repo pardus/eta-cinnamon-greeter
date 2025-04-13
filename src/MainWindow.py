@@ -521,6 +521,8 @@ class MainWindow:
         GLib.idle_add(self.sound_listbox.show_all)
 
     def set_initial_nightlight_status(self):
+        self.config_nightlight_status = False
+        self.config_nightlight_temp = 5500
         self.nightlight_config_file = "{}/pardus/pardus-night-light/settings.ini".format(GLib.get_user_config_dir())
         if os.path.isfile(self.nightlight_config_file):
             try:
@@ -530,8 +532,6 @@ class MainWindow:
                 self.config_nightlight_temp = self.nightlight_config.getint('Main', 'temp')
             except Exception as e:
                 print("{}".format(e))
-                self.config_nightlight_status = False
-                self.config_nightlight_temp = 5500
 
             self.ui_night_switch.set_state(self.config_nightlight_status)
             self.ui_temp_adjusment.set_value(self.config_nightlight_temp)
