@@ -51,7 +51,8 @@ data_files = [
    "src/utils.py",
    "src/WallpaperManager.py",
    "src/ScaleManager.py",
-   "src/ThemeManager.py"]
+   "src/ThemeManager.py",
+   "src/__version__"]
   ),
  ("/usr/share/pardus/eta-cinnamon-greeter/ui", ["ui/MainWindow.glade"]),
  ("/usr/bin/", ["eta-cinnamon-greeter"]),
