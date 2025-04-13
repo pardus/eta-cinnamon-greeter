@@ -14,10 +14,11 @@ from utils import ErrorDialog
 gi.require_version('Gtk', '3.0')
 gi.require_version('Gst', '1.0')
 gi.require_version('Cvc', '1.0')
-from gi.repository import Gtk, GdkPixbuf, GLib, Gdk, Gst, Cvc
+from gi.repository import Gio, Gtk, GdkPixbuf, GLib, Gdk, Gst, Cvc
 import locale
 from locale import gettext as _
 from pathlib import Path
+from configparser import ConfigParser
 from locale import getlocale
 from UserSettings import UserSettings
 
@@ -107,6 +108,8 @@ class MainWindow:
 
         self.set_active_theme()
 
+        self.set_initial_nightlight_status()
+
         # Show Screen:
         self.window.show_all()
 
@@ -137,12 +140,7 @@ class MainWindow:
         settings = Gtk.Settings.get_default()
         theme_name = "{}".format(settings.get_property('gtk-theme-name')).lower().strip()
         cssProvider = Gtk.CssProvider()
-        if theme_name.startswith("pardus") or theme_name.startswith("adwaita"):
-            cssProvider.load_from_path(os.path.dirname(os.path.abspath(__file__)) + "/../data/css/all.css")
-        elif theme_name.startswith("adw-gtk3"):
-            cssProvider.load_from_path(os.path.dirname(os.path.abspath(__file__)) + "/../data/css/adw.css")
-        else:
-            cssProvider.load_from_path(os.path.dirname(os.path.abspath(__file__)) + "/../data/css/base.css")
+        cssProvider.load_from_path(os.path.dirname(os.path.abspath(__file__)) + "/../data/css/style.css")
         screen = Gdk.Screen.get_default()
         styleContext = Gtk.StyleContext()
         styleContext.add_provider_for_screen(screen, cssProvider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
@@ -218,6 +216,7 @@ class MainWindow:
         self.page_sound = get_ui("page_sound")
         self.page_applications = get_ui("page_applications")
         self.page_support = get_ui("page_support")
+        self.page_nightlight = get_ui("page_nightlight")
 
         # FIX this solution later. Because we are not getting stack title in this gtk version.
         self.page_welcome.name = _("Welcome")
@@ -227,6 +226,7 @@ class MainWindow:
         self.page_sound.name = _("Sound Settings")
         self.page_applications.name = _("Applications")
         self.page_support.name = _("Support & Community")
+        self.page_nightlight.name = _("Night Light")
 
         # - Display Settings:
         self.flow_wallpapers = get_ui("flow_wallpapers")
@@ -235,8 +235,15 @@ class MainWindow:
         self.btn_4k = get_ui("btn_4k")
         self.btn_fullhd = get_ui("btn_fullhd")
 
-        self.chkbtn_autostart = get_ui("chkbtn_autostart")
+        # - Night Light:
+        self.ui_night_switch = get_ui("ui_night_switch")
+        self.ui_temp_scale = get_ui("ui_temp_scale")
+        self.ui_temp_adjusment = get_ui("ui_temp_adjusment")
+        self.ui_nightlight_settings_box = get_ui("ui_nightlight_settings_box")
+        self.ui_nightlight_temp_label = get_ui("ui_nightlight_temp_label")
+        self.ui_nightlight_stack = get_ui("ui_nightlight_stack")
 
+        self.chkbtn_autostart = get_ui("chkbtn_autostart")
 
         tabTitle = self.stk_pages.get_visible_child().name
         self.lbl_headerTitle.set_text(tabTitle)
@@ -253,10 +260,15 @@ class MainWindow:
         self.rb_darkTheme = get_ui("rb_darkTheme")
         self.rb_lightTheme = get_ui("rb_lightTheme")
 
+        self.img_nightlight = get_ui("img_nightlight")
+
         self.img_lightTheme.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
             os.path.dirname(os.path.abspath(__file__)) + "/../data/theme-light.png", 350, 276, False))
         self.img_darkTheme.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
             os.path.dirname(os.path.abspath(__file__)) + "/../data/theme-dark.png", 350, 276, False))
+
+        self.img_nightlight.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
+            os.path.dirname(os.path.abspath(__file__)) + "/../data/pardus-night-light-ss.png", 500, 222, False))
 
     def define_variables(self):
         self.currentpage = 0
@@ -280,10 +292,14 @@ class MainWindow:
         self.btn_prev.set_sensitive(self.currentpage != 0)
         self.btn_fullhd.set_sensitive(self.fullhd_found)
         self.btn_4k.set_sensitive(self.hidpi_found)
+        self.ui_temp_scale.set_visible(self.config_nightlight_status)
+        self.ui_nightlight_temp_label.set_visible(self.config_nightlight_status)
 
     def set_signals(self):
         self.rb_lightTheme.connect("clicked", self.on_rb_lightTheme_clicked)
         self.rb_darkTheme.connect("clicked", self.on_rb_darkTheme_clicked)
+        self.ui_night_switch.connect("state-set", self.on_ui_night_switch_state_set)
+        self.ui_temp_adjusment.connect("value-changed", self.on_ui_temp_adjusment_value_changed)
 
     def set_active_theme(self):
         try:
@@ -504,6 +520,27 @@ class MainWindow:
         self.sound_listbox.add(row)
         GLib.idle_add(self.sound_listbox.show_all)
 
+    def set_initial_nightlight_status(self):
+        self.nightlight_config_file = "{}/pardus/pardus-night-light/settings.ini".format(GLib.get_user_config_dir())
+        if os.path.isfile(self.nightlight_config_file):
+            try:
+                self.nightlight_config = ConfigParser(strict=False)
+                self.nightlight_config.read(self.nightlight_config_file)
+                self.config_nightlight_status = self.nightlight_config.getboolean('Main', 'status')
+                self.config_nightlight_temp = self.nightlight_config.getint('Main', 'temp')
+            except Exception as e:
+                print("{}".format(e))
+                self.config_nightlight_status = False
+                self.config_nightlight_temp = 5500
+
+            self.ui_night_switch.set_state(self.config_nightlight_status)
+            self.ui_temp_adjusment.set_value(self.config_nightlight_temp)
+
+        if self.is_app_installed("tr.org.pardus.night-light.desktop"):
+            self.ui_nightlight_stack.set_visible_child_name("installed")
+        else:
+            self.ui_nightlight_stack.set_visible_child_name("notinstalled")
+
     # - stack prev and next page controls
     def get_next_page(self, page):
         increase = 0
@@ -520,6 +557,12 @@ class MainWindow:
             if self.stk_pages.get_child_by_name("{}".format(page + increase)) != None:
                 return page + increase
         return None
+
+    def is_app_installed(self, app_id):
+        try:
+            return Gio.DesktopAppInfo.new(app_id) is not None
+        except:
+            return False
 
     # =========== SIGNALS:    
     def onDestroy(self, b):
@@ -628,3 +671,26 @@ class MainWindow:
             GLib.idle_add(ThemeManager.set_gtk_theme, "eta-dark")
             GLib.idle_add(ThemeManager.set_icon_theme, "eta-dark")
             GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta-dark")
+
+    def on_ui_night_switch_state_set(self, switch, state):
+        self.ui_temp_scale.set_visible(state)
+        self.ui_nightlight_temp_label.set_visible(state)
+        subprocess.Popen(["pardus-night-light", "-s", "1" if state else "0"],
+                         stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL,
+                         stdin=subprocess.DEVNULL,
+                         close_fds=True,
+                         start_new_session=True)
+
+    def on_ui_temp_adjusment_value_changed(self, adjusment):
+        value = "{:0.0f}".format(adjusment.get_value())
+        print("on_ui_temp_adjusment_value_changed", value)
+        subprocess.Popen(["pardus-night-light", "-c", "{}".format(value)],
+                         stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL,
+                         stdin=subprocess.DEVNULL,
+                         close_fds=True,
+                         start_new_session=True)
+
+    def on_ui_nightlight_install_button_clicked(self, button):
+        subprocess.Popen(["pardus-software", "-d", "pardus-night-light"])

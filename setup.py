@@ -38,11 +38,9 @@ data_files = [
  ("/usr/share/pardus/eta-cinnamon-greeter/data",
   ["data/eta-cinnamon-greeter.svg", "data/discord.svg", "data/github.svg",
    "data/tr.org.pardus.eta-cinnamon-greeter.desktop", "data/sample.m4a",
-   "data/theme-dark.png", "data/theme-light.png"]),
+   "data/theme-dark.png", "data/theme-light.png", "data/pardus-night-light-ss.png"]),
  ("/usr/share/pardus/eta-cinnamon-greeter/data/css",
-  ["data/css/adw.css",
-   "data/css/all.css",
-   "data/css/base.css"]
+  ["data/css/style.css"]
   ),
  ("/usr/share/pardus/eta-cinnamon-greeter/src",
   ["src/Main.py",
