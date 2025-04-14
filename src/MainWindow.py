@@ -237,11 +237,14 @@ class MainWindow:
 
         # - Night Light:
         self.ui_night_switch = get_ui("ui_night_switch")
-        self.ui_temp_scale = get_ui("ui_temp_scale")
+        self.ui_temp_box = get_ui("ui_temp_box")
         self.ui_temp_adjusment = get_ui("ui_temp_adjusment")
         self.ui_nightlight_settings_box = get_ui("ui_nightlight_settings_box")
-        self.ui_nightlight_temp_label = get_ui("ui_nightlight_temp_label")
+        self.ui_temp_box = get_ui("ui_temp_box")
         self.ui_nightlight_stack = get_ui("ui_nightlight_stack")
+        self.ui_temp_low_button = get_ui("ui_temp_low_button")
+        self.ui_temp_medium_button = get_ui("ui_temp_medium_button")
+        self.ui_temp_high_button = get_ui("ui_temp_high_button")
 
         self.chkbtn_autostart = get_ui("chkbtn_autostart")
 
@@ -286,20 +289,20 @@ class MainWindow:
         self.hidpi_res = None
         self.fullhd_res = None
 
+        self.temp_color = {"low": 5500, "medium": 4000, "high": 2500}
+
     # =========== UI Preparing functions:
     def hide_widgets(self):
 
         self.btn_prev.set_sensitive(self.currentpage != 0)
         self.btn_fullhd.set_sensitive(self.fullhd_found)
         self.btn_4k.set_sensitive(self.hidpi_found)
-        self.ui_temp_scale.set_visible(self.config_nightlight_status)
-        self.ui_nightlight_temp_label.set_visible(self.config_nightlight_status)
+        self.ui_temp_box.set_visible(self.config_nightlight_status)
 
     def set_signals(self):
         self.rb_lightTheme.connect("clicked", self.on_rb_lightTheme_clicked)
         self.rb_darkTheme.connect("clicked", self.on_rb_darkTheme_clicked)
         self.ui_night_switch.connect("state-set", self.on_ui_night_switch_state_set)
-        self.ui_temp_adjusment.connect("value-changed", self.on_ui_temp_adjusment_value_changed)
 
     def set_active_theme(self):
         try:
@@ -534,7 +537,22 @@ class MainWindow:
                 print("{}".format(e))
 
             self.ui_night_switch.set_state(self.config_nightlight_status)
-            self.ui_temp_adjusment.set_value(self.config_nightlight_temp)
+            if self.config_nightlight_temp == self.temp_color["low"]:
+                self.ui_temp_low_button.get_style_context().add_class("suggested-action")
+                self.ui_temp_medium_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_high_button.get_style_context().remove_class("suggested-action")
+            elif self.config_nightlight_temp == self.temp_color["medium"]:
+                self.ui_temp_low_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_medium_button.get_style_context().add_class("suggested-action")
+                self.ui_temp_high_button.get_style_context().remove_class("suggested-action")
+            elif self.config_nightlight_temp == self.temp_color["high"]:
+                self.ui_temp_low_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_medium_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_high_button.get_style_context().add_class("suggested-action")
+            else:
+                self.ui_temp_low_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_medium_button.get_style_context().remove_class("suggested-action")
+                self.ui_temp_high_button.get_style_context().remove_class("suggested-action")
 
         if self.is_app_installed("tr.org.pardus.night-light.desktop"):
             self.ui_nightlight_stack.set_visible_child_name("installed")
@@ -672,20 +690,21 @@ class MainWindow:
             GLib.idle_add(ThemeManager.set_icon_theme, "eta-dark")
             GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta-dark")
 
-    def on_ui_night_switch_state_set(self, switch, state):
-        self.ui_temp_scale.set_visible(state)
-        self.ui_nightlight_temp_label.set_visible(state)
-        subprocess.Popen(["pardus-night-light", "-s", "1" if state else "0"],
+    def on_ui_temp_button_clicked(self, button):
+        print("on_ui_temp_adjusment_value_changed", self.temp_color[button.get_name()])
+        subprocess.Popen(["pardus-night-light", "-c", "{}".format(self.temp_color[button.get_name()])],
                          stdout=subprocess.DEVNULL,
                          stderr=subprocess.DEVNULL,
                          stdin=subprocess.DEVNULL,
                          close_fds=True,
                          start_new_session=True)
+        for row_button in self.ui_temp_box:
+            row_button.get_style_context().remove_class("suggested-action")
+        button.get_style_context().add_class("suggested-action")
 
-    def on_ui_temp_adjusment_value_changed(self, adjusment):
-        value = "{:0.0f}".format(adjusment.get_value())
-        print("on_ui_temp_adjusment_value_changed", value)
-        subprocess.Popen(["pardus-night-light", "-c", "{}".format(value)],
+    def on_ui_night_switch_state_set(self, switch, state):
+        self.ui_temp_box.set_visible(state)
+        subprocess.Popen(["pardus-night-light", "-s", "1" if state else "0"],
                          stdout=subprocess.DEVNULL,
                          stderr=subprocess.DEVNULL,
                          stdin=subprocess.DEVNULL,

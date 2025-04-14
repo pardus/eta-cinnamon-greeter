@@ -2,13 +2,6 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkAdjustment" id="ui_temp_adjusment">
-    <property name="lower">1500</property>
-    <property name="upper">5500</property>
-    <property name="value">5500</property>
-    <property name="step-increment">100</property>
-    <property name="page-increment">500</property>
-  </object>
   <object class="GtkApplicationWindow" id="window">
     <property name="can-focus">False</property>
     <property name="window-position">center</property>
@@ -1183,41 +1176,170 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkBox">
+                              <object class="GtkBox" id="ui_temp_box">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="hexpand">True</property>
-                                <property name="orientation">vertical</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="spacing">21</property>
+                                <property name="homogeneous">True</property>
                                 <child>
-                                  <object class="GtkScale" id="ui_temp_scale">
+                                  <object class="GtkButton" id="ui_temp_low_button">
+                                    <property name="name">low</property>
                                     <property name="visible">True</property>
                                     <property name="can-focus">True</property>
-                                    <property name="valign">center</property>
-                                    <property name="adjustment">ui_temp_adjusment</property>
-                                    <property name="inverted">True</property>
-                                    <property name="digits">0</property>
-                                    <property name="draw-value">False</property>
+                                    <property name="receives-default">True</property>
+                                    <signal name="clicked" handler="on_ui_temp_button_clicked" swapped="no"/>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="margin-top">3</property>
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">8</property>
+                                        <property name="homogeneous">True</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="height-request">34</property>
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="margin-start">5</property>
+                                            <property name="margin-end">5</property>
+                                            <style>
+                                              <class name="low-label"/>
+                                            </style>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">0</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="label" translatable="yes">Low</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                    </child>
                                   </object>
                                   <packing>
-                                    <property name="expand">True</property>
+                                    <property name="expand">False</property>
                                     <property name="fill">True</property>
                                     <property name="position">0</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="ui_nightlight_temp_label">
+                                  <object class="GtkButton" id="ui_temp_medium_button">
+                                    <property name="name">medium</property>
                                     <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="label" translatable="yes">Color Temperature</property>
-                                    <attributes>
-                                      <attribute name="style" value="italic"/>
-                                      <attribute name="weight" value="light"/>
-                                    </attributes>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <signal name="clicked" handler="on_ui_temp_button_clicked" swapped="no"/>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="margin-top">3</property>
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">8</property>
+                                        <property name="homogeneous">True</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="width-request">34</property>
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="margin-start">5</property>
+                                            <property name="margin-end">5</property>
+                                            <style>
+                                              <class name="medium-label"/>
+                                            </style>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">0</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="label" translatable="yes">Medium</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                    </child>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
                                     <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="ui_temp_high_button">
+                                    <property name="name">high</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <signal name="clicked" handler="on_ui_temp_button_clicked" swapped="no"/>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="margin-top">3</property>
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">8</property>
+                                        <property name="homogeneous">True</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="width-request">34</property>
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="margin-start">5</property>
+                                            <property name="margin-end">5</property>
+                                            <style>
+                                              <class name="high-label"/>
+                                            </style>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">0</property>
+                                          </packing>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="visible">True</property>
+                                            <property name="can-focus">False</property>
+                                            <property name="label" translatable="yes">High</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">True</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
                                   </packing>
                                 </child>
                               </object>
