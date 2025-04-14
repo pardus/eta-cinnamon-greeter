@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-13 15:22+0300\n"
-"PO-Revision-Date: 2025-04-13 15:33+0300\n"
+"POT-Creation-Date: 2025-04-14 19:18+0300\n"
+"PO-Revision-Date: 2025-04-14 19:18+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "X-Generator: Gtranslator 42.0\n"
 
-#: ui/MainWindow.glade:97
+#: ui/MainWindow.glade:90
 msgid ""
 "<span size ='x-large'><b>Expand Your Boundaries! Pardus is Everywhere</b></"
 "span>"
@@ -27,30 +27,30 @@ msgstr ""
 "<span size ='x-large'><b>Sınırlarınızı Genişletin! Pardus Her Yerde</b></"
 "span>"
 
-#: ui/MainWindow.glade:130
+#: ui/MainWindow.glade:123
 msgid "Let's Start"
 msgstr "Hadi Başlayalım"
 
-#: ui/MainWindow.glade:226
+#: ui/MainWindow.glade:219
 msgid ""
 "Always the Same Speed, Uninterrupted Performance! Don't Waste Time in "
 "Education with Pardus"
 msgstr ""
 "Hep Aynı Hız, Kesintisiz Performans! Pardus’la Eğitimde Zaman Kaybetmeyin"
 
-#: ui/MainWindow.glade:296
+#: ui/MainWindow.glade:289
 msgid "Current Resolution"
 msgstr "Mevcut Çözünürlük"
 
-#: ui/MainWindow.glade:355
+#: ui/MainWindow.glade:348
 msgid "4K %200"
 msgstr "4K %200"
 
-#: ui/MainWindow.glade:370
+#: ui/MainWindow.glade:363
 msgid "FullHD %100"
 msgstr "FullHD %100"
 
-#: ui/MainWindow.glade:404
+#: ui/MainWindow.glade:397
 msgid ""
 "4K resolution provides a clearer view, but some applications may not support "
 "4K resolution and may be difficult to use. In this case, you can choose Full "
@@ -60,41 +60,41 @@ msgstr ""
 "çözünürlüğü desteklemeyebilir ve kullanımı zor olabilir. Bu durumda Full HD "
 "çözünürlüğü tercih edebilirsiniz."
 
-#: ui/MainWindow.glade:423
+#: ui/MainWindow.glade:416
 msgid ""
 "You can change the resolution setting later bottom right corner of your "
 "desktop"
 msgstr "Çözünürlük ayarını daha sonra masaüstünüzün sağ alt köşesindeki"
 
-#: ui/MainWindow.glade:448
+#: ui/MainWindow.glade:441
 msgid "change it with the icon."
 msgstr "simgesiyle değiştirebilirsiniz."
 
-#: ui/MainWindow.glade:541
+#: ui/MainWindow.glade:534
 msgid "Secure Education, Seamless Technology! No Place for Viruses with Pardus"
 msgstr "Güvenli Eğitim, Sorunsuz Teknoloji! Pardus’la Virüslere Yer Yok"
 
-#: ui/MainWindow.glade:724
+#: ui/MainWindow.glade:717
 msgid "Tailored to Your Needs, Made for You! Pardus Was Created for You"
 msgstr "İhtiyacınıza Uygun, Size Özel! Pardus Sizin İçin Yapıldı"
 
-#: ui/MainWindow.glade:797
+#: ui/MainWindow.glade:790
 msgid "Light"
 msgstr "Açık"
 
-#: ui/MainWindow.glade:847
+#: ui/MainWindow.glade:840
 msgid "Dark"
 msgstr "Koyu"
 
-#: ui/MainWindow.glade:935
+#: ui/MainWindow.glade:928
 msgid "Make Your Choices! Pardus Offers Options Tailored to You"
 msgstr "Seçimlerinizi Yapın! Pardus, Size Uygun Seçenekler Sunar"
 
-#: ui/MainWindow.glade:1063
+#: ui/MainWindow.glade:1056
 msgid "PARDUS Protects Your Eyes"
 msgstr "PARDUS Gözlerinizi Korur"
 
-#: ui/MainWindow.glade:1118
+#: ui/MainWindow.glade:1111
 msgid ""
 "Pardus Night Light is a great application that does not tire your eyes. It "
 "protects your eye health by adjusting the screen color. If you want to turn "
@@ -104,15 +104,23 @@ msgstr ""
 "ayarlayarak göz sağlığınızı korur. Açmak veya kapatmak isterseniz sağ "
 "alttaki simgeyi kullanabilirsiniz."
 
-#: ui/MainWindow.glade:1157 src/MainWindow.py:229
+#: ui/MainWindow.glade:1150 src/MainWindow.py:229
 msgid "Night Light"
 msgstr "Gece Işığı"
 
-#: ui/MainWindow.glade:1211
-msgid "Color Temperature"
-msgstr "Renk Sıcaklığı"
+#: ui/MainWindow.glade:1222
+msgid "Low"
+msgstr "Düşük"
 
-#: ui/MainWindow.glade:1279
+#: ui/MainWindow.glade:1275
+msgid "Medium"
+msgstr "Orta"
+
+#: ui/MainWindow.glade:1328
+msgid "High"
+msgstr "Yüksek"
+
+#: ui/MainWindow.glade:1401
 msgid ""
 "Pardus Night Light application is not installed on your system.\n"
 "You can install it from Pardus Software Center by clicking the button below."
@@ -121,45 +129,45 @@ msgstr ""
 "Aşağıdaki butona tıklayarak Pardus Yazılım Merkezi üzerinden "
 "yükleyebilirsiniz."
 
-#: ui/MainWindow.glade:1338
+#: ui/MainWindow.glade:1460
 msgid "Pardus Night Light"
 msgstr "Pardus Gece Işığı"
 
-#: ui/MainWindow.glade:1432
+#: ui/MainWindow.glade:1554
 msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
 msgstr "Pardus ile Lisans Sorunu Yok! Ücretsiz Yazılımın Gücünü Keşfedin"
 
-#: ui/MainWindow.glade:1486
+#: ui/MainWindow.glade:1608
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr "<span size='x-large'><b>Pardus Yazılım Merkezi</b></span>"
 
-#: ui/MainWindow.glade:1574
+#: ui/MainWindow.glade:1696
 msgid "For more application"
 msgstr "Daha fazla uygulama için"
 
-#: ui/MainWindow.glade:1590
+#: ui/MainWindow.glade:1712
 msgid "For more settings"
 msgstr "Daha fazla ayar için"
 
-#: ui/MainWindow.glade:1643
+#: ui/MainWindow.glade:1765
 msgid "Pardus Software Center"
 msgstr "Pardus Yazılım Merkezi"
 
-#: ui/MainWindow.glade:1688
+#: ui/MainWindow.glade:1810
 msgid "System Settings"
 msgstr "Sistem Ayarları"
 
-#: ui/MainWindow.glade:1783
+#: ui/MainWindow.glade:1905
 msgid ""
 "We Are Always with You! Support is at Your Fingertips with the Pardus "
 "Community"
 msgstr "Her Zaman Yanınızdayız! Pardus Topluluğu ile Destek Elinizin Altında"
 
-#: ui/MainWindow.glade:1836
+#: ui/MainWindow.glade:1958
 msgid "<span size=\"large\">Links</span>"
 msgstr "<span size=\"large\">Bağlantılar</span>"
 
-#: ui/MainWindow.glade:1849
+#: ui/MainWindow.glade:1971
 msgid ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Home Page</a>"
@@ -167,7 +175,7 @@ msgstr ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
 "tr\">Ana Sayfa</a>"
 
-#: ui/MainWindow.glade:1862
+#: ui/MainWindow.glade:1984
 msgid ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Documentations</a>"
@@ -175,7 +183,7 @@ msgstr ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
 "tr\">Belgeler</a>"
 
-#: ui/MainWindow.glade:1875
+#: ui/MainWindow.glade:1997
 msgid ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Community</a>"
@@ -183,7 +191,7 @@ msgstr ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
 "tr\">Topluluk</a>"
 
-#: ui/MainWindow.glade:1888
+#: ui/MainWindow.glade:2010
 msgid ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
@@ -191,56 +199,56 @@ msgstr ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
 "tr\">Forum</a>"
 
-#: ui/MainWindow.glade:1924 ui/MainWindow.glade:1952
+#: ui/MainWindow.glade:2046 ui/MainWindow.glade:2074
 msgid "<small></small>"
 msgstr "<small></small>"
 
-#: ui/MainWindow.glade:1939
+#: ui/MainWindow.glade:2061
 msgid "<small>+90</small>"
 msgstr "<small>+90</small>"
 
-#: ui/MainWindow.glade:1980
+#: ui/MainWindow.glade:2102
 msgid "<span size=\"large\">Support</span>"
 msgstr "<span size=\"large\">Destek</span>"
 
-#: ui/MainWindow.glade:1993
+#: ui/MainWindow.glade:2115
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
-#: ui/MainWindow.glade:2101
+#: ui/MainWindow.glade:2223
 msgid "Show at next startup."
 msgstr "Sonraki açılışta göster."
 
-#: ui/MainWindow.glade:2143
+#: ui/MainWindow.glade:2265
 msgid "Previous"
 msgstr "Önceki"
 
-#: ui/MainWindow.glade:2161
+#: ui/MainWindow.glade:2283
 msgid "Next"
 msgstr "Sonraki"
 
-#: ui/MainWindow.glade:2169
+#: ui/MainWindow.glade:2291
 msgid "page0"
 msgstr "page0"
 
-#: ui/MainWindow.glade:2174
+#: ui/MainWindow.glade:2296
 msgid "Close"
 msgstr "Kapat"
 
-#: ui/MainWindow.glade:2186
+#: ui/MainWindow.glade:2308
 msgid "page1"
 msgstr "page1"
 
-#: ui/MainWindow.glade:2239 src/MainWindow.py:187
+#: ui/MainWindow.glade:2361 src/MainWindow.py:187
 msgid "ETA Greeter"
 msgstr "ETA Karşılayıcı"
 
-#: ui/MainWindow.glade:2285
+#: ui/MainWindow.glade:2407
 msgid "Tool that helps you to get ETAP ready."
 msgstr "Bu araç ETAP'ı hazırlamanıza yardımcı olacaktır."
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:2288
+#: ui/MainWindow.glade:2410
 msgid "translator-credits"
 msgstr "Fatih Altun <fatih.altun@pardus.org.tr>"
 
@@ -276,10 +284,13 @@ msgstr "Uygulamalar"
 msgid "Support & Community"
 msgstr "Destek ve Topluluk"
 
-#: src/MainWindow.py:612 src/MainWindow.py:618 src/MainWindow.py:624
-#: src/MainWindow.py:630 src/MainWindow.py:638
+#: src/MainWindow.py:630 src/MainWindow.py:636 src/MainWindow.py:642
+#: src/MainWindow.py:648 src/MainWindow.py:656
 msgid "Error"
 msgstr "Hata"
+
+#~ msgid "Color Temperature"
+#~ msgstr "Renk Sıcaklığı"
 
 #~ msgid ""
 #~ "Welcome.\n"
