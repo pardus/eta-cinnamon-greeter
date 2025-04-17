@@ -206,6 +206,7 @@ class MainWindow:
         self.stk_btn_next = get_ui("stk_btn_next")
         self.btn_next = get_ui("btn_next")
         self.btn_prev = get_ui("btn_prev")
+        self.btn_close = get_ui("btn_close")
         self.box_progressDots = get_ui("box_progressDots")
 
         # - Stack Pages:
@@ -598,6 +599,7 @@ class MainWindow:
 
         nextButtonPage = "next" if self.get_next_page(self.currentpage) != None else "close"
         self.stk_btn_next.set_visible_child_name(nextButtonPage)
+        self.btn_next.grab_focus() if nextButtonPage == "next" else self.btn_close.grab_focus()
 
         self.btn_prev.set_sensitive(self.currentpage != 0)
 

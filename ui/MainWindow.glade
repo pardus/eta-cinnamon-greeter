@@ -2292,7 +2292,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton">
+                          <object class="GtkButton" id="btn_close">
                             <property name="label" translatable="yes">Close</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
