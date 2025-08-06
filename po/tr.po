@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 15:47+0300\n"
-"PO-Revision-Date: 2025-04-15 15:47+0300\n"
+"POT-Creation-Date: 2025-08-06 15:24+0300\n"
+"PO-Revision-Date: 2025-08-06 15:24+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
@@ -99,14 +99,15 @@ msgid ""
 "Pardus Night Light is a great application that does not tire your eyes. It "
 "protects your eye health by adjusting the screen color. You can turn it on "
 "and off from here now. If you want to change your settings later, you can "
-"use the icon at the bottom right."
+"open the Pardus Night Light application from its desktop icon or from the "
+"application menu."
 msgstr ""
 "Pardus Gece Işığı, gözlerinizi yormayan harika bir uygulama. Ekran rengini "
 "ayarlayarak göz sağlığınızı korur. Şimdi buradan açıp kapatabilirsiniz. Daha "
-"sonra ayarlarınızı değiştirmek isterseniz sağ alttaki simgeyi "
-"kullanabilirsiniz."
+"sonra ayarlarınızı değiştirmek isterseniz Pardus Gece Işığı uygulamasını "
+"masaüstündeki simgesinden ya da uygulama menüsünden açabilirsiniz."
 
-#: ui/MainWindow.glade:1150 src/MainWindow.py:229
+#: ui/MainWindow.glade:1150 src/MainWindow.py:230
 msgid "Night Light"
 msgstr "Gece Işığı"
 
@@ -258,36 +259,36 @@ msgstr "Fatih Altun <fatih.altun@pardus.org.tr>"
 msgid "About ETA Greeter"
 msgstr "ETA Karşılayıcı Hakkında"
 
-#: src/MainWindow.py:222
+#: src/MainWindow.py:223
 msgid "Welcome"
 msgstr "Hoş Geldiniz"
 
-#: src/MainWindow.py:223
+#: src/MainWindow.py:224
 msgid "Select Wallpaper"
 msgstr "Duvar Kağıdı Seçin"
 
-#: src/MainWindow.py:224
+#: src/MainWindow.py:225
 msgid "Select Theme"
 msgstr "Tema Seçin"
 
-#: src/MainWindow.py:225
+#: src/MainWindow.py:226
 msgid "Display Settings"
 msgstr "Görünüm Ayarları"
 
-#: src/MainWindow.py:226
+#: src/MainWindow.py:227
 msgid "Sound Settings"
 msgstr "Ses Ayarları"
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:228
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: src/MainWindow.py:228
+#: src/MainWindow.py:229
 msgid "Support & Community"
 msgstr "Destek ve Topluluk"
 
-#: src/MainWindow.py:630 src/MainWindow.py:636 src/MainWindow.py:642
-#: src/MainWindow.py:648 src/MainWindow.py:656
+#: src/MainWindow.py:632 src/MainWindow.py:638 src/MainWindow.py:644
+#: src/MainWindow.py:650 src/MainWindow.py:658
 msgid "Error"
 msgstr "Hata"
 
