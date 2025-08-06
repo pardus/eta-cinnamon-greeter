@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 15:47+0300\n"
+"POT-Creation-Date: 2025-08-06 15:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,10 +91,11 @@ msgid ""
 "Pardus Night Light is a great application that does not tire your eyes. It "
 "protects your eye health by adjusting the screen color. You can turn it on "
 "and off from here now. If you want to change your settings later, you can "
-"use the icon at the bottom right."
+"open the Pardus Night Light application from its desktop icon or from the "
+"application menu."
 msgstr ""
 
-#: ui/MainWindow.glade:1150 src/MainWindow.py:229
+#: ui/MainWindow.glade:1150 src/MainWindow.py:230
 msgid "Night Light"
 msgstr ""
 
@@ -235,35 +236,35 @@ msgstr ""
 msgid "About ETA Greeter"
 msgstr ""
 
-#: src/MainWindow.py:222
+#: src/MainWindow.py:223
 msgid "Welcome"
 msgstr ""
 
-#: src/MainWindow.py:223
+#: src/MainWindow.py:224
 msgid "Select Wallpaper"
 msgstr ""
 
-#: src/MainWindow.py:224
+#: src/MainWindow.py:225
 msgid "Select Theme"
 msgstr ""
 
-#: src/MainWindow.py:225
+#: src/MainWindow.py:226
 msgid "Display Settings"
 msgstr ""
 
-#: src/MainWindow.py:226
+#: src/MainWindow.py:227
 msgid "Sound Settings"
 msgstr ""
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:228
 msgid "Applications"
 msgstr ""
 
-#: src/MainWindow.py:228
+#: src/MainWindow.py:229
 msgid "Support & Community"
 msgstr ""
 
-#: src/MainWindow.py:630 src/MainWindow.py:636 src/MainWindow.py:642
-#: src/MainWindow.py:648 src/MainWindow.py:656
+#: src/MainWindow.py:632 src/MainWindow.py:638 src/MainWindow.py:644
+#: src/MainWindow.py:650 src/MainWindow.py:658
 msgid "Error"
 msgstr ""
