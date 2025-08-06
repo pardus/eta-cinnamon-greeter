@@ -1108,7 +1108,7 @@
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">Pardus Night Light is a great application that does not tire your eyes. It protects your eye health by adjusting the screen color. You can turn it on and off from here now. If you want to change your settings later, you can use the icon at the bottom right.</property>
+                            <property name="label" translatable="yes">Pardus Night Light is a great application that does not tire your eyes. It protects your eye health by adjusting the screen color. You can turn it on and off from here now. If you want to change your settings later, you can open the Pardus Night Light application from its desktop icon or from the application menu.</property>
                             <property name="wrap">True</property>
                           </object>
                           <packing>
