@@ -1,15 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Portuguese translation for eta-cinnamon-greeter.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2024-2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-24 20:34+0300\n"
-"PO-Revision-Date: 2024-10-31 19:51+0000\n"
+"POT-Creation-Date: 2025-08-06 15:24+0300\n"
+"PO-Revision-Date: 2025-10-11 08:43+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/MainWindow.glade:90
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 msgid "Let's Start"
 msgstr "Vamos começar"
 
-#: ui/MainWindow.glade:218
+#: ui/MainWindow.glade:219
 msgid ""
 "Always the Same Speed, Uninterrupted Performance! Don't Waste Time in "
 "Education with Pardus"
@@ -39,19 +39,19 @@ msgstr ""
 "Sempre a mesma velocidade, desempenho ininterrupto! Não perca tempo na "
 "educação com o Pardus"
 
-#: ui/MainWindow.glade:288
+#: ui/MainWindow.glade:289
 msgid "Current Resolution"
 msgstr "Resolução atual"
 
-#: ui/MainWindow.glade:347
+#: ui/MainWindow.glade:348
 msgid "4K %200"
 msgstr "4K %200"
 
-#: ui/MainWindow.glade:362
+#: ui/MainWindow.glade:363
 msgid "FullHD %100"
 msgstr "FullHD %100"
 
-#: ui/MainWindow.glade:396
+#: ui/MainWindow.glade:397
 msgid ""
 "4K resolution provides a clearer view, but some applications may not support "
 "4K resolution and may be difficult to use. In this case, you can choose Full "
@@ -61,7 +61,7 @@ msgstr ""
 "aplicações podem não suportar a resolução 4K e podem ser difíceis de "
 "utilizar. Neste caso, pode escolher a resolução Full HD."
 
-#: ui/MainWindow.glade:415
+#: ui/MainWindow.glade:416
 msgid ""
 "You can change the resolution setting later bottom right corner of your "
 "desktop"
@@ -69,156 +69,203 @@ msgstr ""
 "Pode alterar a definição de resolução no canto inferior direito da sua área "
 "de trabalho"
 
-#: ui/MainWindow.glade:440
+#: ui/MainWindow.glade:441
 msgid "change it with the icon."
 msgstr "altere-o com o ícone."
 
-#: ui/MainWindow.glade:533
+#: ui/MainWindow.glade:534
 msgid "Secure Education, Seamless Technology! No Place for Viruses with Pardus"
 msgstr ""
 "Educação segura, tecnologia sem falhas! Não há lugar para vírus com o Pardus"
 
-#: ui/MainWindow.glade:716
+#: ui/MainWindow.glade:717
 msgid "Tailored to Your Needs, Made for You! Pardus Was Created for You"
 msgstr ""
 "Feito à medida das suas necessidades, feito para si! O Pardus foi criado "
 "para si"
 
-#: ui/MainWindow.glade:789
+#: ui/MainWindow.glade:790
 msgid "Light"
 msgstr "Claro"
 
-#: ui/MainWindow.glade:839
+#: ui/MainWindow.glade:840
 msgid "Dark"
 msgstr "Escuro"
 
-#: ui/MainWindow.glade:927
+#: ui/MainWindow.glade:928
 msgid "Make Your Choices! Pardus Offers Options Tailored to You"
 msgstr "Faça as suas escolhas! O Pardus oferece opções adaptadas a si"
 
-#: ui/MainWindow.glade:1054
+#: ui/MainWindow.glade:1056
+msgid "PARDUS Protects Your Eyes"
+msgstr "O PARDUS protege os seus olhos"
+
+#: ui/MainWindow.glade:1111
+msgid ""
+"Pardus Night Light is a great application that does not tire your eyes. It "
+"protects your eye health by adjusting the screen color. You can turn it on "
+"and off from here now. If you want to change your settings later, you can "
+"open the Pardus Night Light application from its desktop icon or from the "
+"application menu."
+msgstr ""
+"A Luz Noturna Pardus é uma excelente aplicação que não cansa os seus olhos. "
+"Ela protege a saúde ocular ajustando a cor do ecrã. Pode ativá-la e desativá-"
+"la aqui agora. Se quiser alterar as definições mais tarde, pode abrir a "
+"aplicação Luz Noturna Pardus a partir do ícone na área de trabalho ou do "
+"menu de aplicações."
+
+#: ui/MainWindow.glade:1150 src/MainWindow.py:230
+msgid "Night Light"
+msgstr "Luz noturna"
+
+#: ui/MainWindow.glade:1222
+msgid "Low"
+msgstr "Baixa"
+
+#: ui/MainWindow.glade:1275
+msgid "Medium"
+msgstr "Média"
+
+#: ui/MainWindow.glade:1328
+msgid "High"
+msgstr "Alta"
+
+#: ui/MainWindow.glade:1401
+msgid ""
+"Pardus Night Light application is not installed on your system.\n"
+"You can install it from Pardus Software Center by clicking the button below."
+msgstr ""
+"A aplicação Luz Noturna Pardus não está instalada no seu sistema.\n"
+"Pode instalá-la a partir do Centro de software Pardus clicando no botão "
+"abaixo."
+
+#: ui/MainWindow.glade:1460
+msgid "Pardus Night Light"
+msgstr "Luz noturna Pardus"
+
+#: ui/MainWindow.glade:1554
 msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
 msgstr ""
 "Sem problemas de licenciamento com o Pardus! Descubra o poder do software "
 "livre"
 
-#: ui/MainWindow.glade:1108
+#: ui/MainWindow.glade:1608
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr "<span size='x-large'><b>Centro de Software Pardus</b></span>"
 
-#: ui/MainWindow.glade:1196
+#: ui/MainWindow.glade:1696
 msgid "For more application"
 msgstr "Para mais aplicações"
 
-#: ui/MainWindow.glade:1212
+#: ui/MainWindow.glade:1712
 msgid "For more settings"
 msgstr "Para mais definições"
 
-#: ui/MainWindow.glade:1265
+#: ui/MainWindow.glade:1765
 msgid "Pardus Software Center"
 msgstr "Centro de Software Pardus"
 
-#: ui/MainWindow.glade:1310
+#: ui/MainWindow.glade:1810
 msgid "System Settings"
 msgstr "Definições do sistema"
 
-#: ui/MainWindow.glade:1405
+#: ui/MainWindow.glade:1905
 msgid ""
 "We Are Always with You! Support is at Your Fingertips with the Pardus "
 "Community"
 msgstr ""
 "Estamos sempre consigo! O suporte está ao seu alcance com a Comunidade Pardus"
 
-#: ui/MainWindow.glade:1458
+#: ui/MainWindow.glade:1958
 msgid "<span size=\"large\">Links</span>"
 msgstr "<span size=\"large\">Ligações</span>"
 
-#: ui/MainWindow.glade:1471
+#: ui/MainWindow.glade:1971
 msgid ""
-"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
-"tr\">Home Page</a>"
+"<a href=\"https://www.pardus.org.tr\" title=\"https://"
+"www.pardus.org.tr\">Home Page</a>"
 msgstr ""
-"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
-"tr\">Página inicial</a>"
+"<a href=\"https://www.pardus.org.tr\" title=\"https://"
+"www.pardus.org.tr\">Página inicial</a>"
 
-#: ui/MainWindow.glade:1484
+#: ui/MainWindow.glade:1984
 msgid ""
-"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
-"tr\">Documentations</a>"
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://"
+"belge.pardus.org.tr\">Documentations</a>"
 msgstr ""
-"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
-"tr\">Documentação</a>"
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://"
+"belge.pardus.org.tr\">Documentação</a>"
 
-#: ui/MainWindow.glade:1497
+#: ui/MainWindow.glade:1997
 msgid ""
-"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
-"tr\">Community</a>"
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
+"gonullu.pardus.org.tr\">Community</a>"
 msgstr ""
-"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
-"tr\">Comunidade</a>"
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
+"gonullu.pardus.org.tr\">Comunidade</a>"
 
-#: ui/MainWindow.glade:1510
+#: ui/MainWindow.glade:2010
 msgid ""
-"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
-"tr\">Forum</a>"
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://"
+"forum.pardus.org.tr\">Forum</a>"
 msgstr ""
-"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
-"tr\">Fórum</a>"
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://"
+"forum.pardus.org.tr\">Fórum</a>"
 
-#: ui/MainWindow.glade:1546 ui/MainWindow.glade:1574
+#: ui/MainWindow.glade:2046 ui/MainWindow.glade:2074
 msgid "<small></small>"
 msgstr "<small></small>"
 
-#: ui/MainWindow.glade:1561
+#: ui/MainWindow.glade:2061
 msgid "<small>+90</small>"
 msgstr "<small>+90</small>"
 
-#: ui/MainWindow.glade:1602
+#: ui/MainWindow.glade:2102
 msgid "<span size=\"large\">Support</span>"
 msgstr "<span size=\"large\">Suporte</span>"
 
-#: ui/MainWindow.glade:1615
+#: ui/MainWindow.glade:2115
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
-#: ui/MainWindow.glade:1723
+#: ui/MainWindow.glade:2223
 msgid "Show at next startup."
 msgstr "Mostrar no próximo arranque."
 
-#: ui/MainWindow.glade:1765
+#: ui/MainWindow.glade:2265
 msgid "Previous"
 msgstr "Anterior"
 
-#: ui/MainWindow.glade:1783
+#: ui/MainWindow.glade:2283
 msgid "Next"
 msgstr "Seguinte"
 
-#: ui/MainWindow.glade:1791
+#: ui/MainWindow.glade:2291
 msgid "page0"
 msgstr "page0"
 
-#: ui/MainWindow.glade:1796
+#: ui/MainWindow.glade:2296
 msgid "Close"
 msgstr "Fechar"
 
-#: ui/MainWindow.glade:1808
+#: ui/MainWindow.glade:2308
 msgid "page1"
 msgstr "page1"
 
-#: ui/MainWindow.glade:1861 src/MainWindow.py:189
+#: ui/MainWindow.glade:2361 src/MainWindow.py:187
 msgid "ETA Greeter"
 msgstr "Saudador ETA"
 
-#: ui/MainWindow.glade:1907
+#: ui/MainWindow.glade:2407
 msgid "Tool that helps you to get ETAP ready."
 msgstr "Ferramenta que o ajuda a preparar o ETAP."
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:1910
+#: ui/MainWindow.glade:2410
 msgid "translator-credits"
 msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
 
-#: src/MainWindow.py:193
+#: src/MainWindow.py:191
 msgid "About ETA Greeter"
 msgstr "Acerca do Saudador ETA"
 
@@ -250,7 +297,7 @@ msgstr "Aplicações"
 msgid "Support & Community"
 msgstr "Suporte e comunidade"
 
-#: src/MainWindow.py:569 src/MainWindow.py:575 src/MainWindow.py:581
-#: src/MainWindow.py:587 src/MainWindow.py:595
+#: src/MainWindow.py:632 src/MainWindow.py:638 src/MainWindow.py:644
+#: src/MainWindow.py:650 src/MainWindow.py:658
 msgid "Error"
 msgstr "Erro"
