@@ -22,6 +22,8 @@ from configparser import ConfigParser
 from locale import getlocale
 from UserSettings import UserSettings
 
+import Actions
+
 # Translation Constants:
 APPNAME = "eta-cinnamon-greeter"
 TRANSLATIONS_PATH = "/usr/share/locale"
@@ -230,6 +232,13 @@ class MainWindow:
         self.page_password_change.name = _("Password Change")
         self.page_support.name = _("Support & Community")
         self.page_nightlight.name = _("Night Light")
+
+        # - Password Change Settings:
+        self.ui_etapadmin_new_password = get_ui("ui_etapadmin_new_password")
+        self.ui_etapadmin_new_password2 = get_ui("ui_etapadmin_new_password2")
+        self.ui_ogretmen_new_password = get_ui("ui_ogretmen_new_password")
+        self.ui_ogretmen_new_password2 = get_ui("ui_ogretmen_new_password2")
+
 
         # - Display Settings:
         self.flow_wallpapers = get_ui("flow_wallpapers")
@@ -738,10 +747,90 @@ class MainWindow:
 
     # Password change page:
     def on_ui_change_etapadmin_password_btn_clicked(self, button):
-        print("clicked")
-    
+        password1 = self.ui_etapadmin_new_password.get_text()
+        password2 = self.ui_etapadmin_new_password2.get_text()
+
+        # Empty check
+        if not password1 or not password2:
+            return
+
+        # Not equal check
+        if password1 != password2:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Passwords are not equal"),
+                secondary_text=_("Passwords are not equal, please check the passwords."),
+            )
+            dialog.run()
+            dialog.hide()
+            return
+
+        p = Actions.run(input=f"{password1}\n\n".encode())
+
+        if p.returncode == 0:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Success"),
+                secondary_text=_("ogretmen's Password Changed Successfully."),
+            )
+            dialog.run()
+            dialog.hide()
+        elif p.returncode == 126:
+            # pkexec dismissed
+            pass
+        else:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Failed"),
+                secondary_text=_(
+                    "Couldn't change the password, please check the terminal output for details."
+                ),
+            )
+            dialog.run()
+            dialog.hide()
+
     def on_ui_change_ogretmen_password_btn_clicked(self, button):
-        print("clicked")
+        password1 = self.ui_ogretmen_new_password.get_text()
+        password2 = self.ui_ogretmen_new_password2.get_text()
+
+        # Empty check
+        if not password1 or not password2:
+            return
+
+        # Not equal check
+        if password1 != password2:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Passwords are not equal"),
+                secondary_text=_("Passwords are not equal, please check the passwords."),
+            )
+            dialog.run()
+            dialog.hide()
+            return
+
+        p = Actions.run(input=f"\n{password1}\n".encode())
+
+        if p.returncode == 0:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Success"),
+                secondary_text=_("ogretmen's Password Changed Successfully."),
+            )
+            dialog.run()
+            dialog.hide()
+        elif p.returncode == 126:
+            # pkexec dismissed
+            pass
+        else:
+            dialog = Gtk.MessageDialog(
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Failed"),
+                secondary_text=_(
+                    "Couldn't change the password. Check the terminal output for details."
+                ),
+            )
+            dialog.run()
+            dialog.hide()
 
     # -- Reveal Icon releases
     def on_ui_password_entry_icon_release(self, entry, icon_pos, event):

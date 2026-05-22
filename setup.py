@@ -43,7 +43,8 @@ data_files = [
   ["data/css/style.css"]
   ),
  ("/usr/share/pardus/eta-cinnamon-greeter/src",
-  ["src/Main.py",
+  ["src/Actions.py",
+   "src/Main.py",
    "src/MainWindow.py",
    "src/Server.py",
    "src/Stream.py",
@@ -54,6 +55,8 @@ data_files = [
    "src/ThemeManager.py",
    "src/__version__"]
   ),
+ ("/usr/share/polkit-1/actions",
+  ["polkit/tr.org.pardus.pkexec.eta-cinnamon-greeter.policy"]),
  ("/usr/share/pardus/eta-cinnamon-greeter/ui", ["ui/MainWindow.glade"]),
  ("/usr/bin/", ["eta-cinnamon-greeter"]),
  ("/etc/skel/.config/autostart", ["data/tr.org.pardus.eta-cinnamon-greeter.desktop"]),
