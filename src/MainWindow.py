@@ -783,7 +783,7 @@ class MainWindow:
                 buttons=Gtk.ButtonsType.OK,
                 text=_("Failed"),
                 secondary_text=_(
-                    "Couldn't change the password, please check the terminal output for details."
+                    "Couldn't change the password. Check the terminal for details."
                 ),
             )
             dialog.run()
@@ -826,7 +826,7 @@ class MainWindow:
                 buttons=Gtk.ButtonsType.OK,
                 text=_("Failed"),
                 secondary_text=_(
-                    "Couldn't change the password. Check the terminal output for details."
+                    "Couldn't change the password. Check the terminal for details."
                 ),
             )
             dialog.run()

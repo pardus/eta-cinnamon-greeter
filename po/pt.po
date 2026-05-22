@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 15:24+0300\n"
+"POT-Creation-Date: 2026-05-22 14:29+0300\n"
 "PO-Revision-Date: 2025-10-11 08:43+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -114,7 +114,7 @@ msgstr ""
 "aplicação Luz Noturna Pardus a partir do ícone na área de trabalho ou do "
 "menu de aplicações."
 
-#: ui/MainWindow.glade:1150 src/MainWindow.py:230
+#: ui/MainWindow.glade:1150 src/MainWindow.py:234
 msgid "Night Light"
 msgstr "Luz noturna"
 
@@ -144,43 +144,67 @@ msgid "Pardus Night Light"
 msgstr "Luz noturna Pardus"
 
 #: ui/MainWindow.glade:1554
+msgid "Secure your credentials"
+msgstr ""
+
+#: ui/MainWindow.glade:1609
+msgid "Change etapadmin password (Optional):"
+msgstr ""
+
+#: ui/MainWindow.glade:1637 ui/MainWindow.glade:1773
+msgid "New Password:"
+msgstr ""
+
+#: ui/MainWindow.glade:1665 ui/MainWindow.glade:1801
+msgid "New Password(Again):"
+msgstr ""
+
+#: ui/MainWindow.glade:1700 ui/MainWindow.glade:1836
+msgid "Change Password"
+msgstr ""
+
+#: ui/MainWindow.glade:1745
+msgid "Change ogretmen password (Optional):"
+msgstr ""
+
+#: ui/MainWindow.glade:1927
 msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
 msgstr ""
 "Sem problemas de licenciamento com o Pardus! Descubra o poder do software "
 "livre"
 
-#: ui/MainWindow.glade:1608
+#: ui/MainWindow.glade:1981
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr "<span size='x-large'><b>Centro de Software Pardus</b></span>"
 
-#: ui/MainWindow.glade:1696
+#: ui/MainWindow.glade:2069
 msgid "For more application"
 msgstr "Para mais aplicações"
 
-#: ui/MainWindow.glade:1712
+#: ui/MainWindow.glade:2085
 msgid "For more settings"
 msgstr "Para mais definições"
 
-#: ui/MainWindow.glade:1765
+#: ui/MainWindow.glade:2138
 msgid "Pardus Software Center"
 msgstr "Centro de Software Pardus"
 
-#: ui/MainWindow.glade:1810
+#: ui/MainWindow.glade:2183
 msgid "System Settings"
 msgstr "Definições do sistema"
 
-#: ui/MainWindow.glade:1905
+#: ui/MainWindow.glade:2278
 msgid ""
 "We Are Always with You! Support is at Your Fingertips with the Pardus "
 "Community"
 msgstr ""
 "Estamos sempre consigo! O suporte está ao seu alcance com a Comunidade Pardus"
 
-#: ui/MainWindow.glade:1958
+#: ui/MainWindow.glade:2331
 msgid "<span size=\"large\">Links</span>"
 msgstr "<span size=\"large\">Ligações</span>"
 
-#: ui/MainWindow.glade:1971
+#: ui/MainWindow.glade:2344
 msgid ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://"
 "www.pardus.org.tr\">Home Page</a>"
@@ -188,7 +212,7 @@ msgstr ""
 "<a href=\"https://www.pardus.org.tr\" title=\"https://"
 "www.pardus.org.tr\">Página inicial</a>"
 
-#: ui/MainWindow.glade:1984
+#: ui/MainWindow.glade:2357
 msgid ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://"
 "belge.pardus.org.tr\">Documentations</a>"
@@ -196,7 +220,7 @@ msgstr ""
 "<a href=\"https://belge.pardus.org.tr\" title=\"https://"
 "belge.pardus.org.tr\">Documentação</a>"
 
-#: ui/MainWindow.glade:1997
+#: ui/MainWindow.glade:2370
 msgid ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
 "gonullu.pardus.org.tr\">Community</a>"
@@ -204,7 +228,7 @@ msgstr ""
 "<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
 "gonullu.pardus.org.tr\">Comunidade</a>"
 
-#: ui/MainWindow.glade:2010
+#: ui/MainWindow.glade:2383
 msgid ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://"
 "forum.pardus.org.tr\">Forum</a>"
@@ -212,92 +236,120 @@ msgstr ""
 "<a href=\"https://forum.pardus.org.tr\" title=\"https://"
 "forum.pardus.org.tr\">Fórum</a>"
 
-#: ui/MainWindow.glade:2046 ui/MainWindow.glade:2074
+#: ui/MainWindow.glade:2419 ui/MainWindow.glade:2447
 msgid "<small></small>"
 msgstr "<small></small>"
 
-#: ui/MainWindow.glade:2061
+#: ui/MainWindow.glade:2434
 msgid "<small>+90</small>"
 msgstr "<small>+90</small>"
 
-#: ui/MainWindow.glade:2102
+#: ui/MainWindow.glade:2475
 msgid "<span size=\"large\">Support</span>"
 msgstr "<span size=\"large\">Suporte</span>"
 
-#: ui/MainWindow.glade:2115
+#: ui/MainWindow.glade:2488
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
-#: ui/MainWindow.glade:2223
+#: ui/MainWindow.glade:2596
 msgid "Show at next startup."
 msgstr "Mostrar no próximo arranque."
 
-#: ui/MainWindow.glade:2265
+#: ui/MainWindow.glade:2638
 msgid "Previous"
 msgstr "Anterior"
 
-#: ui/MainWindow.glade:2283
+#: ui/MainWindow.glade:2656
 msgid "Next"
 msgstr "Seguinte"
 
-#: ui/MainWindow.glade:2291
+#: ui/MainWindow.glade:2664
 msgid "page0"
 msgstr "page0"
 
-#: ui/MainWindow.glade:2296
+#: ui/MainWindow.glade:2669
 msgid "Close"
 msgstr "Fechar"
 
-#: ui/MainWindow.glade:2308
+#: ui/MainWindow.glade:2681
 msgid "page1"
 msgstr "page1"
 
-#: ui/MainWindow.glade:2361 src/MainWindow.py:187
+#: ui/MainWindow.glade:2734 src/MainWindow.py:189
 msgid "ETA Greeter"
 msgstr "Saudador ETA"
 
-#: ui/MainWindow.glade:2407
+#: ui/MainWindow.glade:2780
 msgid "Tool that helps you to get ETAP ready."
 msgstr "Ferramenta que o ajuda a preparar o ETAP."
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:2410
+#: ui/MainWindow.glade:2783
 msgid "translator-credits"
 msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
 
-#: src/MainWindow.py:191
+#: src/MainWindow.py:193
 msgid "About ETA Greeter"
 msgstr "Acerca do Saudador ETA"
 
-#: src/MainWindow.py:223
+#: src/MainWindow.py:226
 msgid "Welcome"
 msgstr "Bem-vindo(a)"
 
-#: src/MainWindow.py:224
+#: src/MainWindow.py:227
 msgid "Select Wallpaper"
 msgstr "Selecionar papel de parede"
 
-#: src/MainWindow.py:225
+#: src/MainWindow.py:228
 msgid "Select Theme"
 msgstr "Selecionar tema"
 
-#: src/MainWindow.py:226
+#: src/MainWindow.py:229
 msgid "Display Settings"
 msgstr "Definições de ecrã"
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:230
 msgid "Sound Settings"
 msgstr "Definições de som"
 
-#: src/MainWindow.py:228
+#: src/MainWindow.py:231
 msgid "Applications"
 msgstr "Aplicações"
 
-#: src/MainWindow.py:229
+#: src/MainWindow.py:232
+msgid "Password Change"
+msgstr ""
+
+#: src/MainWindow.py:233
 msgid "Support & Community"
 msgstr "Suporte e comunidade"
 
-#: src/MainWindow.py:632 src/MainWindow.py:638 src/MainWindow.py:644
-#: src/MainWindow.py:650 src/MainWindow.py:658
+#: src/MainWindow.py:661 src/MainWindow.py:667 src/MainWindow.py:673
+#: src/MainWindow.py:679 src/MainWindow.py:687
 msgid "Error"
 msgstr "Erro"
+
+#: src/MainWindow.py:761 src/MainWindow.py:804
+msgid "Passwords are not equal"
+msgstr ""
+
+#: src/MainWindow.py:762 src/MainWindow.py:805
+msgid "Passwords are not equal, please check the passwords."
+msgstr ""
+
+#: src/MainWindow.py:773 src/MainWindow.py:816
+msgid "Success"
+msgstr ""
+
+#: src/MainWindow.py:774 src/MainWindow.py:817
+msgid "ogretmen's Password Changed Successfully."
+msgstr ""
+
+#: src/MainWindow.py:784 src/MainWindow.py:827
+msgid "Failed"
+msgstr ""
+
+#: src/MainWindow.py:786 src/MainWindow.py:829
+msgid "Couldn't change the password. Check the terminal for details."
+msgstr ""

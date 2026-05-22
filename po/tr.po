@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 15:24+0300\n"
+"POT-Creation-Date: 2026-05-22 14:29+0300\n"
 "PO-Revision-Date: 2025-08-06 15:24+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
@@ -107,7 +107,7 @@ msgstr ""
 "sonra ayarlarınızı değiştirmek isterseniz Pardus Gece Işığı uygulamasını "
 "masaüstündeki simgesinden ya da uygulama menüsünden açabilirsiniz."
 
-#: ui/MainWindow.glade:1150 src/MainWindow.py:230
+#: ui/MainWindow.glade:1150 src/MainWindow.py:234
 msgid "Night Light"
 msgstr "Gece Işığı"
 
@@ -137,342 +137,209 @@ msgid "Pardus Night Light"
 msgstr "Pardus Gece Işığı"
 
 #: ui/MainWindow.glade:1554
+msgid "Secure your credentials"
+msgstr "Kimlik bilgilerinizi güvence altına alın"
+
+#: ui/MainWindow.glade:1609
+msgid "Change etapadmin password (Optional):"
+msgstr "etapadmin Parolasını Değiştir (İsteğe Bağlı):"
+
+#: ui/MainWindow.glade:1637 ui/MainWindow.glade:1773
+msgid "New Password:"
+msgstr "Yeni Parola:"
+
+#: ui/MainWindow.glade:1665 ui/MainWindow.glade:1801
+msgid "New Password(Again):"
+msgstr "Yeni Parola(Tekrar):"
+
+#: ui/MainWindow.glade:1700 ui/MainWindow.glade:1836
+msgid "Change Password"
+msgstr "Parolayı Değiştir"
+
+#: ui/MainWindow.glade:1745
+msgid "Change ogretmen password (Optional):"
+msgstr "ogretmen Parolasını Değiştir(İsteğe Bağlı):"
+
+#: ui/MainWindow.glade:1927
 msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
 msgstr "Pardus ile Lisans Sorunu Yok! Ücretsiz Yazılımın Gücünü Keşfedin"
 
-#: ui/MainWindow.glade:1608
+#: ui/MainWindow.glade:1981
 msgid "<span size='x-large'><b>Pardus Software Center</b></span>"
 msgstr "<span size='x-large'><b>Pardus Yazılım Merkezi</b></span>"
 
-#: ui/MainWindow.glade:1696
+#: ui/MainWindow.glade:2069
 msgid "For more application"
 msgstr "Daha fazla uygulama için"
 
-#: ui/MainWindow.glade:1712
+#: ui/MainWindow.glade:2085
 msgid "For more settings"
 msgstr "Daha fazla ayar için"
 
-#: ui/MainWindow.glade:1765
+#: ui/MainWindow.glade:2138
 msgid "Pardus Software Center"
 msgstr "Pardus Yazılım Merkezi"
 
-#: ui/MainWindow.glade:1810
+#: ui/MainWindow.glade:2183
 msgid "System Settings"
 msgstr "Sistem Ayarları"
 
-#: ui/MainWindow.glade:1905
+#: ui/MainWindow.glade:2278
 msgid ""
 "We Are Always with You! Support is at Your Fingertips with the Pardus "
 "Community"
 msgstr "Her Zaman Yanınızdayız! Pardus Topluluğu ile Destek Elinizin Altında"
 
-#: ui/MainWindow.glade:1958
+#: ui/MainWindow.glade:2331
 msgid "<span size=\"large\">Links</span>"
 msgstr "<span size=\"large\">Bağlantılar</span>"
 
-#: ui/MainWindow.glade:1971
+#: ui/MainWindow.glade:2344
 msgid ""
-"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
-"tr\">Home Page</a>"
+"<a href=\"https://www.pardus.org.tr\" title=\"https://"
+"www.pardus.org.tr\">Home Page</a>"
 msgstr ""
-"<a href=\"https://www.pardus.org.tr\" title=\"https://www.pardus.org."
-"tr\">Ana Sayfa</a>"
+"<a href=\"https://www.pardus.org.tr\" title=\"https://"
+"www.pardus.org.tr\">Ana Sayfa</a>"
 
-#: ui/MainWindow.glade:1984
+#: ui/MainWindow.glade:2357
 msgid ""
-"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
-"tr\">Documentations</a>"
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://"
+"belge.pardus.org.tr\">Documentations</a>"
 msgstr ""
-"<a href=\"https://belge.pardus.org.tr\" title=\"https://belge.pardus.org."
-"tr\">Belgeler</a>"
+"<a href=\"https://belge.pardus.org.tr\" title=\"https://"
+"belge.pardus.org.tr\">Belgeler</a>"
 
-#: ui/MainWindow.glade:1997
+#: ui/MainWindow.glade:2370
 msgid ""
-"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
-"tr\">Community</a>"
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
+"gonullu.pardus.org.tr\">Community</a>"
 msgstr ""
-"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://gonullu.pardus.org."
-"tr\">Topluluk</a>"
+"<a href=\"https://gonullu.pardus.org.tr\" title=\"https://"
+"gonullu.pardus.org.tr\">Topluluk</a>"
 
-#: ui/MainWindow.glade:2010
+#: ui/MainWindow.glade:2383
 msgid ""
-"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
-"tr\">Forum</a>"
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://"
+"forum.pardus.org.tr\">Forum</a>"
 msgstr ""
-"<a href=\"https://forum.pardus.org.tr\" title=\"https://forum.pardus.org."
-"tr\">Forum</a>"
+"<a href=\"https://forum.pardus.org.tr\" title=\"https://"
+"forum.pardus.org.tr\">Forum</a>"
 
-#: ui/MainWindow.glade:2046 ui/MainWindow.glade:2074
+#: ui/MainWindow.glade:2419 ui/MainWindow.glade:2447
 msgid "<small></small>"
 msgstr "<small></small>"
 
-#: ui/MainWindow.glade:2061
+#: ui/MainWindow.glade:2434
 msgid "<small>+90</small>"
 msgstr "<small>+90</small>"
 
-#: ui/MainWindow.glade:2102
+#: ui/MainWindow.glade:2475
 msgid "<span size=\"large\">Support</span>"
 msgstr "<span size=\"large\">Destek</span>"
 
-#: ui/MainWindow.glade:2115
+#: ui/MainWindow.glade:2488
 msgid "<span size=\"xx-large\"><b>444 5 773</b></span>"
 msgstr "<span size=\"xx-large\"><b>444 5 773</b></span>"
 
-#: ui/MainWindow.glade:2223
+#: ui/MainWindow.glade:2596
 msgid "Show at next startup."
 msgstr "Sonraki açılışta göster."
 
-#: ui/MainWindow.glade:2265
+#: ui/MainWindow.glade:2638
 msgid "Previous"
 msgstr "Önceki"
 
-#: ui/MainWindow.glade:2283
+#: ui/MainWindow.glade:2656
 msgid "Next"
 msgstr "Sonraki"
 
-#: ui/MainWindow.glade:2291
+#: ui/MainWindow.glade:2664
 msgid "page0"
 msgstr "page0"
 
-#: ui/MainWindow.glade:2296
+#: ui/MainWindow.glade:2669
 msgid "Close"
 msgstr "Kapat"
 
-#: ui/MainWindow.glade:2308
+#: ui/MainWindow.glade:2681
 msgid "page1"
 msgstr "page1"
 
-#: ui/MainWindow.glade:2361 src/MainWindow.py:187
+#: ui/MainWindow.glade:2734 src/MainWindow.py:189
 msgid "ETA Greeter"
 msgstr "ETA Karşılayıcı"
 
-#: ui/MainWindow.glade:2407
+#: ui/MainWindow.glade:2780
 msgid "Tool that helps you to get ETAP ready."
 msgstr "Bu araç ETAP'ı hazırlamanıza yardımcı olacaktır."
 
 #. Name Surname <example@examplemail.com>
-#: ui/MainWindow.glade:2410
+#: ui/MainWindow.glade:2783
 msgid "translator-credits"
 msgstr "Fatih Altun <fatih.altun@pardus.org.tr>"
 
-#: src/MainWindow.py:191
+#: src/MainWindow.py:193
 msgid "About ETA Greeter"
 msgstr "ETA Karşılayıcı Hakkında"
 
-#: src/MainWindow.py:223
+#: src/MainWindow.py:226
 msgid "Welcome"
 msgstr "Hoş Geldiniz"
 
-#: src/MainWindow.py:224
+#: src/MainWindow.py:227
 msgid "Select Wallpaper"
 msgstr "Duvar Kağıdı Seçin"
 
-#: src/MainWindow.py:225
+#: src/MainWindow.py:228
 msgid "Select Theme"
 msgstr "Tema Seçin"
 
-#: src/MainWindow.py:226
+#: src/MainWindow.py:229
 msgid "Display Settings"
 msgstr "Görünüm Ayarları"
 
-#: src/MainWindow.py:227
+#: src/MainWindow.py:230
 msgid "Sound Settings"
 msgstr "Ses Ayarları"
 
-#: src/MainWindow.py:228
+#: src/MainWindow.py:231
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: src/MainWindow.py:229
+#: src/MainWindow.py:232
+msgid "Password Change"
+msgstr "Parola Değiştir"
+
+#: src/MainWindow.py:233
 msgid "Support & Community"
 msgstr "Destek ve Topluluk"
 
-#: src/MainWindow.py:632 src/MainWindow.py:638 src/MainWindow.py:644
-#: src/MainWindow.py:650 src/MainWindow.py:658
+#: src/MainWindow.py:661 src/MainWindow.py:667 src/MainWindow.py:673
+#: src/MainWindow.py:679 src/MainWindow.py:687
 msgid "Error"
 msgstr "Hata"
 
-#~ msgid "Color Temperature"
-#~ msgstr "Renk Sıcaklığı"
+#: src/MainWindow.py:761 src/MainWindow.py:804
+msgid "Passwords are not equal"
+msgstr "Parolalar aynı değil"
 
-#~ msgid ""
-#~ "Welcome.\n"
-#~ "\n"
-#~ "This application helps you to configure ETAP."
-#~ msgstr ""
-#~ "Hoş Geldiniz.\n"
-#~ "\n"
-#~ "Bu uygulama ETAP'ı hazırlamanız için size yardımcı olacaktır."
+#: src/MainWindow.py:762 src/MainWindow.py:805
+msgid "Passwords are not equal, please check the passwords."
+msgstr "Parolalar aynı değil, lütfen parolaları kontrol edin."
 
-#~ msgid "Shortcuts"
-#~ msgstr "Kısayollar"
+#: src/MainWindow.py:773 src/MainWindow.py:816
+msgid "Success"
+msgstr "Başarılı"
 
-#~ msgid ""
-#~ "<b>Screenshot (Active Window):</b>\n"
-#~ "Alt + Print Screen\n"
-#~ "\n"
-#~ "<b>Screenshot (Area):</b>\n"
-#~ "Shift + Print Screen\n"
-#~ "\n"
-#~ "<b>Lock Screen:</b>\n"
-#~ "Super + L | Ctrl + Alt + L\n"
-#~ "\n"
-#~ "<b>Applications:</b>\n"
-#~ "Super\n"
-#~ "\n"
-#~ "<b>Show Desktop:</b>\n"
-#~ "Ctrl + Alt + D\n"
-#~ "\n"
-#~ "<b>Terminal:</b>\n"
-#~ "Ctrl + Alt + T"
-#~ msgstr ""
-#~ "<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
-#~ "Alt + Print Screen\n"
-#~ "\n"
-#~ "<b>Ekran Görüntüsü (Seçim):</b>\n"
-#~ "Shift + Print Screen\n"
-#~ "\n"
-#~ "<b>Ekranı Kilitle:</b>\n"
-#~ "Super + L | Ctrl + Alt + L\n"
-#~ "\n"
-#~ "<b>Uygulamalar:</b>\n"
-#~ "Super\n"
-#~ "\n"
-#~ "<b>Masaüstünü Göster:</b>\n"
-#~ "Ctrl + Alt + D\n"
-#~ "\n"
-#~ "<b>Uçbirim:</b>\n"
-#~ "Ctrl + Alt + T"
+#: src/MainWindow.py:774 src/MainWindow.py:817
+msgid "ogretmen's Password Changed Successfully."
+msgstr "ogretmen'in Parolası Başarıyla Değiştirildi."
 
-#~ msgid ""
-#~ "<b>Change Workspace:</b>\n"
-#~ "Ctrl + Alt + ←  → ↑ ↓\n"
-#~ "\n"
-#~ "<b>Add/Remove Workspace:</b>\n"
-#~ "Alt + Insert/Delete\n"
-#~ "\n"
-#~ "<b>Go to Workspace:</b>\n"
-#~ "Ctrl + F1...F12\n"
-#~ "\n"
-#~ "<b>Change Program:</b>\n"
-#~ "Alt + Tab\n"
-#~ "\n"
-#~ "<b>Change Window:</b>\n"
-#~ "Super + Tab\n"
-#~ "\n"
-#~ "<b>View Split:</b>\n"
-#~ "Super + ←  →"
-#~ msgstr ""
-#~ "<b>Çalışma Alanı Değiştir:</b>\n"
-#~ "Ctrl + Alt + ←  → ↑ ↓\n"
-#~ "\n"
-#~ "<b>Çalışma Alanı Ekle/Kaldır:</b>\n"
-#~ "Alt + Insert/Delete\n"
-#~ "\n"
-#~ "<b>Çalışma Alanına Git:</b>\n"
-#~ "Ctrl + F1...F12\n"
-#~ "\n"
-#~ "<b>Programlar Arası Geçiş:</b>\n"
-#~ "Alt + Tab\n"
-#~ "\n"
-#~ "<b>Pencereler Arası Geçiş:</b>\n"
-#~ "Super + Tab\n"
-#~ "\n"
-#~ "<b>Ekranı Böl:</b>\n"
-#~ "Super + ←  →"
+#: src/MainWindow.py:784 src/MainWindow.py:827
+msgid "Failed"
+msgstr "Başarısız"
 
-#~ msgid ""
-#~ "<b>Screenshot (Active Window):</b>\n"
-#~ "Alt + Print Screen\n"
-#~ "\n"
-#~ "<b>Screenshot (Area):</b>\n"
-#~ "Shift + Print Screen\n"
-#~ "\n"
-#~ "<b>Lock Screen:</b>\n"
-#~ "Super + L\n"
-#~ "\n"
-#~ "<b>Applications:</b>\n"
-#~ "Super"
-#~ msgstr ""
-#~ "<b>Ekran Görüntüsü (Aktif Pencere):</b>\n"
-#~ "Alt + Print Screen\n"
-#~ "\n"
-#~ "<b>Ekran Görüntüsü (Seçim):</b>\n"
-#~ "Shift + Print Screen\n"
-#~ "\n"
-#~ "<b>Ekranı Kilitle:</b>\n"
-#~ "Super + L\n"
-#~ "\n"
-#~ "<b>Uygulamalar:</b>\n"
-#~ "Super"
-
-#~ msgid ""
-#~ "<b>Change Workspace:</b>\n"
-#~ "Ctrl + Alt + ↑ ↓\n"
-#~ "\n"
-#~ "<b>Change Program:</b>\n"
-#~ "Alt + Tab\n"
-#~ "\n"
-#~ "<b>Change Window:</b>\n"
-#~ "Super + Tab\n"
-#~ "\n"
-#~ "<b>View Split:</b>\n"
-#~ "Super + ←  →"
-#~ msgstr ""
-#~ "<b>Çalışma Alanı Değiştir:</b>\n"
-#~ "Ctrl + Alt + ↑ ↓\n"
-#~ "\n"
-#~ "<b>Programlar Arası Geçiş:</b>\n"
-#~ "Alt + Tab\n"
-#~ "\n"
-#~ "<b>Pencereler Arası Geçiş:</b>\n"
-#~ "Super + Tab\n"
-#~ "\n"
-#~ "<b>Ekranı Böl:</b>\n"
-#~ "Super + ←  →"
-
-#~ msgid "<b>Display Scaling:</b>"
-#~ msgstr "<b>Görüntü Ölçekleme:</b>"
-
-#~ msgid "<b>Panel Size</b> (px):"
-#~ msgstr "<b>Panel Boyutu</b> (px):"
-
-#~ msgid "<b>Desktop Icon Size</b> (px):"
-#~ msgstr "<b>Masaüstü Simge Boyutu</b> (px):"
-
-#~ msgid "<b>Mouse Cursor Size</b> (px):"
-#~ msgstr "<b>Fare İmleç Boyutu</b> (px):"
-
-#~ msgid "Add / Remove Keyboard layouts"
-#~ msgstr "Klavye Yerleşimi Ekle / Kaldır"
-
-#~ msgid "Turkish - Q Keyboard"
-#~ msgstr "Türkçe - Q Klavye"
-
-#~ msgid "Add"
-#~ msgstr "Ekle"
-
-#~ msgid "Remove"
-#~ msgstr "Kaldır"
-
-#~ msgid "Turkish - F Keyboard"
-#~ msgstr "Türkçe - F Klavye"
-
-#~ msgid "English Keyboard"
-#~ msgstr "İngilizce Klavye"
-
-#~ msgid ""
-#~ "<span size=\"10000\">You can switch between keyboard layouts with:\n"
-#~ "<b>Super + Space</b></span>"
-#~ msgstr ""
-#~ "<span size=\"10000\">Klavye yerleşimini değiştirmek için:\n"
-#~ "<b>Super + Boşluk</b></span>"
-
-#~ msgid "Show Keyboard Indicator on Panel"
-#~ msgstr "Klavye Göstergesini Panelde Göster"
-
-#~ msgid "Pardus Xfce Tweaks"
-#~ msgstr "Pardus Xfce İnce Ayarlar"
-
-#~ msgid "Your desktop environment is not supported."
-#~ msgstr "Masaüstü ortamınız desteklenmiyor."
+#: src/MainWindow.py:786 src/MainWindow.py:829
+msgid "Couldn't change the password. Check the terminal for details."
+msgstr "Parola değiştirilemedi. Detaylar için uçbirim çıktılarını kontrol edin."
