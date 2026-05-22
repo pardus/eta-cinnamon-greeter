@@ -216,6 +216,7 @@ class MainWindow:
         self.page_display = get_ui("page_display")
         self.page_sound = get_ui("page_sound")
         self.page_applications = get_ui("page_applications")
+        self.page_password_change = get_ui("page_password_change")
         self.page_support = get_ui("page_support")
         self.page_nightlight = get_ui("page_nightlight")
 
@@ -226,6 +227,7 @@ class MainWindow:
         self.page_display.name = _("Display Settings")
         self.page_sound.name = _("Sound Settings")
         self.page_applications.name = _("Applications")
+        self.page_password_change.name = _("Password Change")
         self.page_support.name = _("Support & Community")
         self.page_nightlight.name = _("Night Light")
 
@@ -289,6 +291,8 @@ class MainWindow:
         self.fullhd_found = False
         self.hidpi_res = None
         self.fullhd_res = None
+        
+        self.is_etapadmin = os.getuid() == 1000
 
         self.temp_color = {"low": 5500, "medium": 4000, "high": 2500}
 
@@ -565,16 +569,32 @@ class MainWindow:
         increase = 0
         for i in range(0, self.stk_len):
             increase += 1
-            if self.stk_pages.get_child_by_name("{}".format(page + increase)) != None:
-                return page + increase
+            child = self.stk_pages.get_child_by_name("{}".format(page + increase))
+            if child is None:
+                return None
+            
+            title = self.stk_pages.child_get_property(child, "title")
+
+            if title and title == "etapadmin_only" and not self.is_etapadmin:
+                continue
+
+            return page + increase
         return None
 
     def get_prev_page(self, page):
         increase = 0
         for i in range(0, self.stk_len):
             increase += -1
-            if self.stk_pages.get_child_by_name("{}".format(page + increase)) != None:
-                return page + increase
+            child = self.stk_pages.get_child_by_name("{}".format(page + increase))
+            if child is None:
+                return None
+            
+            title = self.stk_pages.child_get_property(child, "title")
+
+            if title and title == "etapadmin_only" and not self.is_etapadmin:
+                continue
+
+            return page + increase
         return None
 
     def is_app_installed(self, app_id):
@@ -715,3 +735,19 @@ class MainWindow:
 
     def on_ui_nightlight_install_button_clicked(self, button):
         subprocess.Popen(["pardus-software", "-d", "pardus-night-light"])
+
+    # Password change page:
+    def on_ui_change_etapadmin_password_btn_clicked(self, button):
+        print("clicked")
+    
+    def on_ui_change_ogretmen_password_btn_clicked(self, button):
+        print("clicked")
+
+    # -- Reveal Icon releases
+    def on_ui_password_entry_icon_release(self, entry, icon_pos, event):
+        if entry.get_visibility():
+            entry.set_visibility(False)
+            entry.set_icon_from_icon_name(1, "view-conceal-symbolic")
+        else:
+            entry.set_visibility(True)
+            entry.set_icon_from_icon_name(1, "view-reveal-symbolic")
