@@ -9,7 +9,7 @@
   <action id="tr.org.pardus.pkexec.eta-cinnamon-greeter-action">
     <description>Pardus Restricted Access Authentication</description>
     <message>Authentication is required.</message>
-    <message xml:lang="tr">Yetkilendirme gerekiyor</message>
+    <message xml:lang="tr">Şu anki yetkili şifresini giriniz</message>
     <icon_name>preferences-system</icon_name>
 
     <defaults>
