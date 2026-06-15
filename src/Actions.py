@@ -27,11 +27,6 @@ def _change_password(uid, username, password):
     if p2.returncode != 0:
         sys.exit(p2.returncode)
 
-    # Remove expired flag if exists
-    expire_file = "/var/lib/eta/expire-uid/{}".format(uid)
-    if os.path.isfile(expire_file):
-        os.unlink(expire_file)
-
 
 if __name__ == "__main__":
     # Only for password changing
