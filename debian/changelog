@@ -1,3 +1,21 @@
+eta-cinnamon-greeter (1.4.0) yirmiuc; urgency=medium
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translations
+
+  [ Emin Fedar ]
+  * feat: added password change page
+  * feat: add password change action polkit
+  * fix: translations
+  * fix: return exitcode of actions
+  * feat: password change with openssl and usermod
+  * fix: translations
+  * fix: remove expire file
+  * feat: clear entries after password changed
+  * chore: policy string changed
+
+ -- Emin Fedar <emin.fedar@pardus.org.tr>  Mon, 15 Jun 2026 18:40:45 +0300
+
 eta-cinnamon-greeter (1.3.2) unstable; urgency=medium
 
   * Add grab focus to close button
