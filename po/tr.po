@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 14:29+0300\n"
+"POT-Creation-Date: 2026-06-15 16:43+0300\n"
 "PO-Revision-Date: 2025-08-06 15:24+0300\n"
 "Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
@@ -332,9 +332,9 @@ msgstr "Parolalar aynı değil, lütfen parolaları kontrol edin."
 msgid "Success"
 msgstr "Başarılı"
 
-#: src/MainWindow.py:774 src/MainWindow.py:817
-msgid "ogretmen's Password Changed Successfully."
-msgstr "ogretmen'in Parolası Başarıyla Değiştirildi."
+#: src/MainWindow.py:774
+msgid "etapadmin's Password Changed Successfully."
+msgstr "etapadmin'in Parolası Başarıyla Değiştirildi."
 
 #: src/MainWindow.py:784 src/MainWindow.py:827
 msgid "Failed"
@@ -342,4 +342,9 @@ msgstr "Başarısız"
 
 #: src/MainWindow.py:786 src/MainWindow.py:829
 msgid "Couldn't change the password. Check the terminal for details."
-msgstr "Parola değiştirilemedi. Detaylar için uçbirim çıktılarını kontrol edin."
+msgstr ""
+"Parola değiştirilemedi. Detaylar için uçbirim çıktılarını kontrol edin."
+
+#: src/MainWindow.py:817
+msgid "ogretmen's Password Changed Successfully."
+msgstr "ogretmen'in Parolası Başarıyla Değiştirildi."

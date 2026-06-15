@@ -771,7 +771,7 @@ class MainWindow:
             dialog = Gtk.MessageDialog(
                 buttons=Gtk.ButtonsType.OK,
                 text=_("Success"),
-                secondary_text=_("ogretmen's Password Changed Successfully."),
+                secondary_text=_("etapadmin's Password Changed Successfully."),
             )
             dialog.run()
             dialog.hide()

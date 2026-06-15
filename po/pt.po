@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 14:29+0300\n"
+"POT-Creation-Date: 2026-06-15 16:43+0300\n"
 "PO-Revision-Date: 2025-10-11 08:43+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -342,8 +342,8 @@ msgstr ""
 msgid "Success"
 msgstr ""
 
-#: src/MainWindow.py:774 src/MainWindow.py:817
-msgid "ogretmen's Password Changed Successfully."
+#: src/MainWindow.py:774
+msgid "etapadmin's Password Changed Successfully."
 msgstr ""
 
 #: src/MainWindow.py:784 src/MainWindow.py:827
@@ -352,4 +352,8 @@ msgstr ""
 
 #: src/MainWindow.py:786 src/MainWindow.py:829
 msgid "Couldn't change the password. Check the terminal for details."
+msgstr ""
+
+#: src/MainWindow.py:817
+msgid "ogretmen's Password Changed Successfully."
 msgstr ""
