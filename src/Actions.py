@@ -12,6 +12,27 @@ def run(cmd="", capture_output=False, input=None):
     )
 
 
+def _change_password(uid, username, password):
+    # Create password hash
+    p = subprocess.run(
+        ["/usr/bin/openssl", "passwd", "-6", password], capture_output=True, text=True
+    )
+    if p.returncode != 0:
+        sys.exit(p.returncode)
+
+    hashed_password = p.stdout.strip()
+
+    # Change user password with hashed value
+    p2 = subprocess.run(["/usr/sbin/usermod", "-p", hashed_password, username])
+    if p2.returncode != 0:
+        sys.exit(p2.returncode)
+
+    # Remove expired flag if exists
+    expire_file = "/var/lib/eta/expire-uid/{}".format(uid)
+    if os.path.isfile(expire_file):
+        os.unlink(expire_file)
+
+
 if __name__ == "__main__":
     # Only for password changing
     # Add args support if a new action needed
@@ -19,17 +40,7 @@ if __name__ == "__main__":
     ogretmen_password = input().strip()
 
     if etapadmin_password:
-        p = subprocess.run(
-            ["/usr/sbin/chpasswd"], input=f"etapadmin:{etapadmin_password}\n".encode()
-        )
-
-        if p.returncode != 0:
-            sys.exit(p.returncode)
+        _change_password(1000, "etapadmin", etapadmin_password)
 
     if ogretmen_password:
-        subprocess.run(
-            ["/usr/sbin/chpasswd"], input=f"ogretmen:{ogretmen_password}\n".encode()
-        )
-
-        if p.returncode != 0:
-            sys.exit(p.returncode)
+        _change_password(1001, "ogretmen", ogretmen_password)
