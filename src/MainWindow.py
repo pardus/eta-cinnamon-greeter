@@ -775,6 +775,8 @@ class MainWindow:
             )
             dialog.run()
             dialog.hide()
+            self.ui_etapadmin_new_password.set_text("")
+            self.ui_etapadmin_new_password2.set_text("")
         elif p.returncode == 126:
             # pkexec dismissed
             pass
@@ -818,6 +820,8 @@ class MainWindow:
             )
             dialog.run()
             dialog.hide()
+            self.ui_ogretmen_new_password.set_text("")
+            self.ui_ogretmen_new_password2.set_text("")
         elif p.returncode == 126:
             # pkexec dismissed
             pass
