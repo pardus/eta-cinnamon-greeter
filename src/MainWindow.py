@@ -759,7 +759,7 @@ class MainWindow:
             dialog = Gtk.MessageDialog(
                 buttons=Gtk.ButtonsType.OK,
                 text=_("Passwords are not equal"),
-                secondary_text=_("Passwords are not equal, please check the passwords."),
+                secondary_text=_("Please check the passwords."),
             )
             dialog.run()
             dialog.hide()
@@ -804,7 +804,7 @@ class MainWindow:
             dialog = Gtk.MessageDialog(
                 buttons=Gtk.ButtonsType.OK,
                 text=_("Passwords are not equal"),
-                secondary_text=_("Passwords are not equal, please check the passwords."),
+                secondary_text=_("Please check the passwords."),
             )
             dialog.run()
             dialog.hide()

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 16:43+0300\n"
+"POT-Creation-Date: 2026-06-25 17:09+0300\n"
 "PO-Revision-Date: 2025-10-11 08:43+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
@@ -156,7 +156,7 @@ msgid "New Password:"
 msgstr ""
 
 #: ui/MainWindow.glade:1665 ui/MainWindow.glade:1801
-msgid "New Password(Again):"
+msgid "New Password (Again):"
 msgstr ""
 
 #: ui/MainWindow.glade:1700 ui/MainWindow.glade:1836
@@ -330,15 +330,15 @@ msgstr "Suporte e comunidade"
 msgid "Error"
 msgstr "Erro"
 
-#: src/MainWindow.py:761 src/MainWindow.py:804
+#: src/MainWindow.py:761 src/MainWindow.py:806
 msgid "Passwords are not equal"
 msgstr ""
 
-#: src/MainWindow.py:762 src/MainWindow.py:805
-msgid "Passwords are not equal, please check the passwords."
+#: src/MainWindow.py:762
+msgid "Please check the passwords."
 msgstr ""
 
-#: src/MainWindow.py:773 src/MainWindow.py:816
+#: src/MainWindow.py:773 src/MainWindow.py:818
 msgid "Success"
 msgstr ""
 
@@ -346,14 +346,18 @@ msgstr ""
 msgid "etapadmin's Password Changed Successfully."
 msgstr ""
 
-#: src/MainWindow.py:784 src/MainWindow.py:827
+#: src/MainWindow.py:786 src/MainWindow.py:831
 msgid "Failed"
 msgstr ""
 
-#: src/MainWindow.py:786 src/MainWindow.py:829
+#: src/MainWindow.py:788 src/MainWindow.py:833
 msgid "Couldn't change the password. Check the terminal for details."
 msgstr ""
 
-#: src/MainWindow.py:817
+#: src/MainWindow.py:807
+msgid "Passwords are not equal, please check the passwords."
+msgstr ""
+
+#: src/MainWindow.py:819
 msgid "ogretmen's Password Changed Successfully."
 msgstr ""
