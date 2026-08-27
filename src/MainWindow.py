@@ -4,6 +4,7 @@ import os
 import subprocess
 import threading
 import time
+import distro
 
 import dbus
 import gi
@@ -294,6 +295,9 @@ class MainWindow:
 
         self.img_nightlight.set_from_pixbuf(GdkPixbuf.Pixbuf.new_from_file_at_scale(
             os.path.dirname(os.path.abspath(__file__)) + "/../data/pardus-night-light-ss.png", 500, 222, False))
+
+        self.welcome_distro_name = get_ui("welcome_distro_name")
+        self.welcome_distro_name.set_text(f"{distro.name()} {distro.major_version()}")
 
     def define_variables(self):
         self.currentpage = 0

@@ -61,7 +61,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkLabel" id="welcome_distro_name">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="label">ETAP 23</property>
@@ -185,7 +185,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -195,16 +195,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -501,7 +492,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -511,16 +502,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -685,7 +667,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -695,16 +677,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -897,7 +870,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -907,16 +880,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -1026,7 +990,7 @@
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -1036,16 +1000,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -1525,7 +1480,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -1535,16 +1490,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -1899,7 +1845,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -1909,16 +1855,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
@@ -2251,7 +2188,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               <object class="GtkImage">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="pixel-size">36</property>
+                                <property name="pixel-size">48</property>
                                 <property name="icon-name">emblem-pardus-symbolic</property>
                               </object>
                               <packing>
@@ -2261,16 +2198,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label">ETAP 23</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
+                              <placeholder/>
                             </child>
                           </object>
                           <packing>
