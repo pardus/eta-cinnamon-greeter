@@ -27,6 +27,7 @@
                 <property name="transition-type">slide-left-right</property>
                 <child>
                   <object class="GtkBox" id="page_welcome">
+                    <property name="name">welcome</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="orientation">vertical</property>
@@ -159,6 +160,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="page_display">
+                    <property name="name">display</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="halign">center</property>
@@ -475,6 +477,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="page_sound">
+                    <property name="name">sound</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
@@ -658,6 +661,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="page_theme">
+                    <property name="name">theme</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
@@ -870,6 +874,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="page_wallpaper">
+                    <property name="name">wallpaper</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
@@ -996,6 +1001,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="page_nightlight">
+                    <property name="name">nightlight</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="halign">center</property>
@@ -1495,6 +1501,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                 </child>
                 <child>
                   <object class="GtkBox" id="page_password_change">
+                    <property name="name">password</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
@@ -1868,6 +1875,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                 </child>
                 <child>
                   <object class="GtkBox" id="page_applications">
+                    <property name="name">apps</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>
@@ -2219,6 +2227,7 @@ You can install it from Pardus Software Center by clicking the button below.</pr
                 </child>
                 <child>
                   <object class="GtkBox" id="page_support">
+                    <property name="name">support</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <property name="margin-start">13</property>

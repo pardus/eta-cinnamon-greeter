@@ -21,6 +21,7 @@ from pathlib import Path
 from configparser import ConfigParser
 from locale import getlocale
 from UserSettings import UserSettings
+from SystemSettings import SystemSettings
 
 import Actions
 
@@ -96,9 +97,13 @@ class MainWindow:
         self.get_monitor_resolution()
         self.add_sound_devices()
 
-        self.user_settings()
-        self.UserSettings.set_autostart(self.UserSettings.config_autostart)
-        self.chkbtn_autostart.set_active(self.UserSettings.config_autostart)
+        self.load_user_settings()
+        self.load_system_settings()
+
+        self.configure_pages()
+
+        self.user_settings.set_autostart(self.user_settings.config_autostart)
+        self.chkbtn_autostart.set_active(self.user_settings.config_autostart)
 
         # Put Wallpapers on a Grid
         thread = threading.Thread(target=self.add_wallpapers, args=(WallpaperManager.get_wallpapers(),))
@@ -120,9 +125,10 @@ class MainWindow:
 
         self.set_signals()
 
-        thread_sound = threading.Thread(target=self.select_sound_device)
-        thread_sound.daemon = True
-        thread_sound.start()
+        if self.system_settings.select_hdmi_sound:
+            thread_sound = threading.Thread(target=self.select_sound_device)
+            thread_sound.daemon = True
+            thread_sound.start()
 
     def get_user_locale(self):
         try:
@@ -173,12 +179,16 @@ class MainWindow:
 
         print("window w:{} h:{} | monitor w:{} h:{} s:{}".format(width, height, w, h, s))
 
-    def user_settings(self):
-        self.UserSettings = UserSettings()
-        self.UserSettings.createDefaultConfig()
-        self.UserSettings.readConfig()
+    def load_user_settings(self):
+        self.user_settings = UserSettings()
+        self.user_settings.createDefaultConfig()
+        self.user_settings.readConfig()
 
-        print("{} {}".format("config_autostart", self.UserSettings.config_autostart))
+        print("{} {}".format("config_autostart", self.user_settings.config_autostart))
+
+    def load_system_settings(self):
+        self.system_settings = SystemSettings()
+        self.system_settings.readConfig()
 
     def define_components(self):
         def get_ui(str):
@@ -288,8 +298,7 @@ class MainWindow:
     def define_variables(self):
         self.currentpage = 0
         self.stk_len = 0
-        for row in self.stk_pages:
-            self.stk_len += 1
+        self.enabled_pages = []
 
         self.apps_url = "https://apps.pardus.org.tr/api/greeter"
         self.non_tls_tried = False
@@ -300,12 +309,43 @@ class MainWindow:
         self.fullhd_found = False
         self.hidpi_res = None
         self.fullhd_res = None
-        
-        self.is_etapadmin = os.getuid() == 1000
+
+        self.is_etapadmin = GLib.get_user_name() == "etapadmin"
 
         self.temp_color = {"low": 5500, "medium": 4000, "high": 2500}
 
     # =========== UI Preparing functions:
+
+    def configure_pages(self):
+        self.enabled_pages = []
+
+        for page in self.stk_pages:
+            page_name = page.get_name()
+
+            if page_name == "password" and not self.is_etapadmin:
+                continue
+
+            if self.system_settings.is_page_enabled(page_name):
+                self.enabled_pages.append(page)
+
+        self.stk_len = len(self.enabled_pages)
+
+        if self.stk_len == 0:
+            print("No enabled pages found.")
+            return
+
+        # Show the first enabled page.
+        self.currentpage = 0
+        self.stk_pages.set_visible_child(self.enabled_pages[self.currentpage])
+
+        # Update header title.
+        tabTitle = self.stk_pages.get_visible_child().name
+        self.lbl_headerTitle.set_text(tabTitle)
+
+        # print("Active pages:")
+        # for page in self.enabled_pages:
+        #     print("  {}".format(page.get_name()))
+
     def hide_widgets(self):
 
         self.btn_prev.set_sensitive(self.currentpage != 0)
@@ -321,13 +361,17 @@ class MainWindow:
     def set_active_theme(self):
         try:
             theme = ThemeManager.get_gtk_theme()
-            if theme == "eta":
+
+            if theme == self.system_settings.light_gtk_theme:
                 self.rb_lightTheme.set_active(True)
-            elif theme == "eta-dark":
+
+            elif theme == self.system_settings.dark_gtk_theme:
                 self.rb_darkTheme.set_active(True)
+
             else:
                 self.rb_lightTheme.set_active(False)
                 self.rb_darkTheme.set_active(False)
+
         except Exception as e:
             print("{}".format(e))
 
@@ -481,6 +525,30 @@ class MainWindow:
                 self.ui_apps_stack.set_visible_child_name("error")
                 self.ui_apps_error_label.set_text(error_message)
 
+    def maximize_stream_volume(self, stream):
+        if stream:
+            max_norm = self.controller.get_vol_max_norm()
+            stream.change_is_muted(False)
+            stream.set_volume(max_norm)
+            stream.push_volume()
+
+    def on_sound_listbox_row_selected(self, listbox, row):
+        device = row.name
+        print(f"Selected Device: {device.get_description()}")
+        GLib.idle_add(self.controller.change_output, device)
+        def _delayed_maximize():
+            stream = self.controller.lookup_stream_id(device.get_stream_id())
+            if stream:
+                self.maximize_stream_volume(stream)
+            return False
+        GLib.timeout_add(200, _delayed_maximize)
+
+    def on_play_button_clicked(self, button):
+        Gst.init(None)
+        self.player = Gst.ElementFactory.make('playbin', 'player')
+        self.player.set_property('uri', 'file://' + (os.path.dirname(os.path.abspath(__file__)) + "/../data/sample.m4a"))
+        self.player.set_state(Gst.State.PLAYING)
+
     def on_sound_device_added(self, c, deviceId, direction):
         device = getattr(self.controller, "lookup_" + direction + "_id")(deviceId)
         print("Sound Device: {}".format(device.get_description()))
@@ -490,13 +558,25 @@ class MainWindow:
         default_sink = self.controller.get_default_sink()
         if default_sink is None:
             return
-        print(f"default sink_changed to: {c.get_default_sink().get_description()}")
-        max_norm = self.controller.get_vol_max_norm()
+        print(f"default sink_changed to: {default_sink.get_description()}")
         stream = self.controller.lookup_stream_id(deviceId)
-        denormalized_volume = max_norm
-        stream.change_is_muted(False)
-        stream.set_volume(denormalized_volume)
-        stream.push_volume()
+        self.maximize_stream_volume(stream)
+
+        default_sink_id = default_sink.get_id()
+        active_port = default_sink.get_port()
+        active_port_name = active_port.port if active_port else None
+
+        for row in self.sound_listbox.get_children():
+            ui_device = row.name
+
+            if ui_device.get_stream_id() == default_sink_id:
+                if ui_device.has_ports():
+                    if active_port_name and ui_device.get_port() == active_port_name:
+                        GLib.idle_add(self.sound_listbox.select_row, row)
+                        break
+                else:
+                    GLib.idle_add(self.sound_listbox.select_row, row)
+                    break
 
     def add_sound_devices(self):
         self.controller = Cvc.MixerControl.new("mixer-control")
@@ -575,35 +655,19 @@ class MainWindow:
 
     # - stack prev and next page controls
     def get_next_page(self, page):
-        increase = 0
-        for i in range(0, self.stk_len):
-            increase += 1
-            child = self.stk_pages.get_child_by_name("{}".format(page + increase))
-            if child is None:
-                return None
-            
-            title = self.stk_pages.child_get_property(child, "title")
+        next_page = page + 1
 
-            if title and title == "etapadmin_only" and not self.is_etapadmin:
-                continue
+        while next_page < self.stk_len:
+            return next_page
 
-            return page + increase
         return None
 
     def get_prev_page(self, page):
-        increase = 0
-        for i in range(0, self.stk_len):
-            increase += -1
-            child = self.stk_pages.get_child_by_name("{}".format(page + increase))
-            if child is None:
-                return None
-            
-            title = self.stk_pages.child_get_property(child, "title")
+        prev_page = page - 1
 
-            if title and title == "etapadmin_only" and not self.is_etapadmin:
-                continue
+        while prev_page >= 0:
+            return prev_page
 
-            return page + increase
         return None
 
     def is_app_installed(self, app_id):
@@ -622,13 +686,22 @@ class MainWindow:
 
     # - NAVIGATION:
     def on_btn_next_clicked(self, btn):
-        self.stk_pages.set_visible_child_name("{}".format(self.get_next_page(self.currentpage)))
+        next_page = self.get_next_page(self.currentpage)
 
-        self.currentpage = int(self.stk_pages.get_visible_child_name())
+        if next_page is None:
+            return
 
-        nextButtonPage = "next" if self.get_next_page(self.currentpage) != None else "close"
+        self.currentpage = next_page
+        self.stk_pages.set_visible_child(self.enabled_pages[self.currentpage])
+
+        nextButtonPage = "next" if self.get_next_page(self.currentpage) is not None else "close"
+
         self.stk_btn_next.set_visible_child_name(nextButtonPage)
-        self.btn_next.grab_focus() if nextButtonPage == "next" else self.btn_close.grab_focus()
+
+        if nextButtonPage == "next":
+            self.btn_next.grab_focus()
+        else:
+            self.btn_close.grab_focus()
 
         self.btn_prev.set_sensitive(self.currentpage != 0)
 
@@ -637,9 +710,13 @@ class MainWindow:
         self.lbl_headerTitle.set_text(tabTitle)
 
     def on_btn_prev_clicked(self, btn):
-        self.stk_pages.set_visible_child_name("{}".format(self.get_prev_page(self.currentpage)))
+        prev_page = self.get_prev_page(self.currentpage)
 
-        self.currentpage = int(self.stk_pages.get_visible_child_name())
+        if prev_page is None:
+            return
+
+        self.currentpage = prev_page
+        self.stk_pages.set_visible_child(self.enabled_pages[self.currentpage])
 
         self.stk_btn_next.set_visible_child_name("next")
         self.btn_prev.set_sensitive(self.currentpage != 0)
@@ -691,35 +768,41 @@ class MainWindow:
     def on_chkbtn_autostart_toggled(self, button):
         state = button.get_active()
         print(state)
-        self.UserSettings.set_autostart(state)
-        user_autostart = self.UserSettings.config_autostart
+        self.user_settings.set_autostart(state)
+        user_autostart = self.user_settings.config_autostart
         if state != user_autostart:
-            self.UserSettings.writeConfig(state)
-            self.user_settings()
-
-    def on_sound_listbox_row_selected(self, listbox, row):
-        device = row.name
-        print(f"Selected Device: {device.get_description()}")
-        GLib.idle_add(self.controller.change_output, device)
-
-    def on_play_button_clicked(self, button):
-        Gst.init(None)
-        self.player = Gst.ElementFactory.make('playbin', 'player')
-        self.player.set_property('uri', 'file://' + (os.path.dirname(os.path.abspath(__file__)) + "/../data/sample.m4a"))
-        self.player.set_state(Gst.State.PLAYING)
+            self.user_settings.writeConfig(state)
+            self.load_user_settings()
 
     def on_rb_lightTheme_clicked(self, rb):
         if rb.get_active():
-
-            GLib.idle_add(ThemeManager.set_gtk_theme, "eta")
-            GLib.idle_add(ThemeManager.set_icon_theme, "eta")
-            GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta")
+            GLib.idle_add(
+                ThemeManager.set_gtk_theme,
+                self.system_settings.light_gtk_theme
+            )
+            GLib.idle_add(
+                ThemeManager.set_icon_theme,
+                self.system_settings.light_icon_theme
+            )
+            GLib.idle_add(
+                ThemeManager.set_cinnamon_theme,
+                self.system_settings.light_cinnamon_theme
+            )
 
     def on_rb_darkTheme_clicked(self, rb):
         if rb.get_active():
-            GLib.idle_add(ThemeManager.set_gtk_theme, "eta-dark")
-            GLib.idle_add(ThemeManager.set_icon_theme, "eta-dark")
-            GLib.idle_add(ThemeManager.set_cinnamon_theme, "eta-dark")
+            GLib.idle_add(
+                ThemeManager.set_gtk_theme,
+                self.system_settings.dark_gtk_theme
+            )
+            GLib.idle_add(
+                ThemeManager.set_icon_theme,
+                self.system_settings.dark_icon_theme
+            )
+            GLib.idle_add(
+                ThemeManager.set_cinnamon_theme,
+                self.system_settings.dark_cinnamon_theme
+            )
 
     def on_ui_temp_button_clicked(self, button):
         print("on_ui_temp_adjusment_value_changed", self.temp_color[button.get_name()])

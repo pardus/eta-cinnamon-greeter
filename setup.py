@@ -52,6 +52,7 @@ data_files = [
    "src/utils.py",
    "src/WallpaperManager.py",
    "src/ScaleManager.py",
+   "src/SystemSettings.py",
    "src/ThemeManager.py",
    "src/__version__"]
   ),
