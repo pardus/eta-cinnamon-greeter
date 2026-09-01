@@ -126,6 +126,8 @@ class MainWindow:
 
         self.set_signals()
 
+        GLib.idle_add(self.init_player)
+
         if self.system_settings.select_hdmi_sound:
             thread_sound = threading.Thread(target=self.select_sound_device)
             thread_sound.daemon = True
@@ -529,6 +531,55 @@ class MainWindow:
                 self.ui_apps_stack.set_visible_child_name("error")
                 self.ui_apps_error_label.set_text(error_message)
 
+    def init_player(self):
+        """Initialize GStreamer and create the audio player."""
+        Gst.init(None)
+
+        self.player = Gst.ElementFactory.make("playbin", "player")
+
+        if self.player is None:
+            print("Failed to create GStreamer playbin")
+            return
+
+        sample_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data/sample.m4a"))
+
+        uri = GLib.filename_to_uri(sample_path, None)
+        self.player.set_property("uri", uri)
+
+        bus = self.player.get_bus()
+        bus.add_signal_watch()
+        bus.connect("message::error", self.on_gst_error)
+        bus.connect("message::eos", self.on_gst_eos)
+
+        print(f"GStreamer player initialized: {uri}")
+
+    def on_play_button_clicked(self, button):
+        """Start sample audio playback."""
+        if self.player is None:
+            print("GStreamer player is not initialized")
+            return
+
+        result = self.player.set_state(Gst.State.PLAYING)
+
+        if result == Gst.StateChangeReturn.FAILURE:
+            print("Failed to start audio playback")
+
+    def on_gst_error(self, bus, message):
+        """Handle GStreamer playback errors."""
+        error, debug = message.parse_error()
+
+        print(f"GStreamer error: {error}")
+
+        if debug:
+            print(f"GStreamer debug: {debug}")
+
+        self.player.set_state(Gst.State.READY)
+
+    def on_gst_eos(self, bus, message):
+        """Handle end of sample playback."""
+        print("GStreamer playback finished")
+        self.player.set_state(Gst.State.READY)
+
     def maximize_stream_volume(self, stream):
         if stream:
             max_norm = self.controller.get_vol_max_norm()
@@ -546,12 +597,6 @@ class MainWindow:
                 self.maximize_stream_volume(stream)
             return False
         GLib.timeout_add(200, _delayed_maximize)
-
-    def on_play_button_clicked(self, button):
-        Gst.init(None)
-        self.player = Gst.ElementFactory.make('playbin', 'player')
-        self.player.set_property('uri', 'file://' + (os.path.dirname(os.path.abspath(__file__)) + "/../data/sample.m4a"))
-        self.player.set_state(Gst.State.PLAYING)
 
     def on_sound_device_added(self, c, deviceId, direction):
         device = getattr(self.controller, "lookup_" + direction + "_id")(deviceId)
