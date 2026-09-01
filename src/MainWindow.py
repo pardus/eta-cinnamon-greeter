@@ -126,7 +126,10 @@ class MainWindow:
 
         self.set_signals()
 
-        GLib.idle_add(self.init_player)
+        self.player = None
+        self.player_ready = False
+        thread_init_player = threading.Thread(target=self.init_player, daemon=True)
+        thread_init_player.start()
 
         if self.system_settings.select_hdmi_sound:
             thread_sound = threading.Thread(target=self.select_sound_device)
@@ -533,36 +536,49 @@ class MainWindow:
 
     def init_player(self):
         """Initialize GStreamer and create the audio player."""
-        Gst.init(None)
+        try:
+            Gst.init(None)
 
-        self.player = Gst.ElementFactory.make("playbin", "player")
+            sample_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data/sample.m4a"))
 
+            player = Gst.ElementFactory.make("playbin", "player")
+
+            if player is None:
+                print("Failed to create GStreamer playbin")
+                return
+
+            uri = GLib.filename_to_uri(sample_path, None)
+            player.set_property("uri", uri)
+
+            # Store the player after it has been initialized.
+            self.player = player
+
+            # Continue GLib-related setup in the main thread.
+            GLib.idle_add(self._finish_player_init)
+
+        except Exception as e:
+            print(f"Failed to initialize GStreamer player: {e}")
+
+    def _finish_player_init(self):
+        """Complete GStreamer bus setup in the GTK main loop."""
         if self.player is None:
-            print("Failed to create GStreamer playbin")
-            return
+            return False
 
-        sample_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../data/sample.m4a"))
+        try:
+            bus = self.player.get_bus()
+            bus.add_signal_watch()
+            bus.connect("message::error", self.on_gst_error)
+            bus.connect("message::eos", self.on_gst_eos)
 
-        uri = GLib.filename_to_uri(sample_path, None)
-        self.player.set_property("uri", uri)
+            self.player_ready = True
+            print("GStreamer player initialized")
 
-        bus = self.player.get_bus()
-        bus.add_signal_watch()
-        bus.connect("message::error", self.on_gst_error)
-        bus.connect("message::eos", self.on_gst_eos)
+        except Exception as e:
+            print(f"Failed to complete GStreamer initialization: {e}")
+            self.player = None
+            self.player_ready = False
 
-        print(f"GStreamer player initialized: {uri}")
-
-    def on_play_button_clicked(self, button):
-        """Start sample audio playback."""
-        if self.player is None:
-            print("GStreamer player is not initialized")
-            return
-
-        result = self.player.set_state(Gst.State.PLAYING)
-
-        if result == Gst.StateChangeReturn.FAILURE:
-            print("Failed to start audio playback")
+        return False
 
     def on_gst_error(self, bus, message):
         """Handle GStreamer playback errors."""
@@ -579,6 +595,17 @@ class MainWindow:
         """Handle end of sample playback."""
         print("GStreamer playback finished")
         self.player.set_state(Gst.State.READY)
+
+    def on_play_button_clicked(self, button):
+        """Start sample audio playback."""
+        if self.player is None or not self.player_ready:
+            print("GStreamer player is not ready yet")
+            return
+
+        result = self.player.set_state(Gst.State.PLAYING)
+
+        if result == Gst.StateChangeReturn.FAILURE:
+            print("Failed to start audio playback")
 
     def maximize_stream_volume(self, stream):
         if stream:
