@@ -1,3 +1,9 @@
+eta-cinnamon-greeter (1.5.2) yirmiuc; urgency=medium
+
+  * Update app icon
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 22 Sep 2026 23:45:23 +0300
+
 eta-cinnamon-greeter (1.5.1) yirmiuc; urgency=medium
 
   * Fix play sound bug
