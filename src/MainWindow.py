@@ -281,7 +281,6 @@ class MainWindow:
             self.stk_len += 1
 
         self.apps_url = "https://apps.pardus.org.tr/api/greeter"
-        self.non_tls_tried = False
 
         self.current_res = ""
         self.current_scale = ""
@@ -453,20 +452,14 @@ class MainWindow:
             datas = response["greeter"]["suggestions"]
             if len(datas) > 0:
                 for data in datas:
-                    if self.non_tls_tried:
-                        data["icon"] = data["icon"].replace("https", "http")
                     self.stream.fetch(data)
         else:
-            if "tlserror" in response.keys() and not self.non_tls_tried:
-                self.non_tls_tried = True
-                self.apps_url = self.apps_url.replace("https", "http")
-                print("trying {}".format(self.apps_url))
-                self.server.get(self.apps_url)
-            else:
-                error_message = response["message"]
-                print(error_message)
-                self.ui_apps_stack.set_visible_child_name("error")
-                self.ui_apps_error_label.set_text(error_message)
+            # No plain http retry on TLS errors: anyone in between could then
+            # replace the suggested apps and their icons.
+            error_message = response["message"]
+            print(error_message)
+            self.ui_apps_stack.set_visible_child_name("error")
+            self.ui_apps_error_label.set_text(error_message)
 
     def on_sound_device_added(self, c, deviceId, direction):
         device = getattr(self.controller, "lookup_" + direction + "_id")(deviceId)
