@@ -404,8 +404,7 @@ class MainWindow:
     def add_wallpapers(self, wallpaper_list):
         for i in range(len(wallpaper_list)):
             # Image
-            bitmap = GdkPixbuf.Pixbuf.new_from_file(wallpaper_list[i])
-            bitmap = bitmap.scale_simple(240, 135, GdkPixbuf.InterpType.BILINEAR)
+            bitmap = GdkPixbuf.Pixbuf.new_from_file_at_scale(wallpaper_list[i], 240, 135, False)
 
             img_wallpaper = Gtk.Image.new_from_pixbuf(bitmap)
             img_wallpaper.img_path = wallpaper_list[i]
