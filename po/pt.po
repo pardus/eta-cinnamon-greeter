@@ -1,7 +1,7 @@
 # Portuguese translation for eta-cinnamon-greeter.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2024-2025.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2024-2026.
 #
 #, fuzzy
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-25 17:09+0300\n"
-"PO-Revision-Date: 2025-10-11 08:43+0100\n"
+"PO-Revision-Date: 2026-11-23 12:31+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.10\n"
 
 #: ui/MainWindow.glade:90
 msgid ""
@@ -145,27 +145,27 @@ msgstr "Luz noturna Pardus"
 
 #: ui/MainWindow.glade:1554
 msgid "Secure your credentials"
-msgstr ""
+msgstr "Proteja as suas credenciais"
 
 #: ui/MainWindow.glade:1609
 msgid "Change etapadmin password (Optional):"
-msgstr ""
+msgstr "Alterar a palavra-passe do etapadmin (opcional):"
 
 #: ui/MainWindow.glade:1637 ui/MainWindow.glade:1773
 msgid "New Password:"
-msgstr ""
+msgstr "Nova palavra-passe:"
 
 #: ui/MainWindow.glade:1665 ui/MainWindow.glade:1801
 msgid "New Password (Again):"
-msgstr ""
+msgstr "Nova palavra-passe (novamente):"
 
 #: ui/MainWindow.glade:1700 ui/MainWindow.glade:1836
 msgid "Change Password"
-msgstr ""
+msgstr "Alterar palavra-passe"
 
 #: ui/MainWindow.glade:1745
 msgid "Change ogretmen password (Optional):"
-msgstr ""
+msgstr "Alterar a palavra-passe do ogretmen (opcional):"
 
 #: ui/MainWindow.glade:1927
 msgid "No Licensing Issues with Pardus! Discover the Power of Free Software"
@@ -319,7 +319,7 @@ msgstr "Aplicações"
 
 #: src/MainWindow.py:232
 msgid "Password Change"
-msgstr ""
+msgstr "Alteração da palavra-passe"
 
 #: src/MainWindow.py:233
 msgid "Support & Community"
@@ -332,32 +332,34 @@ msgstr "Erro"
 
 #: src/MainWindow.py:761 src/MainWindow.py:806
 msgid "Passwords are not equal"
-msgstr ""
+msgstr "As palavras-passe não são iguais"
 
 #: src/MainWindow.py:762
 msgid "Please check the passwords."
-msgstr ""
+msgstr "Verifique as palavras-passe."
 
 #: src/MainWindow.py:773 src/MainWindow.py:818
 msgid "Success"
-msgstr ""
+msgstr "Sucesso"
 
 #: src/MainWindow.py:774
 msgid "etapadmin's Password Changed Successfully."
-msgstr ""
+msgstr "A palavra-passe do etapadmin foi alterada com sucesso."
 
 #: src/MainWindow.py:786 src/MainWindow.py:831
 msgid "Failed"
-msgstr ""
+msgstr "Falha"
 
 #: src/MainWindow.py:788 src/MainWindow.py:833
 msgid "Couldn't change the password. Check the terminal for details."
 msgstr ""
+"Não foi possível alterar a palavra-passe. Consulte o terminal para obter "
+"mais detalhes."
 
 #: src/MainWindow.py:807
 msgid "Passwords are not equal, please check the passwords."
-msgstr ""
+msgstr "As palavras-passe não são iguais; por favor, verifique-as."
 
 #: src/MainWindow.py:819
 msgid "ogretmen's Password Changed Successfully."
-msgstr ""
+msgstr "A palavra-passe do ogretmen foi alterada com sucesso."
